@@ -15,11 +15,6 @@ status.register("load")
 status.register("temp",
     format="{temp:.0f}°C",)
 
-# Displays whether a DHCP client is running
-status.register("runwatch",
-    name="DHCP",
-    path="/var/run/dhclient*.pid",)
-
 # Shows the address and up/down state of eth0. If it is up the address is shown in
 # green (the default value of color_up) and the CIDR-address is shown
 # (i.e. 10.10.10.42/24).
@@ -28,13 +23,8 @@ status.register("runwatch",
 #
 # Note: the network module requires PyPI package netifaces
 status.register("network",
-    interface="eth0",
+    interface="enp3s0",
     format_up="{v4cidr}",)
-
-# Note: requires both netifaces and basiciw (for essid and quality)
-status.register("network",
-    interface="wlan0",
-    format_up="{essid} {quality:03.0f}%",)
 
 # Shows disk usage of /
 # Format:
@@ -59,5 +49,10 @@ status.register("mpd",
         "play": "▶",
         "stop": "◾",
     },)
+# Shows weather
+status.register("shell",
+    format="{output}",
+    command="curl wttr.in/Saint-Léger,Belgium?format=3",
+    interval=600,)
 
 status.run()

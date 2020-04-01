@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Monospace 9
+font = Source Code Pro 10
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -48,17 +48,18 @@ scrollback_lines = 10000
 
 foreground = #ffffff
 #foreground_bold = #ffffff
-#background = #ffffff
+#background = #000000
 
 # 20% background transparency (requires a compositor)
-background = rgba(63, 63, 63, 0.8)
+background = rgba(0, 0, 0, 0.5)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f
 
 # Colors from color0 to color254 can be set
 color0 = #3f3f3f
-color1 = #705050
+#color1 = #705050
+#color1 = #ff0000
 color2 = #60b48a
 color3 = #dfaf8f
 color4 = #506070
