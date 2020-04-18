@@ -22,6 +22,11 @@
 # display manager : lightdm + gtk-greeter
 # power manager : xfce power manager
 # media control : playerctl
+# ascii displayer : figlet
+
+# Kernel
+# linux-ck-haswell
+# required for a custom kernel : nvidia-dkms
 
 # i3 config file (v4)
 #
@@ -43,6 +48,10 @@ font pango:Source Code Pro 10
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# lock screen
+set $i3lockwall i3lock -i ~/Images/Archlinux.png -t
+bindsym $mod+Ctrl+l exec --no-startup-id $i3lockwall
 
 # xfce power manager
 exec xfce4-power-manager
@@ -128,11 +137,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "coding"
-set $ws2 "university"
-set $ws3 "social"
-set $ws4 "media"
-set $ws5 "system"
+set $ws1 "1:coding"
+set $ws2 "2:university"
+set $ws3 "3:social"
+set $ws4 "4:media"
+set $ws5 "5:system"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -140,11 +149,11 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
@@ -231,4 +240,12 @@ exec picom &
   client.background       #2B2C2B
 
 # set xwallpaper
+exec xwallpaper --stretch ~/Images/wallpaper/*.png
 exec xwallpaper --stretch ~/Images/wallpaper/*.jpg
+
+# run conky
+exec conky -b -c ~/.config/conky/conky-config/conky1.conf
+exec conky -b -c ~/.config/conky/conky-config/conky2.conf
+exec conky -b -c ~/.config/conky/conky-config/conky3.conf
+exec conky -b -c ~/.config/conky/conky-config/conky4.conf
+exec conky -b -c ~/.config/conky/conky-config/conky5.conf

@@ -1,19 +1,26 @@
 from i3pystatus import Status
-
 status = Status()
 
 # Displays clock like this:
 # Tue 30 Jul 11:59:46 PM
 status.register("clock",
-    format="%a %-d %b %X",)
+    format="🗓️ %a %-d %b %X",)
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
 status.register("load")
 
-# Shows your CPU temperature, if you have a Intel CPU
-status.register("temp",
-    format="{temp:.0f}°C",)
+# Shows avg cpu temp
+status.register("shell",
+    format="🌡️ avg cpu temp: {output}°C",
+    command="python ~/.config/i3/i3pystatus/cputemp.py",
+    interval=1,)
+
+# Shows avg cpu freq
+status.register("shell",
+    format="⚡avg cpu freq: {output} MHz",
+    command="python ~/.config/i3/i3pystatus/cpufreq.py",
+    interval=1,)
 
 # Shows the address and up/down state of eth0. If it is up the address is shown in
 # green (the default value of color_up) and the CIDR-address is shown
@@ -24,20 +31,22 @@ status.register("temp",
 # Note: the network module requires PyPI package netifaces
 status.register("network",
     interface="enp3s0",
-    format_up="{v4cidr}",)
+    format_up="🌐{v4cidr}",)
 
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
 status.register("disk",
     path="/",
-    format="{used}/{total}G [{avail}G]",)
+    format="🖴{used}/{total}G [{avail}G]",)
 
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
-    format="♪{volume}",)
+    format="🎵{volume}",
+    on_leftclick="switch_mute")
+
 
 # Shows mpd status
 # Format:
@@ -49,10 +58,8 @@ status.register("mpd",
         "play": "▶",
         "stop": "◾",
     },)
-# Shows weather
-status.register("shell",
-    format="{output}",
-    command="curl wttr.in/Saint-Léger,Belgium?format=3",
-    interval=600,)
 
+# weather
+status.register("custom_weather", interval=600)
+	
 status.run()

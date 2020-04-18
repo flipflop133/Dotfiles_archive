@@ -38,7 +38,7 @@ scrollback_lines = 10000
 #size_hints = false
 
 # "off", "left" or "right"
-#scrollbar = off
+scrollbar = right
 
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
@@ -48,10 +48,10 @@ scrollback_lines = 10000
 
 foreground = #ffffff
 #foreground_bold = #ffffff
-#background = #000000
+background = #444444
 
 # 20% background transparency (requires a compositor)
-background = rgba(0, 0, 0, 0.5)
+#background = rgba(0, 0, 0, 0.5)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f
