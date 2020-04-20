@@ -22,6 +22,7 @@
 # display manager : lightdm + gtk-greeter
 # power manager : xfce power manager
 # media control : playerctl
+# sound control : pulseaudio-ctl
 # ascii displayer : figlet
 
 # Kernel
@@ -62,10 +63,9 @@ exec xfce4-power-manager
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
+bindsym XF86AudioMute exec pulseaudio-ctl mute
 
 # Use playerctl to control media.
 bindsym XF86AudioPlay exec playerctl play-pause  
@@ -137,11 +137,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:coding"
-set $ws2 "2:university"
-set $ws3 "3:social"
-set $ws4 "4:media"
-set $ws5 "5:system"
+set $ws1 "1:coding🖥️"
+set $ws2 "2:university🎓"
+set $ws3 "3:social🧑‍🤝‍🧑"
+set $ws4 "4:media🎵"
+set $ws5 "5:system⚙️"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -227,7 +227,7 @@ bar {
 }
 
 # compositor
-picom --experimental-backends --backend glx
+exec picom --experimental-backends --backend glx
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border

@@ -32,7 +32,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="msapplication-config" content="none">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta property="ts" content="1587206209">
+<meta property="ts" content="1587411173">
 <meta property="og:site_name" content="BrainyQuote">
 <meta property="og:title" content="Quote of the Day">
 <meta property="og:type" content="article">
@@ -46,9 +46,9 @@
 <meta name="twitter:app:id:iphone" content="916307096">
 <meta name="twitter:app:id:ipad" content="916307096">
 <meta name="twitter:creator" content="@BrainyQuote">
-<meta name="twitter:title" content="Quote of the Day April 18th">
-<meta name="twitter:description" content="&quot;Better remain silent, better not even think, if you are not prepared to act.&quot; - Annie Besant">
-<meta name="twitter:image" content="https://www.brainyquote.com/photos_tr/en/a/anniebesant/169913/anniebesant1.jpg">
+<meta name="twitter:title" content="Quote of the Day April 20th">
+<meta name="twitter:description" content="&quot;Perfection is the child of time.&quot; - Joseph Hall">
+<meta name="twitter:image" content="https://www.brainyquote.com/photos_tr/en/j/josephhall/160521/josephhall1.jpg">
 <meta property="og:url" content="https://www.brainyquote.com/quote_of_the_day">
 <link rel="canonical" href="https://www.brainyquote.com/quote_of_the_day">
 <meta name="apple-itunes-app" content="app-id=916307096">
@@ -79,13 +79,13 @@
 <script type="text/javascript">
 JsLOG = [];
 document.BQ_START = new Date().getTime();
-document.BQ_PRED = {"/1008298/BQ_ros_bottom_300x250":{"bq_loc":{"AU":0.93,"IN":0.15,"OtherEU":0.3,"PH":0.24,"GB":0.64,"US":1.45,"CA":0.81,"Other":0.3},"bq_second":{"y":0.85,"n":1.0},"bq_mbl":{"y":0.46,"n":1.0},"bq_auct":{"refresh":1.0,"main":0.52},"bq_vide":{"11":0.75,"12":0.72,"13":0.72,"14":0.74,"15":0.71,"16":0.71,"17":0.66,"18":0.76,"19":0.7,"1":1.13,"2":0.97,"3":0.89,"4":0.85,"5":0.82,"6":0.79,"7":0.77,"8":0.75,"9":0.74,"20":0.67,"10":0.74},"bq_dytm":{"0_18":0.88,"0_12":1.0,"6_18":0.92,"4_18":0.84,"2_18":0.82,"6_12":1.02,"4_12":0.98,"2_12":0.98,"0_0":0.91,"1_0":0.86,"1_18":0.8,"2_0":0.81,"3_0":0.8,"4_0":0.9,"5_0":0.95,"6_0":0.71,"0_6":1.13,"1_6":1.25,"5_18":0.72,"2_6":1.15,"3_6":1.18,"4_6":1.2,"3_18":0.89,"5_6":1.24,"6_6":1.13,"5_12":0.93,"3_12":1.01,"1_12":0.94}},"/1008298/BQ_mobile_anchor":{"bq_loc":{"AU":1.33,"IN":0.48,"OtherEU":0.38,"PH":0.16,"GB":0.9,"US":2.39,"CA":1.26,"Other":0.4},"bq_second":{"n":1.0},"bq_mbl":{"y":1.0,"n":0.61},"bq_auct":{"refresh":0.37,"main":1.0},"bq_vide":{"11":1.02,"12":1.0,"13":1.03,"14":1.0,"15":1.0,"16":1.03,"17":1.02,"18":1.01,"19":1.0,"1":1.02,"2":0.96,"3":0.98,"4":0.99,"5":1.01,"6":1.0,"7":1.04,"8":1.02,"9":1.01,"20":0.91,"10":1.01},"bq_dytm":{"0_18":0.76,"0_12":0.87,"6_18":0.78,"4_18":0.91,"2_18":0.85,"6_12":0.92,"4_12":1.02,"2_12":0.89,"0_0":0.85,"1_0":0.88,"1_18":0.75,"2_0":0.83,"3_0":0.99,"4_0":1.12,"5_0":1.48,"6_0":0.86,"0_6":1.17,"1_6":1.33,"5_18":0.69,"2_6":1.21,"3_6":1.36,"4_6":1.45,"3_18":0.9,"5_6":1.69,"6_6":1.28,"5_12":0.88,"3_12":0.96,"1_12":0.88}},"/1008298/BQ_mobile_320x50":{"bq_loc":{"AU":1.41,"IN":0.16,"OtherEU":0.38,"PH":0.18,"GB":1.02,"US":2.9,"CA":1.16,"Other":0.37},"bq_second":{"y":0.74,"n":1.0},"bq_mbl":{"y":1.0,"n":3.91},"bq_auct":{"refresh":0.99,"main":1.13},"bq_vide":{"11":0.8,"12":0.9,"13":0.63,"14":0.75,"15":0.66,"16":0.96,"17":0.7,"18":0.8,"19":0.73,"1":1.06,"2":0.96,"3":0.84,"4":0.89,"5":0.82,"6":0.86,"7":0.77,"8":0.79,"9":0.81,"20":0.93,"10":0.74},"bq_dytm":{"0_18":0.75,"0_12":1.0,"6_18":0.9,"4_18":0.84,"2_18":0.77,"6_12":1.06,"4_12":1.0,"2_12":0.89,"0_0":1.01,"1_0":0.87,"1_18":0.72,"2_0":0.72,"3_0":0.92,"4_0":1.04,"5_0":1.6,"6_0":0.9,"0_6":1.18,"1_6":1.19,"5_18":0.76,"2_6":0.91,"3_6":1.17,"4_6":1.32,"3_18":0.83,"5_6":2.09,"6_6":1.25,"5_12":1.18,"3_12":0.97,"1_12":0.94}},"/1008298/BQ_ros_square_300x250":{"bq_loc":{"AU":1.26,"IN":0.26,"OtherEU":0.42,"PH":0.3,"GB":0.8,"US":2.01,"CA":1.11,"Other":0.41},"bq_second":{"y":1.93,"n":1.0},"bq_mbl":{"y":0.73,"n":1.69},"bq_auct":{"refresh":0.88,"main":1.25},"bq_vide":{"11":0.97,"12":0.94,"13":0.96,"14":0.97,"15":0.94,"16":0.96,"17":0.93,"18":0.97,"19":0.97,"1":1.03,"2":0.96,"3":0.97,"4":0.94,"5":0.96,"6":0.94,"7":0.95,"8":0.94,"9":0.95,"20":0.93,"10":0.93},"bq_dytm":{"0_18":0.76,"0_12":1.03,"6_18":0.88,"4_18":0.88,"2_18":0.8,"6_12":0.95,"4_12":1.08,"2_12":1.04,"0_0":0.95,"1_0":0.81,"1_18":0.76,"2_0":0.78,"3_0":0.85,"4_0":0.89,"5_0":1.09,"6_0":0.74,"0_6":1.19,"1_6":1.33,"5_18":0.62,"2_6":1.25,"3_6":1.34,"4_6":1.31,"3_18":0.81,"5_6":1.43,"6_6":1.13,"5_12":0.94,"3_12":1.08,"1_12":1.0}},"/1008298/BQ_ros_middle_300x250":{"bq_loc":{"AU":1.27,"IN":0.17,"OtherEU":0.44,"PH":0.33,"GB":0.88,"US":2.06,"CA":1.14,"Other":0.42},"bq_second":{"y":1.97,"n":1.0},"bq_mbl":{"y":0.74,"n":1.68},"bq_auct":{"refresh":0.92,"main":1.15},"bq_vide":{"11":0.98,"12":0.97,"13":0.99,"14":0.97,"15":0.95,"16":0.98,"17":0.94,"18":1.02,"19":1.0,"1":1.01,"2":0.98,"3":0.99,"4":0.95,"5":0.98,"6":0.95,"7":0.97,"8":0.94,"9":0.97,"20":0.99,"10":0.94},"bq_dytm":{"0_18":0.74,"0_12":1.07,"6_18":0.93,"4_18":0.9,"2_18":0.79,"6_12":0.97,"4_12":1.11,"2_12":1.03,"0_0":1.0,"1_0":0.78,"1_18":0.76,"2_0":0.78,"3_0":0.86,"4_0":0.91,"5_0":1.11,"6_0":0.72,"0_6":1.23,"1_6":1.24,"5_18":0.6,"2_6":1.16,"3_6":1.3,"4_6":1.29,"3_18":0.81,"5_6":1.52,"6_6":1.06,"5_12":1.0,"3_12":1.08,"1_12":0.99}},"/1008298/BQ_ros_top_728x90":{"bq_loc":{"AU":0.83,"IN":0.12,"OtherEU":0.3,"PH":0.12,"GB":0.66,"US":1.35,"CA":0.73,"Other":0.28},"bq_second":{"n":1.0},"bq_mbl":{"y":0.24,"n":1.0},"bq_auct":{"refresh":0.96,"main":1.21},"bq_vide":{"11":0.81,"12":0.79,"13":0.79,"14":0.8,"15":0.74,"16":0.75,"17":0.79,"18":0.83,"19":0.84,"1":1.12,"2":0.99,"3":0.91,"4":0.9,"5":0.88,"6":0.83,"7":0.82,"8":0.82,"9":0.76,"20":0.75,"10":0.83},"bq_dytm":{"0_18":0.81,"0_12":0.94,"6_18":0.81,"4_18":0.78,"2_18":0.82,"6_12":0.89,"4_12":1.01,"2_12":0.95,"0_0":0.82,"1_0":0.86,"1_18":0.76,"2_0":0.85,"3_0":0.89,"4_0":0.96,"5_0":0.97,"6_0":0.68,"0_6":1.11,"1_6":1.25,"5_18":0.66,"2_6":1.19,"3_6":1.2,"4_6":1.25,"3_18":0.85,"5_6":1.23,"6_6":1.1,"5_12":0.92,"3_12":1.01,"1_12":0.9}},"/1008298/BQ_ros_center_300x250":{"bq_loc":{"AU":1.04,"IN":0.15,"OtherEU":0.35,"PH":0.25,"GB":0.68,"US":1.49,"CA":0.93,"Other":0.32},"bq_second":{"y":2.22,"n":1.0},"bq_mbl":{"y":0.61,"n":1.0},"bq_auct":{"refresh":0.95,"main":1.23},"bq_vide":{"11":0.74,"12":0.73,"13":0.73,"14":0.72,"15":0.71,"16":0.7,"17":0.68,"18":0.7,"19":0.75,"1":1.14,"2":0.97,"3":0.88,"4":0.86,"5":0.82,"6":0.81,"7":0.78,"8":0.78,"9":0.76,"20":0.65,"10":0.73},"bq_dytm":{"0_18":0.89,"0_12":1.01,"6_18":0.89,"4_18":0.83,"2_18":0.82,"6_12":0.99,"4_12":0.98,"2_12":0.99,"0_0":0.9,"1_0":0.83,"1_18":0.79,"2_0":0.83,"3_0":0.81,"4_0":0.89,"5_0":0.98,"6_0":0.72,"0_6":1.12,"1_6":1.25,"5_18":0.7,"2_6":1.16,"3_6":1.21,"4_6":1.21,"3_18":0.87,"5_6":1.27,"6_6":1.11,"5_12":0.94,"3_12":1.0,"1_12":0.95}}};
+document.BQ_PRED = {"/1008298/BQ_ros_bottom_300x250":{"bq_loc":{"AU":0.95,"IN":0.14,"OtherEU":0.3,"PH":0.21,"GB":0.64,"US":1.46,"CA":0.84,"Other":0.3},"bq_second":{"y":0.75,"n":1.0},"bq_mbl":{"y":0.46,"n":1.0},"bq_auct":{"refresh":1.0,"main":0.6},"bq_vide":{"11":0.75,"12":0.73,"13":0.72,"14":0.73,"15":0.71,"16":0.69,"17":0.67,"18":0.77,"19":0.72,"1":1.13,"2":0.98,"3":0.9,"4":0.86,"5":0.82,"6":0.79,"7":0.78,"8":0.76,"9":0.75,"20":0.65,"10":0.73},"bq_dytm":{"0_18":0.75,"0_12":0.94,"6_18":1.02,"4_18":0.81,"2_18":0.81,"6_12":1.05,"4_12":0.97,"2_12":0.97,"0_0":1.05,"1_0":0.8,"1_18":0.79,"2_0":0.8,"3_0":0.79,"4_0":0.89,"5_0":0.82,"6_0":0.96,"0_6":1.25,"1_6":1.24,"5_18":0.9,"2_6":1.14,"3_6":1.16,"4_6":1.19,"3_18":0.88,"5_6":1.23,"6_6":1.16,"5_12":1.01,"3_12":1.0,"1_12":0.93}},"/1008298/BQ_mobile_anchor":{"bq_loc":{"AU":1.25,"IN":0.54,"OtherEU":0.38,"PH":0.16,"GB":0.84,"US":2.27,"CA":1.19,"Other":0.39},"bq_second":{"n":1.0},"bq_mbl":{"y":1.0,"n":0.61},"bq_auct":{"refresh":0.53,"main":1.0},"bq_vide":{"11":1.03,"12":1.03,"13":1.04,"14":1.02,"15":1.02,"16":1.02,"17":1.03,"18":1.02,"19":1.05,"1":1.01,"2":0.98,"3":1.0,"4":1.01,"5":1.04,"6":1.01,"7":1.05,"8":1.04,"9":1.02,"20":0.9,"10":1.04},"bq_dytm":{"0_18":0.66,"0_12":0.8,"6_18":1.08,"4_18":0.8,"2_18":0.76,"6_12":1.14,"4_12":0.92,"2_12":0.8,"0_0":1.4,"1_0":0.79,"1_18":0.68,"2_0":0.74,"3_0":0.89,"4_0":1.01,"5_0":1.12,"6_0":1.13,"0_6":1.55,"1_6":1.19,"5_18":0.99,"2_6":1.09,"3_6":1.22,"4_6":1.3,"3_18":0.81,"5_6":1.57,"6_6":2.01,"5_12":1.14,"3_12":0.87,"1_12":0.79}},"/1008298/BQ_mobile_320x50":{"bq_loc":{"AU":1.38,"IN":0.17,"OtherEU":0.37,"PH":0.17,"GB":0.98,"US":2.75,"CA":1.14,"Other":0.36},"bq_second":{"y":0.52,"n":1.0},"bq_mbl":{"y":1.0,"n":3.61},"bq_auct":{"refresh":0.99,"main":1.21},"bq_vide":{"11":0.84,"12":0.89,"13":0.64,"14":0.79,"15":0.82,"16":0.97,"17":0.79,"18":0.87,"19":1.31,"1":1.05,"2":0.95,"3":0.88,"4":0.91,"5":0.85,"6":0.86,"7":0.83,"8":0.91,"9":0.78,"20":0.97,"10":0.69},"bq_dytm":{"0_18":0.63,"0_12":0.99,"6_18":1.3,"4_18":0.76,"2_18":0.71,"6_12":1.4,"4_12":0.92,"2_12":0.82,"0_0":1.66,"1_0":0.77,"1_18":0.66,"2_0":0.66,"3_0":0.85,"4_0":0.97,"5_0":1.18,"6_0":1.24,"0_6":1.56,"1_6":1.1,"5_18":1.29,"2_6":0.84,"3_6":1.08,"4_6":1.22,"3_18":0.77,"5_6":2.14,"6_6":1.46,"5_12":1.79,"3_12":0.9,"1_12":0.87}},"/1008298/BQ_ros_square_300x250":{"bq_loc":{"AU":1.28,"IN":0.24,"OtherEU":0.41,"PH":0.25,"GB":0.79,"US":2.01,"CA":1.12,"Other":0.39},"bq_second":{"y":2.9,"n":1.0},"bq_mbl":{"y":0.73,"n":1.66},"bq_auct":{"refresh":0.88,"main":1.24},"bq_vide":{"11":0.96,"12":0.94,"13":0.96,"14":0.96,"15":0.94,"16":0.94,"17":0.93,"18":0.96,"19":0.96,"1":1.03,"2":0.96,"3":0.96,"4":0.93,"5":0.95,"6":0.93,"7":0.95,"8":0.93,"9":0.95,"20":0.9,"10":0.91},"bq_dytm":{"0_18":0.61,"0_12":0.91,"6_18":0.9,"4_18":0.83,"2_18":0.78,"6_12":1.23,"4_12":1.05,"2_12":1.01,"0_0":1.14,"1_0":0.74,"1_18":0.73,"2_0":0.76,"3_0":0.82,"4_0":0.86,"5_0":0.87,"6_0":0.94,"0_6":1.35,"1_6":1.3,"5_18":0.87,"2_6":1.21,"3_6":1.3,"4_6":1.27,"3_18":0.79,"5_6":1.32,"6_6":1.35,"5_12":1.13,"3_12":1.05,"1_12":0.97}},"/1008298/BQ_ros_middle_300x250":{"bq_loc":{"AU":1.31,"IN":0.17,"OtherEU":0.44,"PH":0.26,"GB":0.88,"US":2.1,"CA":1.17,"Other":0.41},"bq_second":{"y":1.63,"n":1.0},"bq_mbl":{"y":0.74,"n":1.67},"bq_auct":{"refresh":0.92,"main":1.16},"bq_vide":{"11":0.98,"12":0.97,"13":1.0,"14":0.97,"15":0.97,"16":0.95,"17":0.96,"18":1.01,"19":1.0,"1":1.01,"2":0.98,"3":0.98,"4":0.96,"5":0.97,"6":0.96,"7":0.98,"8":0.94,"9":0.97,"20":0.98,"10":0.93},"bq_dytm":{"0_18":0.59,"0_12":0.94,"6_18":0.91,"4_18":0.86,"2_18":0.77,"6_12":1.06,"4_12":1.09,"2_12":1.01,"0_0":1.18,"1_0":0.72,"1_18":0.75,"2_0":0.77,"3_0":0.84,"4_0":0.89,"5_0":0.9,"6_0":0.9,"0_6":1.39,"1_6":1.22,"5_18":0.86,"2_6":1.14,"3_6":1.28,"4_6":1.26,"3_18":0.8,"5_6":1.47,"6_6":1.17,"5_12":1.29,"3_12":1.06,"1_12":0.98}},"/1008298/BQ_ros_top_728x90":{"bq_loc":{"AU":0.85,"IN":0.12,"OtherEU":0.3,"PH":0.12,"GB":0.66,"US":1.36,"CA":0.75,"Other":0.29},"bq_second":{"n":1.0},"bq_mbl":{"y":0.23,"n":1.0},"bq_auct":{"refresh":0.97,"main":1.19},"bq_vide":{"11":0.79,"12":0.77,"13":0.75,"14":0.84,"15":0.72,"16":0.76,"17":0.77,"18":0.81,"19":0.81,"1":1.11,"2":1.0,"3":0.91,"4":0.9,"5":0.87,"6":0.85,"7":0.82,"8":0.81,"9":0.76,"20":0.77,"10":0.83},"bq_dytm":{"0_18":0.68,"0_12":0.85,"6_18":0.99,"4_18":0.76,"2_18":0.81,"6_12":0.98,"4_12":1.0,"2_12":0.94,"0_0":0.98,"1_0":0.82,"1_18":0.76,"2_0":0.84,"3_0":0.88,"4_0":0.94,"5_0":0.88,"6_0":0.95,"0_6":1.16,"1_6":1.23,"5_18":0.86,"2_6":1.17,"3_6":1.19,"4_6":1.23,"3_18":0.84,"5_6":1.21,"6_6":1.13,"5_12":0.99,"3_12":1.0,"1_12":0.9}},"/1008298/BQ_ros_center_300x250":{"bq_loc":{"AU":1.07,"IN":0.15,"OtherEU":0.35,"PH":0.22,"GB":0.68,"US":1.49,"CA":0.96,"Other":0.31},"bq_second":{"y":2.2,"n":1.0},"bq_mbl":{"y":0.59,"n":1.0},"bq_auct":{"refresh":0.94,"main":1.24},"bq_vide":{"11":0.74,"12":0.75,"13":0.73,"14":0.72,"15":0.73,"16":0.7,"17":0.69,"18":0.7,"19":0.73,"1":1.14,"2":0.98,"3":0.89,"4":0.87,"5":0.83,"6":0.82,"7":0.79,"8":0.78,"9":0.75,"20":0.63,"10":0.72},"bq_dytm":{"0_18":0.75,"0_12":0.94,"6_18":1.0,"4_18":0.8,"2_18":0.81,"6_12":1.04,"4_12":0.97,"2_12":0.98,"0_0":1.04,"1_0":0.78,"1_18":0.78,"2_0":0.82,"3_0":0.8,"4_0":0.89,"5_0":0.84,"6_0":0.89,"0_6":1.25,"1_6":1.24,"5_18":0.85,"2_6":1.15,"3_6":1.2,"4_6":1.2,"3_18":0.86,"5_6":1.23,"6_6":1.17,"5_12":1.0,"3_12":0.99,"1_12":0.94}}};
 window.infoRevn = {a9:false,adMargin:1000,adbShow:false,adxFlPct:100,allAdPages:6,auctTimeoutAdmin:3000,bidDivs:false,ctTarg:{"bq_ct":"idxd","bq_idxId":"idxd000001","bq_pg":"f"},ddBullfrog:false,ddTLog:false,delayAuctionMargin:1200,delayAuctions:true,delayDisplay:true,drpP:0,firstInfScrollPos:2,forcebdrp:null,gaDisabledBasedOnPageType:false,hasRightRail:false,infScrollSlotsPerAuction:2,infScrollSpacing:5,intlDrp:10,logPn:false,maxBidMult:175,pbBidCaching:false,pbSyncDelay:3000,pbSyncsPerBidder:5,pubcid:true,refreshInterval:0,revnOn:true,secondChance:false,seoExpGrp:"na",smDefault:7,smLoc:6,smMvsD:2,tadpole:false,uflrEnabled:true,uflrGlobal:true,uflrPct:20,usDrp:20};
-window.infoSvr = {RID:"3789813",isAws:true,isDev:false,isLocal:false,isProd:true,svrUID:"i-0ecbfdcc88df4abcd",svrVersion:"9.8.7:3789813"};
-window.infoReq = {abgrp:"b",country:"BE",cpageNum:1,curl:"/quote_of_the_day",domainId:null,evtTk:"RFMgWxYYCDoHNyMgPFk9AgRgCkJLEDolBC0ZAR89Y2MXIQFqYiVaYBciAzM0CUlHMHBhcUEDBwl9CiEJMmQMAwQ4P1tUJyUTAyllfwJvdn8eMhkoIwoiBAIkPilfMh9mOmNAIDAoEw4jASAoQx5qDnoxfxJPchR/OQdsEkxyDxNOenIyOiIZfRQLJEkTHjBQBSghLVQxURRcUXoEd0gHWREMOgYfEBoYHSlBWil2NElOMww=",gaPageType:"qotd",langc:"en",logTiming:false,lpageNum:15,mobile:false,ngmods:[],region:"EU",searchAutoFocus:true,userAgent:"other",userId:"na",vid:"343dbd599aeceab78596c7b436c5b453"};
+window.infoSvr = {RID:"3789813",isAws:true,isDev:false,isLocal:false,isProd:true,svrUID:"i-05274acd1081307c9",svrVersion:"9.8.7:3789813"};
+window.infoReq = {abgrp:"a",country:"BE",cpageNum:1,curl:"/quote_of_the_day",domainId:null,evtTk:"RFMgWxYYCDoHNyMgPFk9AgRgCkJLEDolBC0ZAR89Y2MXIQFqYiVaYBciAzM0CUlHMGdyZUMUFBV4Hg8VMmcMPhEuP1tUJjU5AylmXUV5ZnMeMRkGIAocD1okPjlZMSJpKGNAIDAoEw4jASAoQx5qDnoxfxJPchR/OQdsEkxyDxNOenIyOiIZfRkeFkQMGiFQIy4sPAkZDVZ5RURSS2s9WhgRJhUKKCs4Azg9ND5tGkRLbzo=",gaPageType:"qotd",langc:"en",logTiming:false,lpageNum:15,mobile:false,ngmods:[],region:"EU",searchAutoFocus:true,userAgent:"other",userId:"na",vid:"343dbd599aeceab78596c7b436c5b453"};
 window.infoUI = {abBtn:"OK",abMsg:"BrainyQuote loves you! Please love us back by whitelisting our site.",asyncScripts:["later"],infEnabled:true,infLdMargin:1200,redirDom:true,useGrid:false};
 document.BQ_ADCFG = {"procfg":{"appnexus":{"disc":"0.0","sync":true},"conversant":{"disc":"0.04"},"indexExchange":{"disc":"0.01"},"openx":{"disc":"0.01","sync":true},"sovrn":{"disc":"0.05","sync":true},"rubicon":{"disc":"0.0","sync":true},"criteo":{"disc":"0.02"}},"placements":[{"elementId":"div-gpt-ad-1418667263920-4","sizes":[[300,250],[1,1]],"masonryUseAllowed":true,"name":"/1008298/BQ_ros_square_300x250","sn":"sqT","bdrs":{"criteo":{"uf":false,"am":"b","zoneIds":[1320648],"disc":0.02},"appnexus":{"uf":true,"bfp":0,"am":"b","plid":6524299,"disc":0.0},"rubicon":{"uf":true,"bfp":0,"am":"b","zone":457864,"sizekey":15,"pos":"atf","disc":0.0},"conversant":{"uf":true,"bfp":0,"am":"b","cnvSizes":[[300,250]]},"openx":{"uf":true,"bfp":0,"am":"b","oxAdUnitId":538124062},"sovrn":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"Header_BQ_ros_square_300x250","tagId":335425,"width":300,"height":250}]},"indexExchange":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"IE_Desktop_top_2","tagId":175234,"tagNum":2,"width":300,"height":250}]}},"hbSizes":[[300,250]]},{"elementId":"div-gpt-ad-1418667263920-3","sizes":[[300,250],[1,1]],"masonryUseAllowed":true,"name":"/1008298/BQ_ros_middle_300x250","sn":"sqM","bdrs":{"criteo":{"uf":false,"am":"b","zoneIds":[1320647],"disc":0.02},"appnexus":{"uf":true,"bfp":0,"am":"b","plid":6524304,"disc":0.0},"rubicon":{"uf":true,"bfp":0,"am":"b","zone":457866,"sizekey":15,"pos":"atf","disc":0.0},"conversant":{"uf":true,"bfp":0,"am":"b","cnvSizes":[[300,250]]},"openx":{"uf":true,"bfp":0,"am":"b","oxAdUnitId":538124063},"sovrn":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"Header_BQ_ros_middle_300x250","tagId":335426,"width":300,"height":250}]},"indexExchange":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"IE_Desktop_mid_5","tagId":175237,"tagNum":5,"width":300,"height":250}]}},"hbSizes":[[300,250]]},{"elementId":"div-gpt-ad-1418667263920-5","sizes":[[728,90],[1,1]],"masonryUseAllowed":false,"name":"/1008298/BQ_ros_top_728x90","sn":"d-bT","bdrs":{"criteo":{"uf":false,"am":"b","zoneIds":[1320651],"disc":0.02},"appnexus":{"uf":true,"bfp":0,"am":"b","plid":6524298,"disc":0.0},"rubicon":{"uf":true,"bfp":0,"am":"b","zone":455084,"sizekey":2,"pos":"atf","disc":0.0},"conversant":{"uf":true,"bfp":0,"am":"b","cnvSizes":[[728,90]]},"openx":{"uf":true,"bfp":0,"am":"b","oxAdUnitId":538124061},"sovrn":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"Header_BQ_ros_top_728x90","tagId":335424,"width":728,"height":90}]},"indexExchange":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"IE_Desktop_top_1","tagId":164175,"tagNum":1,"width":728,"height":90}]}},"hbSizes":[[728,90]]},{"elementId":"div-gpt-ad-1418667263920-1","sizes":[[300,250],[1,1]],"masonryUseAllowed":true,"name":"/1008298/BQ_ros_bottom_300x250","sn":"sqB","bdrs":{"criteo":{"uf":false,"am":"b","zoneIds":[1320645],"disc":0.02},"appnexus":{"uf":true,"bfp":0,"am":"b","plid":6524310,"disc":0.0},"rubicon":{"uf":true,"bfp":0,"am":"b","zone":457870,"sizekey":15,"pos":"atf","disc":0.0},"conversant":{"uf":true,"bfp":0,"am":"b","cnvSizes":[[300,250]]},"openx":{"uf":true,"bfp":0,"am":"b","oxAdUnitId":538124065},"sovrn":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"Header_BQ_ros_bottom_300x250","tagId":335428,"width":300,"height":250}]},"indexExchange":{"uf":true,"bfp":0,"am":"b","tags":[{"tagName":"IE_Desktop_center_7","tagId":175239,"tagNum":7,"width":300,"height":250}]}},"hbSizes":[[300,250]]}],"curi":"/quote_of_the_day"};
-document.BQ_EDATA = {"d":[140,210,30,32,215,130,75,130,70,45,31,78,61,46,94,55,66,91,68,21],"v":["mbPerc","mbPerc_m","adxPerc","adxPerc_m","brealtime_bfp_m","brealtime_bfp_d","conversant_bfp_m","conversant_bfp_d","sovrn_bfp_m","sovrn_bfp_d","appnexus_pri","amazon_pri","openx_pri","sovrn_pri","indexExchange_pri","brealtime_pri","districtm_pri","rubicon_pri","criteo_pri","conversant_pri"],"cName":"c024","cNum":24};
+document.BQ_EDATA = {"d":[220,220,30,26,95,165,195,50,135,130,27,85,53,46,94,36,47,80,13,35],"v":["mbPerc","mbPerc_m","adxPerc","adxPerc_m","brealtime_bfp_m","brealtime_bfp_d","conversant_bfp_m","conversant_bfp_d","sovrn_bfp_m","sovrn_bfp_d","appnexus_pri","amazon_pri","openx_pri","sovrn_pri","indexExchange_pri","brealtime_pri","districtm_pri","rubicon_pri","criteo_pri","conversant_pri"],"cName":"c026","cNum":26};
 document.BQ_SVR_PRED = {"/1008298/BQ_ros_bottom_300x250":0.59,"/1008298/BQ_mobile_anchor":0.39,"/1008298/BQ_mobile_320x50":0.23,"/1008298/BQ_ros_square_300x250":0.43,"/1008298/BQ_ros_middle_300x250":0.37,"/1008298/BQ_ros_top_728x90":0.64,"/1008298/BQ_ros_center_300x250":0.83};
 document.BQ_UNIT_LOOKUP = {"/1008298/BQ_ros_bottom_300x250":"div-gpt-ad-1418667263920-1","/1008298/BQ_ros_square_300x250":"div-gpt-ad-1418667263920-4","/1008298/BQ_ros_middle_300x250":"div-gpt-ad-1418667263920-3","/1008298/BQ_ros_top_728x90":"div-gpt-ad-1418667263920-5"};
 document.BQ_SLOTS = [["main","/1008298/BQ_ros_square_300x250","div-gpt-ad-1418667263920-4"],["main","/1008298/BQ_ros_middle_300x250","div-gpt-ad-1418667263920-3"],["main","/1008298/BQ_ros_top_728x90","div-gpt-ad-1418667263920-5"]];
@@ -207,7 +207,7 @@ Quote of the Day
 </h1>
 </div>
 <ul class="nav navbar-nav navbar-right hidden-1col">
-<li><a href="/share/fb/u?url=%2Fquote_of_the_day" class="fa-lg sh-fb sh-grey" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a></li><li><a href="/share/tw/u?url=%2Fquote_of_the_day&ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a></li><li><a href="/share/li/u?url=%2Fquote_of_the_day&ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-li sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="/share/fb/u?url=%2Fquote_of_the_day" class="fa-lg sh-fb sh-grey" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a></li><li><a href="/share/tw/u?url=%2Fquote_of_the_day&ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a></li><li><a href="/share/li/u?url=%2Fquote_of_the_day&ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-li sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a></li>
 </ul>
 </nav>
 </div>
@@ -224,7 +224,7 @@ This site requires Javascript to function properly, please enable it.
 <div class="qotdDayHeaderBar">
 <div class="dayTitleWrapper">
 <div class="qotdSubt">
-April 18th
+April 20th
 </div>
 </div>
 </div>
@@ -232,23 +232,20 @@ April 18th
 <div class="row">
 <div class="col-xs-8 col-md-8">
 <div class="bqQt" style="margin:0;">
-<a title="view quote" href="/quotes/annie_besant_169913" class="oncl_q"><img id="qimage_169913" data-img-url="/photos_tr/en/a/anniebesant/169913/anniebesant1-2x.jpg" class="p-qotd bqPhotoDefault bqPhotoDefaultFw img-responsive delayedPhotoLoad" src="/images/600x315.png" alt="Better remain silent, better not even think, if you are not prepared to act. - Annie Besant"></a>
-<div class="qotdNewSh b-qt qt_169913">
+<a title="view quote" href="/quotes/joseph_hall_160521" class="oncl_q"><img id="qimage_160521" data-img-url="/photos_tr/en/j/josephhall/160521/josephhall1-2x.jpg" class="p-qotd bqPhotoDefault bqPhotoDefaultFw img-responsive delayedPhotoLoad" src="/images/600x315.png" alt="Perfection is the child of time. - Joseph Hall"></a>
+<div class="qotdNewSh b-qt qt_160521">
 <div style="padding:3px">
-<a href="/share/fb/169913" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/169913?ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/169913?ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
+<a href="/share/fb/160521" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/160521?ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/160521?ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
 <span ng-show="showMemberButtons()" class="bqAddQuote bqAddQuoteLg">
-<span data-ng-click="" data-ng-class="favCssClass(169913)" class="fa favHeart pointerCursor sh-grey"></span
-><span data-ng-click="" data-ng-class="collectionCssClass(169913)" class="fa favAddToCol pointerCursor sh-grey"></span>
+<span data-ng-click="" data-ng-class="favCssClass(160521)" class="fa favHeart pointerCursor sh-grey"></span
+><span data-ng-click="" data-ng-class="collectionCssClass(160521)" class="fa favAddToCol pointerCursor sh-grey"></span>
 </span>
 </div>
 <div class="qll-dsk-kw-box">
 <div class="kw-box">
-<a href="/topics/you-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">You</a>
-<a href="/topics/better-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Better</a>
-<a href="/topics/think-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Think</a>
-<a href="/topics/act-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Act</a>
-<a href="/topics/silent-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="4">Silent</a>
-<a href="/topics/even-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="5">Even</a>
+<a href="/topics/time-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Time</a>
+<a href="/topics/perfection-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Perfection</a>
+<a href="/topics/child-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Child</a>
 </div>
 </div>
 </div>
@@ -258,32 +255,32 @@ April 18th
 <div>
 <div class="boxy" style="width:302px; padding:12px 20px 10px 20px; background-color:white">
 <h2 style="border-bottom: 0; padding-bottom: 4px">
-Birthdays on April 18th
+Birthdays on April 20th
 </h2>
 <div style="padding: 0; min-height:89px;">
 <table class="qotdBdTbl">
 <tr>
 <td class="qotdBdRow qotdBdRowFirst">
-<a href="/authors/conan-obrien-quotes">Conan O&#39;Brien</a>
+<a href="/authors/jessica-lange-quotes">Jessica Lange</a>
 </td>
 <td class="qotdBdRow">
-<a href="/authors/clarence-darrow-quotes">Clarence Darrow</a>
+<a href="/authors/carmen-electra-quotes">Carmen Electra</a>
 </td>
 </tr>
 <tr>
 <td class="qotdBdRow qotdBdRowFirst">
-<a href="/authors/george-henry-lewes-quotes">George Henry Lewes</a>
+<a href="/authors/shemar-moore-quotes">Shemar Moore</a>
 </td>
 <td class="qotdBdRow">
-<a href="/authors/christian-slater-quotes">Christian Slater</a>
+<a href="/authors/joan-miro-quotes">Joan Miro</a>
 </td>
 </tr>
 <tr>
 <td class="qotdBdRow qotdBdRowFirst">
-<a href="/authors/melissa-joan-hart-quotes">Melissa Joan Hart</a>
+<a href="/authors/george-takei-quotes">George Takei</a>
 </td>
 <td class="qotdBdRow">
-<a href="/birthdays/april_18" class="btn btn-xs btn-primary" style="margin-top:4px;">More</a>
+<a href="/birthdays/april_20" class="btn btn-xs btn-primary" style="margin-top:4px;">More</a>
 </td>
 </tr>
 </table>
@@ -305,25 +302,25 @@ Birthdays on April 18th
 <h2 class="qotd-h2">Quote of the Day</h2>
 <div class="qotd-h-short">
 <div class="clearfix">
-<a href="/quotes/benjamin_franklin_123466" class="b-qt qt_123466 oncl_q" title="view quote">A penny saved is a penny earned.</a>
+<a href="/quotes/robert_h_goddard_390146" class="b-qt qt_390146 oncl_q" title="view quote">It is difficult to say what is impossible, for the dream of yesterday is the hope of today and the reality of tomorrow.</a>
 <div style="text-align:left">
-<a href="/authors/benjamin-franklin-quotes" class="bq-aut qa_123466 oncl_a" title="view author">Benjamin Franklin</a>
+<a href="/authors/robert-h-goddard-quotes" class="bq-aut qa_390146 oncl_a" title="view author">Robert H. Goddard</a>
 </div>
 </div>
 </div>
 <div class="qbn-box">
-<a href="/share/fb/123466" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/123466?ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/123466?ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
+<a href="/share/fb/390146" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/390146?ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/390146?ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
 <span ng-show="showMemberButtons()" class="bqAddQuote bqAddQuoteLg">
-<span data-ng-click="" data-ng-class="favCssClass(123466)" class="fa favHeart pointerCursor sh-grey"></span
-><span data-ng-click="" data-ng-class="collectionCssClass(123466)" class="fa favAddToCol pointerCursor sh-grey"></span>
+<span data-ng-click="" data-ng-class="favCssClass(390146)" class="fa favHeart pointerCursor sh-grey"></span
+><span data-ng-click="" data-ng-class="collectionCssClass(390146)" class="fa favAddToCol pointerCursor sh-grey"></span>
 </span>
 </div>
 <div class="qll-dsk-kw-box">
 <div class="kw-box">
-<a href="/topics/money-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Money</a>
-<a href="/topics/penny-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Penny</a>
-<a href="/topics/earned-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Earned</a>
-<a href="/topics/saved-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Saved</a>
+<a href="/topics/easter-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Easter</a>
+<a href="/topics/hope-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Hope</a>
+<a href="/topics/today-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Today</a>
+<a href="/topics/tomorrow-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Tomorrow</a>
 </div>
 </div>
 </div>
@@ -337,25 +334,25 @@ Birthdays on April 18th
 <h2 class="qotd-h2">Love Quote of the Day</h2>
 <div class="qotd-h-short">
 <div class="clearfix">
-<a href="/quotes/joyce_brothers_131256" class="b-qt qt_131256 oncl_q" title="view quote">The best proof of love is trust.</a>
+<a href="/quotes/frank_a_clark_106520" class="b-qt qt_106520 oncl_q" title="view quote">A baby is born with a need to be loved - and never outgrows it.</a>
 <div style="text-align:left">
-<a href="/authors/joyce-brothers-quotes" class="bq-aut qa_131256 oncl_a" title="view author">Joyce Brothers</a>
+<a href="/authors/frank-a-clark-quotes" class="bq-aut qa_106520 oncl_a" title="view author">Frank A. Clark</a>
 </div>
 </div>
 </div>
 <div class="qbn-box">
-<a href="/share/fb/131256" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/131256?ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/131256?ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
+<a href="/share/fb/106520" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/106520?ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/106520?ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
 <span ng-show="showMemberButtons()" class="bqAddQuote bqAddQuoteLg">
-<span data-ng-click="" data-ng-class="favCssClass(131256)" class="fa favHeart pointerCursor sh-grey"></span
-><span data-ng-click="" data-ng-class="collectionCssClass(131256)" class="fa favAddToCol pointerCursor sh-grey"></span>
+<span data-ng-click="" data-ng-class="favCssClass(106520)" class="fa favHeart pointerCursor sh-grey"></span
+><span data-ng-click="" data-ng-class="collectionCssClass(106520)" class="fa favAddToCol pointerCursor sh-grey"></span>
 </span>
 </div>
 <div class="qll-dsk-kw-box">
 <div class="kw-box">
-<a href="/topics/love-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Love</a>
-<a href="/topics/best-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Best</a>
-<a href="/topics/love-is-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Love Is</a>
-<a href="/topics/trust-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Trust</a>
+<a href="/topics/parenting-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Parenting</a>
+<a href="/topics/never-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Never</a>
+<a href="/topics/loved-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Loved</a>
+<a href="/topics/born-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Born</a>
 </div>
 </div>
 </div>
@@ -369,25 +366,25 @@ Birthdays on April 18th
 <h2 class="qotd-h2">Art Quote of the Day</h2>
 <div class="qotd-h-short">
 <div class="clearfix">
-<a href="/quotes/paul_gauguin_382087" class="b-qt qt_382087 oncl_q" title="view quote">Many excellent cooks are spoilt by going into the arts.</a>
+<a href="/quotes/robert_schumann_104110" class="b-qt qt_104110 oncl_q" title="view quote">To send light into the darkness of men&#39;s hearts - such is the duty of the artist.</a>
 <div style="text-align:left">
-<a href="/authors/paul-gauguin-quotes" class="bq-aut qa_382087 oncl_a" title="view author">Paul Gauguin</a>
+<a href="/authors/robert-schumann-quotes" class="bq-aut qa_104110 oncl_a" title="view author">Robert Schumann</a>
 </div>
 </div>
 </div>
 <div class="qbn-box">
-<a href="/share/fb/382087" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/382087?ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/382087?ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
+<a href="/share/fb/104110" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/104110?ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/104110?ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
 <span ng-show="showMemberButtons()" class="bqAddQuote bqAddQuoteLg">
-<span data-ng-click="" data-ng-class="favCssClass(382087)" class="fa favHeart pointerCursor sh-grey"></span
-><span data-ng-click="" data-ng-class="collectionCssClass(382087)" class="fa favAddToCol pointerCursor sh-grey"></span>
+<span data-ng-click="" data-ng-class="favCssClass(104110)" class="fa favHeart pointerCursor sh-grey"></span
+><span data-ng-click="" data-ng-class="collectionCssClass(104110)" class="fa favAddToCol pointerCursor sh-grey"></span>
 </span>
 </div>
 <div class="qll-dsk-kw-box">
 <div class="kw-box">
-<a href="/topics/cooks-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Cooks</a>
-<a href="/topics/going-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Going</a>
-<a href="/topics/excellent-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Excellent</a>
-<a href="/topics/arts-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Arts</a>
+<a href="/topics/art-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Art</a>
+<a href="/topics/darkness-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Darkness</a>
+<a href="/topics/light-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Light</a>
+<a href="/topics/men-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Men</a>
 </div>
 </div>
 </div>
@@ -403,25 +400,25 @@ Birthdays on April 18th
 <h2 class="qotd-h2">Nature Quote of the Day</h2>
 <div class="qotd-h-tall">
 <div class="clearfix">
-<a href="/quotes/edouard_manet_304496" class="b-qt qt_304496 oncl_q" title="view quote">There are no lines in nature, only areas of colour, one against another.</a>
+<a href="/quotes/amy_sedaris_410013" class="b-qt qt_410013 oncl_q" title="view quote">I have always wanted a bunny and I&#39;ll always have a rabbit the rest of my life.</a>
 <div style="text-align:left">
-<a href="/authors/edouard-manet-quotes" class="bq-aut qa_304496 oncl_a" title="view author">Edouard Manet</a>
+<a href="/authors/amy-sedaris-quotes" class="bq-aut qa_410013 oncl_a" title="view author">Amy Sedaris</a>
 </div>
 </div>
 </div>
 <div class="qbn-box">
-<a href="/share/fb/304496" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/304496?ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/304496?ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
+<a href="/share/fb/410013" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/410013?ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/410013?ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
 <span ng-show="showMemberButtons()" class="bqAddQuote bqAddQuoteLg">
-<span data-ng-click="" data-ng-class="favCssClass(304496)" class="fa favHeart pointerCursor sh-grey"></span
-><span data-ng-click="" data-ng-class="collectionCssClass(304496)" class="fa favAddToCol pointerCursor sh-grey"></span>
+<span data-ng-click="" data-ng-class="favCssClass(410013)" class="fa favHeart pointerCursor sh-grey"></span
+><span data-ng-click="" data-ng-class="collectionCssClass(410013)" class="fa favAddToCol pointerCursor sh-grey"></span>
 </span>
 </div>
 <div class="qll-dsk-kw-box">
 <div class="kw-box">
-<a href="/topics/nature-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Nature</a>
-<a href="/topics/only-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Only</a>
-<a href="/topics/colour-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Colour</a>
-<a href="/topics/lines-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Lines</a>
+<a href="/topics/easter-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Easter</a>
+<a href="/topics/life-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Life</a>
+<a href="/topics/my-life-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">My Life</a>
+<a href="/topics/rest-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Rest</a>
 </div>
 </div>
 </div>
@@ -442,23 +439,25 @@ Birthdays on April 18th
 <h2 class="qotd-h2">Funny Quote Of the Day</h2>
 <div class="qotd-h-tall">
 <div class="clearfix">
-<a href="/quotes/yogi_berra_139942" class="b-qt qt_139942 oncl_q" title="view quote">It ain&#39;t the heat, it&#39;s the humility.</a>
+<a href="/quotes/franklin_p_jones_104523" class="b-qt qt_104523 oncl_q" title="view quote">You can learn many things from children. How much patience you have, for instance.</a>
 <div style="text-align:left">
-<a href="/authors/yogi-berra-quotes" class="bq-aut qa_139942 oncl_a" title="view author">Yogi Berra</a>
+<a href="/authors/franklin-p-jones-quotes" class="bq-aut qa_104523 oncl_a" title="view author">Franklin P. Jones</a>
 </div>
 </div>
 </div>
 <div class="qbn-box">
-<a href="/share/fb/139942" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/139942?ti=Quote+of+the+Day+April+18th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/139942?ti=Quote+of+the+Day+April+18th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
+<a href="/share/fb/104523" class="fa-lg sh-fb sh-grey no-margin" target="_blank" rel="nofollow"><i class="fa fa-facebook"></i></a><a href="/share/tw/104523?ti=Quote+of+the+Day+April+20th" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i></a><a href="/share/li/104523?ti=Quote+of+the+Day+April+20th+-+BrainyQuote" class="fa-lg sh-tw sh-grey" target="_blank" rel="nofollow"><i class="fa fa-linkedin"></i></a>
 <span ng-show="showMemberButtons()" class="bqAddQuote bqAddQuoteLg">
-<span data-ng-click="" data-ng-class="favCssClass(139942)" class="fa favHeart pointerCursor sh-grey"></span
-><span data-ng-click="" data-ng-class="collectionCssClass(139942)" class="fa favAddToCol pointerCursor sh-grey"></span>
+<span data-ng-click="" data-ng-class="favCssClass(104523)" class="fa favHeart pointerCursor sh-grey"></span
+><span data-ng-click="" data-ng-class="collectionCssClass(104523)" class="fa favAddToCol pointerCursor sh-grey"></span>
 </span>
 </div>
 <div class="qll-dsk-kw-box">
 <div class="kw-box">
-<a href="/topics/humility-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Humility</a>
-<a href="/topics/heat-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">Heat</a>
+<a href="/topics/patience-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="0">Patience</a>
+<a href="/topics/you-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="1">You</a>
+<a href="/topics/parenting-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="2">Parenting</a>
+<a href="/topics/children-quotes" class="qkw-btn btn btn-xs oncl_list_kc" data-idx="3">Children</a>
 </div>
 </div>
 </div>

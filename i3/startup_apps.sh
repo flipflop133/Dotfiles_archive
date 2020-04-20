@@ -13,7 +13,7 @@ apps=(
 
 # Which workspace to assign your wanted App :
 workspaces=(
-"2:university"
+"2:university🎓"
 )
 
 # open the apps
@@ -38,7 +38,7 @@ apps=(
 
 # Which workspace to assign your wanted App :
 workspaces=(
-"3:social"
+"3:social🧑‍🤝‍🧑"
 )
 
 # open the apps
@@ -60,7 +60,7 @@ apps=(
 
 # Which workspace to assign your wanted App :
 workspaces=(
-"4:media"
+"4:media🎵"
 )
 
 # open the apps
