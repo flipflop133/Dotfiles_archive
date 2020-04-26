@@ -11,7 +11,7 @@
 
 # Display title
 clear
-figlet DOT BACKUP|lolcat || echo -e "\e[44mDOT BACKUP \e[1mBold"
+figlet DOT BACKUP|lolcat || echo -e echo -e "\e[96mDOT BACKUP\e[0m"
 
 # define backup directory
 dot=~/dot_files
@@ -44,4 +44,4 @@ git(){
     ${GIT} push
 }
 
-backup && git && echo "Backup completed!"
+backup && git && echo -e "\e[96mBackup completed!\e[0m"
