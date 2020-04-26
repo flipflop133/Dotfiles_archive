@@ -1,0 +1,45 @@
+{
+    ///intelli-code
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    ///telemetry
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    ///workbench
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1775d1",
+        "statusBar.noFolderBackground": "#1775d1",
+        "statusBar.debuggingBackground": "#1775d1",
+        "statusBar.foreground": "#ffffff"
+    },
+    ///Update
+    "update.mode": "none",
+    ///Editor
+    "editor.renderWhitespace": "boundary",
+    "editor.minimap.enabled": false,
+    "editor.fontLigatures": true,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 20,
+    "editor.cursorBlinking": "phase",
+    "editor.lineNumbers": "on",
+    ///Terminal
+    "terminal.integrated.fontFamily": "Fira Code",
+    ///auto-save-on-windows-change
+    "files.autoSave": "onWindowChange",
+    ///Disable-files-indicator
+    "explorer.decorations.badges": false,
+    ///Editor-quick-suggestions
+    "editor.suggestSelection": "first",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    ///Remove-extra-newline
+    "files.trimFinalNewlines": true,
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.iconTheme": "material-icon-theme",
+    // "python.pythonPath": "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.8_3.8.752.0_x64__qbz5n2kfra8p0/python3.8.exe",
+}

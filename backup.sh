@@ -18,12 +18,13 @@ dot=~/dot_files
 
 # dot files directories
 directories=(
-    ~/.config/i3
-    ~/.zshrc
-    ~/.config/rofi
-    ~/.config/conky
-    ~/.config/picom
-    ~/.config/termite
+    $HOME/.config/i3
+    $HOME/.zshrc
+    $HOME/.config/rofi
+    $HOME/.config/conky
+    $HOME/.config/picom
+    $HOME/.config/termite
+    $HOME/.config/Code/User/settings.json
 )
 
 # backup files
@@ -31,7 +32,7 @@ backup(){
     # copy dot files to backup directory
     echo -e "\e[96mCopying files...\e[0m"
     for dir in ${directories[@]}; do
-        cp -R -f $dir $dot
+        eval cp -R -f "$dir" $dot
     done
 }
 

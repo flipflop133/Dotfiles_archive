@@ -13,7 +13,6 @@ capitaine-cursors 4-1
 chromium 81.0.4044.122-1
 clang 10.0.0-2
 cmake 3.17.1-2
-code 1.44.2-1
 conky-lua-nv 1.11.5-6
 devilspie 0.23-2
 dhcpcd 9.0.2-1
@@ -128,6 +127,7 @@ ttf-windows 1-1
 unzip 6.0-14
 vim 8.2.0510-2
 vimb 3.6.0-1
+visual-studio-code-bin 1.44.2-1
 w3m 0.5.3.git20190105-1
 wget 1.20.3-2
 which 2.21-5
