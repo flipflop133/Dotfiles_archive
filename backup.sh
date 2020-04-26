@@ -11,7 +11,7 @@
 
 # Display title
 clear
-figlet DOT BACKUP || echo "DOT BACKUP"
+figlet DOT BACKUP|lolcat || echo -e "\e[44mDOT BACKUP \e[1mBold"
 
 # define backup directory
 dot=~/dot_files
