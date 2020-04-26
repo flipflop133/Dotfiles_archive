@@ -1,13 +1,15 @@
 # imports
 from i3pystatus import IntervalModule
+from i3pystatus.core.color import ColorRangeModule
 import subprocess
 import os
 
-class cputemp(IntervalModule):
+class cputemp(IntervalModule, ColorRangeModule):
 	
 	settings = (
         "format",
     )
+	alert_temp = 90
 	def getTemp(self):
 		""" execute a command and extract temperature
 		return
@@ -37,22 +39,21 @@ class cputemp(IntervalModule):
 		for i in listTemps:
 			sum+=float(i)
 		temp = (sum//nCores)
-		# determine the color in function of the temperature
-		if temp > 69:
-			color = '#ff0000'
-		elif temp > 59:
-			color = '#fb8c00'
-		elif temp > 49:
-			color = '#ffff00'
-		else:
-			color = '#ffffff'
-		cdict = {'temp':temp, 'color':color}
+		cdict = {'temp':temp}
 		return cdict
 	
+	def init(self):
+		self.colors = self.get_hex_color_range(self.start_color, self.end_color, 100)
+
 	def run(self):
 		cdict = self.getTemp()
 		self.data = cdict
+		perc = int(self.percentage(int(cdict['temp']), self.alert_temp))
 		self.output = {
             "full_text": self.format.format(**cdict),
-            "color": cdict['color'],
+            "color": self.get_colour(perc),
         }
+
+	def get_colour(self, percentage):
+		index = -1 if int(percentage) > len(self.colors) - 1 else int(percentage)
+		return self.colors[index]

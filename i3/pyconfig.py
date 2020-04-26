@@ -1,21 +1,27 @@
 from i3pystatus import Status
 status = Status()
 
-# Displays clock like this:
-# Tue 30 Jul 11:59:46 PM
-status.register("clock",
-    format="🗓️ %a %-d %b %X",
-	color="#df78ef",)
+# Open Rofi power menu
+status.register("power_menu")
+
+# Displays clock
+status.register("clock", format=" %X", color="#f38181")
+
+# Displays date
+status.register("custom_calendar",format=" {date}",interval=600, color="#95e1d3")
+
+# weather
+status.register("custom_weather",format="{weather}")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
 status.register("load")
 
 # Shows avg cpu freq
-status.register("cpufreq",format="⚡avg cpu freq: {freq} MHz",interval=1)
+status.register("cpu_usage",format=" {usage}%",dynamic_color=True)
 
 # Shows avg cpu temp
-status.register("cputemp",format="🌡️avg cpu temp: {temp}°C",interval=1)
+status.register("cputemp",format=" {temp}°C")
 
 # Shows the address and up/down state of eth0. If it is up the address is shown in
 # green (the default value of color_up) and the CIDR-address is shown
@@ -26,26 +32,27 @@ status.register("cputemp",format="🌡️avg cpu temp: {temp}°C",interval=1)
 # Note: the network module requires PyPI package netifaces
 status.register("network",
     interface="enp3s0",
-    format_up="🌐{v4cidr}",)
+    format_up=" {v4cidr}",)
 
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
 status.register("disk",
     path="/",
-    format="🖴{used}/{total}G [{avail}G]")
-
-# Shows Spotify song
-status.register("custom_spotify",format="🎶{song}{artist}",interval=3)
+    format="🖴 {used}/{total}G [{avail}G]")
 
 # Shows pulseaudio default sink volume
 #
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
-
+    color_unmuted="#ca7df9",
+    format=" {volume}",
     on_leftclick="switch_mute")
 
-# weather
-status.register("custom_weather",format="{weather}")
+# Shows Spotify song
+status.register("custom_spotify",format=" {song}{artist}",interval=3)
+
+# Displays window
+#status.register("window_title")
 	
 status.run()

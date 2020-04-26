@@ -1,7 +1,9 @@
 from i3pystatus import IntervalModule
 import subprocess
+import os
 class custom_weather(IntervalModule):
 	
+	on_leftclick = "googleCalendar"
 	settings = (
         "format",("interval", "update interval")
     )
@@ -17,7 +19,9 @@ class custom_weather(IntervalModule):
 			cdict = {'weather':output_list[0],'interval':600}
 			return cdict
 
-
+	def googleCalendar(self):
+		os.popen("chromium https://www.meteo.be/fr/belgique")
+	
 	def run(self):
 			cdict = self.getWeather()
 			self.data = cdict
