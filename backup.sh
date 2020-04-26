@@ -30,6 +30,7 @@ directories=(
 backup(){
     # copy dot files to backup directory
     echo "Copying files..."
+    echo -e "\e[44mCopying files... \e[1mBold"
     for dir in ${directories[@]}; do
         cp -R -f $dir $dot
     done
@@ -39,7 +40,7 @@ backup(){
 GIT=`which git`
 git(){
     ${GIT} add .
-    ${GIT} commit -m "update"
+    ${GIT} commit -m "update dotfiles"
     ${GIT} push
 }
 
