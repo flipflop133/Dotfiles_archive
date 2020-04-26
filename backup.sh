@@ -30,7 +30,7 @@ directories=(
 backup(){
     # copy dot files to backup directory
     echo "Copying files..."
-    echo -e "\e[96m\e[1mCopying files...\e[0m"
+    echo -e "\e[96mCopying files...\e[0m"
     for dir in ${directories[@]}; do
         cp -R -f $dir $dot
     done
