@@ -14,7 +14,7 @@
 # wallpaper : xwallpaper
 # terminal : termite
 # compositor : picom
-# bar : 
+# bar : i3pystatus 
 # dmenu : rofi
 # network : network manager + applet
 # theme changer : lxappearance
@@ -28,6 +28,7 @@
 # lolcat
 # zsh
 # display window title: xtitle
+# ytop
 
 # Kernel
 # linux-ck-haswell

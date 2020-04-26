@@ -35,6 +35,19 @@ backup(){
     done
 }
 
+# backup list of installed packages
+backup_app(){
+    read -r -p "Backup explicitly installed app list? [y/N]" response
+    if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+    then
+        echo -e "\e[96mDoing app list backup.\e[0m" 
+        pacman -Qe > appList.txt
+    else
+        echo -e "\e[96mSkipping app list backup.\e[0m" 
+    fi
+}
+
+
 # push files to github
 GIT=`which git`
 git(){
@@ -43,4 +56,4 @@ git(){
     ${GIT} push
 }
 
-backup && git && echo -e "\e[96mBackup completed!\e[0m"
+backup && backup_app && git && echo -e "\e[96mBackup completed!\e[0m"
