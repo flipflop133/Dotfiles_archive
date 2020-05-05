@@ -227,7 +227,7 @@ set $green   #50fa7b
 set $magenta #ff79c6
 set $comment #6272a4
 set $purple  #bd93f9
-set $transparent #00000088
+set $transparent #00000000
 
 # i3bar
 bar {

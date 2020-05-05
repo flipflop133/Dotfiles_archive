@@ -1,19 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# small power menu using rofi, i3, systemd and pm-utils
-# (last 3 dependencies are adjustable below)
-# tostiheld, 2016
+_rofi() {
+  rofi -sep '|' -columns 6 -lines 1 -disable-history true -cycle true \
+    -theme menu\
+    -dmenu -font "Hack Nerd Font 15" "$@"
+}
 
-poweroff_command="systemctl poweroff"
-reboot_command="systemctl reboot"
-logout_command="i3-msg exit"
-hibernate_command="systemctl hibernate"
-suspend_command="systemctl suspend"
+choice=$(echo -n "|||||" | _rofi -mesg "<span face='ClearSans' font='9' weight='bold'>Goodbye, François 🙋‍♂️!</span>")
 
-# you can customise the rofi command all you want ...
-#rofi_command="rofi -width 10 -hide-scrollbar -bg #586e75 -opacity 100 -padding 5"
-rofi_command="rofi -show drun -columns 1"
-options=$'poweroff\nreboot\nlogout\nhibernate\nsuspend' 
-
-# ... because the essential options (-dmenu and -p) are added here
-eval \$"$(echo "$options" | $rofi_command -dmenu -p "")_command"
+case "$choice" in
+  )
+    betterlockscreen -l
+    ;;
+  )
+    ~/.bin/displaysleep
+    ;;
+  )
+    systemctl suspend
+    ;;
+  )
+    choice=$(echo -n "No|Yes" | _rofi -mesg "<span face='ClearSans' font='9' weight='bold'>Logging out. Are you sure?</span>")
+    if [ "$choice" = "Yes" ]; then
+      i3-msg exit
+    fi
+    ;;
+  )
+    choice=$(echo -n "No|Yes" | _rofi -mesg "<span face='ClearSans' font='9' weight='bold'>Rebooting. Are you sure?</span>")
+    if [ "$choice" = "Yes" ]; then
+      systemctl reboot
+    fi
+    ;;
+  )
+    choice=$(echo -n "No|Yes" | _rofi -mesg "<span face='ClearSans' font='9' weight='bold'>Powering off. Are you sure?</span>")
+    if [ "$choice" = "Yes" ]; then
+      systemctl poweroff
+    fi
+    ;;
+esac
