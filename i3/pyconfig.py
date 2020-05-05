@@ -23,6 +23,9 @@ status.register("cpu_usage",format=" {usage}%",dynamic_color=True)
 # Shows avg cpu temp
 status.register("cputemp",format=" {temp}°C")
 
+# Shows avg cpu temp
+status.register("mem",format=" {used_mem}/{total_mem}Gb",divisor=1*(10**9))
+
 # Shows the address and up/down state of eth0. If it is up the address is shown in
 # green (the default value of color_up) and the CIDR-address is shown
 # (i.e. 10.10.10.42/24).

@@ -9,6 +9,9 @@
 # |_____/ \____/  |_|    |____/_/    \_\_____|_|\_\\____/|_|      #
 ###################################################################
 
+# Save default IFS value
+DefaultIFS=$IFS
+
 # Display title
 clear
 figlet DOT BACKUP|lolcat || echo -e echo -e "\e[96mDOT BACKUP\e[0m"
@@ -24,16 +27,21 @@ directories=(
     $HOME/.config/conky
     $HOME/.config/picom
     $HOME/.config/termite
-    $HOME/.config/Code/User/settings.json
+    "$HOME/.config/Code - OSS/User/settings.json"
 )
 
 # backup files
 backup(){
+    # Set IFS to '' so spaces are not ignored
+	IFS=''
     # copy dot files to backup directory
-    echo -e "\e[96mCopying files...\e[0m"
+    echo -e "\e[96mCopying files the following files:\e[0m"
     for dir in ${directories[@]}; do
-        eval cp -R -f "$dir" $dot
+        echo "$dir"
+        cp -R -f "$dir" $dot
     done
+    # Reset IFS to its default value
+    IFS=$DefaultIFS
 }
 
 # backup list of installed packages

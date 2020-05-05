@@ -1,12 +1,12 @@
 [options]
-#allow_bold = true
+allow_bold = true
 #audible_bell = false
 #bold_is_bright = true
 #cell_height_scale = 1.0
 #cell_width_scale = 1.0
-#clickable_url = true
-#dynamic_title = true
-font = Source Code Pro 10
+clickable_url = true
+dynamic_title = true
+font = SauceCodePro Nerd Font 10
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -20,13 +20,13 @@ scrollback_lines = 10000
 #hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-#browser = xdg-open
+browser = xdg-open
 
 # "system", "on" or "off"
-#cursor_blink = system
+cursor_blink = system
 
 # "block", "underline" or "ibeam"
-#cursor_shape = block
+cursor_shape = ibeam
 
 # Hide links that are no longer valid in url select overlay mode
 #filter_unmatched_urls = true
@@ -38,52 +38,35 @@ scrollback_lines = 10000
 #size_hints = false
 
 # "off", "left" or "right"
-scrollbar = off
+#scrollbar = off
+
+# ======================================================================
 
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
+foreground=#000000
+background=rgba(255, 255, 255, 1)
+cursor=#000000
 
-foreground = #ffffff
-#foreground_bold = #ffffff
-#background = #444444
+color0=#000000
+color1=#fb0120
+color2=#a1c659
+color3=#fda331
+color4=#6fb3d2
+color5=#d381c3
+color6=#76c7b7
+color7=#e0e0e0
+color8=#b0b0b0
+color9=#fb0120
+color10=#a1c659
+color11=#fda331
+color12=#6fb3d2
+color13=#d381c3
+color14=#76c7b7
+color15=#ffffff
 
-# 20% background transparency (requires a compositor)
-background = rgba(0, 0, 0, 0.5)
-
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
-
-# Colors from color0 to color254 can be set
-color0 = #9f9f9f
-#color1 = #705050
-#color1 = #ff0000
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
-
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
-
-# vim: ft=dosini cms=#%s
+color16=#fc6d24
+color17=#be643c
+color18=#303030
+color19=#505050
+color20=#d0d0d0
+color21=#f5f5f5

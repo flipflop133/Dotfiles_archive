@@ -12,7 +12,7 @@
 # file exlorer : nautilus
 # screenshot : gscreenshot
 # wallpaper : xwallpaper
-# terminal : termite
+# terminal : alacritty
 # compositor : picom
 # bar : i3pystatus 
 # dmenu : rofi
@@ -29,6 +29,7 @@
 # zsh
 # display window title: xtitle
 # ytop
+# lockscreen: betterlockscreen
 
 # Kernel
 # linux-ck-haswell
@@ -50,6 +51,7 @@ gaps inner 6
 # font: https://github.com/ryanoasis/nerd-fonts
 # list fonts with fc-match -s
 font pango: Noto Sans Nerd Font Medium 11
+# font pango: SauceCodePro Nerd Font Medium 11
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -58,9 +60,8 @@ font pango: Noto Sans Nerd Font Medium 11
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# lock screen
-set $i3lockwall i3lock -i ~/Images/Archlinux.png -t
-bindsym $mod+Ctrl+l exec --no-startup-id $i3lockwall
+# Lock screen
+bindsym $mod+Ctrl+l exec betterlockscreen -l dimblur
 
 # xfce power manager
 exec xfce4-power-manager
@@ -85,7 +86,7 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -271,3 +272,6 @@ exec xwallpaper --stretch ~/Images/wallpaper/*.jpg
 #exec conky -b -c ~/.config/conky/conky-config/conky3.conf
 #exec conky -b -c ~/.config/conky/conky-config/conky4.conf
 #exec conky -b -c ~/.config/conky/conky-config/conky5.conf
+
+# Set wallpaper to be the same as lockscreen
+# exec --no-startup-id betterlockscreen -w dim
