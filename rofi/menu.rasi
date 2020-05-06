@@ -1,11 +1,5 @@
 /*
- * ROFI One Dark
- *
- * Based on OneDark.vim (https://github.com/joshdick/onedark.vim)
- *
- * Author: Benjamin Stauss
- * User: me-benni
- *
+ * ROFI PowerMenu
  */
 
 
@@ -35,7 +29,7 @@
 window {
   transparency: "real";
   fullscreen: false;
-  background-color: #000000bb;
+  background-color: #00000099;
   y-offset: 396;
   x-offset: 890;
   width: 150;
@@ -73,7 +67,7 @@ listview {
 
 element {
   padding: 8px;
-  text-color: @text-alt;
+  text-color: #ffffff;
   highlight: bold #95ee8f; /* green */
   border-radius: 0px;
 }
@@ -94,9 +88,9 @@ element active, element selected active {
 message {
   padding: 5px;
   border-radius: 3px;
-  background-color: @emphasis;
+  background-color: @background;
   border: 1px;
-  border-color: @cyan;
+  //border-color: @cyan;
 }
 
 button selected {

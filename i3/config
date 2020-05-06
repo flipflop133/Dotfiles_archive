@@ -9,7 +9,7 @@
 # Required apps
 #
 # i3 gaps
-# file exlorer : nautilus
+# file exlorer : pcmanfm
 # screenshot : gscreenshot
 # wallpaper : xwallpaper
 # terminal : alacritty
@@ -64,7 +64,7 @@ font pango: Noto Sans Nerd Font Medium 11
 bindsym $mod+Ctrl+l exec betterlockscreen -l dimblur
 
 # xfce power manager
-exec xfce4-power-manager
+exec --no-startup-id xfce4-power-manager
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -253,7 +253,7 @@ bar {
 }
 
 # compositor
-exec picom --experimental-backends --backend glx
+exec --no-startup-id picom --experimental-backends --backend glx
 
 # Set some nice colors      border	 background text     indicator
 client.focused              $comment $comment   $fg      $cyan
@@ -263,8 +263,8 @@ client.urgent               $bg      $bg        $magenta $bg
 client.placeholder          $bg      $bg        $cyan    $bg
 
 # set xwallpaper
-exec xwallpaper --stretch ~/Images/wallpaper/*.png
-exec xwallpaper --stretch ~/Images/wallpaper/*.jpg
+exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png
+exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
 
 # run conky
 #exec conky -b -c ~/.config/conky/conky-config/conky1.conf
