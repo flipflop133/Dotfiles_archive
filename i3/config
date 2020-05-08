@@ -20,7 +20,7 @@
 # theme changer : lxappearance
 # themes : arc
 # icon theme : papirus
-# display manager : lightdm + gtk-greeter
+# display manager : lightdm + gtk greeter + lightdm litarvan
 # power manager : xfce power manager
 # media control : playerctl
 # sound control : pulseaudio-ctl
@@ -41,6 +41,9 @@
 
 set $mod Mod4
 
+# test
+bindsym $mod+Escape exec ~/.config/i3/power-menu.sh
+
 # Hide titlebar
 new_window pixel
 
@@ -50,8 +53,11 @@ gaps inner 6
 # font for window titles
 # font: https://github.com/ryanoasis/nerd-fonts
 # list fonts with fc-match -s
-font pango: Noto Sans Nerd Font Medium 11
+font pango: Noto Sans Nerd Font Medium 12
 # font pango: SauceCodePro Nerd Font Medium 11
+# font pango: FuraMonoForPowerline Nerd Font Medim 12
+# font pango: DejaVuSansMono Nerd Font Mono
+#font pango: Roboto Nerd Font Mono
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -61,7 +67,7 @@ font pango: Noto Sans Nerd Font Medium 11
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Lock screen
-bindsym $mod+Ctrl+l exec betterlockscreen -l dimblur
+bindsym $mod+l exec betterlockscreen -l dimblur
 
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
@@ -96,10 +102,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun -columns 3
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -182,6 +188,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# open apps in specific workspaces
+for_window [class="Chromium" title="Google Agenda - Chromium"] move window to workspace $ws2.
+
+# startup apps
 exec --no-startup-id ~/.config/i3/startup_apps.sh
 
 # reload the configuration file
@@ -227,10 +237,11 @@ set $green   #50fa7b
 set $magenta #ff79c6
 set $comment #6272a4
 set $purple  #bd93f9
-set $transparent #00000000
+set $transparent #00000066
 
 # i3bar
 bar {
+    separator_symbol " "
     # disable system tray
     # tray_output none
     tray_padding 0
@@ -248,7 +259,7 @@ bar {
 	urgent_workspace    $transparent    $transparent        $magenta
 	background          $transparent
 	statusline	    $fg
-	separator	    $lg
+	separator	    $fg
     }
 }
 

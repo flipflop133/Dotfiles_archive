@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 _rofi() {
-  rofi -sep '|' -columns 6 -lines 1 -disable-history true -cycle true \
+  rofi -sep '|' -disable-history true -cycle true \
     -theme menu\
     -dmenu -font "Noto Sans Nerd Font Medium 11" "$@"
 }
 
-choice=$(echo -n " Lock| Hibernate| Sleep| Logout| Restart| Poweroff" | _rofi -mesg "<span face='NotoSans' font='9' weight='bold'>Goodbye, François 🙋‍♂️!</span>")
+choice=$(echo -n " Lock| Hibernate| Sleep| Logout| Restart| Poweroff" | _rofi -mesg "<span face='Noto Sans Nerd Font' font='10' weight='bold'>Goodbye! 🦊</span>")
 
 case "$choice" in
   " Lock")

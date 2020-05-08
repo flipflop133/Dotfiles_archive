@@ -28,6 +28,7 @@ directories=(
     $HOME/.config/picom
     $HOME/.config/termite
     "$HOME/.config/Code - OSS/User/settings.json"
+    $HOME/.config/fontconfig
 )
 
 # backup files
