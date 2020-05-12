@@ -5,8 +5,9 @@ import os
 
 class custom_weather(IntervalModule):
 
-    on_leftclick = "googleCalendar"
-    settings = ("format", ("interval", "update interval"))
+    color = "#ffffff"
+    on_leftclick = "irm"
+    settings = ("format", ("interval", "update interval"), "color")
 
     def getWeather(self):
         process = subprocess.run(
@@ -21,7 +22,7 @@ class custom_weather(IntervalModule):
             cdict = {'weather': output_list[0], 'interval': 600}
             return cdict
 
-    def googleCalendar(self):
+    def irm(self):
         os.popen("chromium https://www.meteo.be/fr/belgique")
 
     def run(self):
@@ -29,4 +30,5 @@ class custom_weather(IntervalModule):
         self.data = cdict
         self.output = {
             "full_text": self.format.format(**cdict),
+            "color": self.color
         }

@@ -69,7 +69,7 @@ apps=(
 
 # Which workspace to assign your wanted App :
 workspaces=(
-"4:  "
+"4: ﱘ "
 )
 # open the apps
 for app in "${apps[@]}"

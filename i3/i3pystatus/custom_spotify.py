@@ -49,7 +49,10 @@ class custom_spotify(IntervalModule):
         for i in range(len(artist)):
             if artist[i] == "\"xesam:artist\"":
                 artistName = artist[i + 5] + ' ' + artist[i + 6]
-                artistName = 'by ' + artistName.strip('\"')
+                # filter weird characters
+                artistName = artistName.strip(']')
+                artistName = artistName.replace('"', '')
+                artistName = 'by ' + artistName
 
         if finalSong != '' and 'Advertisement' not in finalSong and artistName != '' and custom_spotify.isSong is False:
             custom_spotify.isSong = True

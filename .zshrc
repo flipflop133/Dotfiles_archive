@@ -1,9 +1,9 @@
 # set terminal title
 echo -n -e "\033]0;francois@pc-francois\007"
 # run my own commands
-neofetch | lolcat
+neofetch #| lolcat
 #figlet Arch Linux #| lolcat
-python ~/.config/conky/conky-config/pythons-scripts/daily_quote.py | lolcat
+python ~/.config/conky/conky-config/pythons-scripts/daily_quote.py #| lolcat
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]

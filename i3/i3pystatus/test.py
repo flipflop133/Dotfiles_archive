@@ -1,8 +1,3 @@
-import string
-
-def ispangram(str1, alphabet=string.ascii_lowercase):  
-    alphaset = set(alphabet)  
-    return alphaset <= set(str1.lower())
-
-
-print(ispangram("The quick brown foo jumps over the lazy dog"))
+f = open("/home/francois/.config/xrp_api_key.txt", "r")
+print(f.read())
+f.close()

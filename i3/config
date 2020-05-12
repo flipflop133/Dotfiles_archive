@@ -29,10 +29,10 @@
 # zsh
 # display window title: xtitle
 # ytop
-# lockscreen: betterlockscreen
+# lockscreen: lightlocker
 
 # Kernel
-# linux-ck-haswell
+# linux-nitrous
 # required for a custom kernel : nvidia-dkms
 
 # i3 config file (v4)
@@ -42,22 +42,18 @@
 set $mod Mod4
 
 # test
-bindsym $mod+Escape exec ~/.config/i3/power-menu.sh
+bindsym $mod+Escape exec --no-startup-id ~/.config/i3/power-menu.sh
 
 # Hide titlebar
 new_window pixel
 
 # i3-gaps
-gaps inner 6
+gaps inner 10
 
 # font for window titles
 # font: https://github.com/ryanoasis/nerd-fonts
 # list fonts with fc-match -s
-font pango: Noto Sans Nerd Font Medium 12
-# font pango: SauceCodePro Nerd Font Medium 11
-# font pango: FuraMonoForPowerline Nerd Font Medim 12
-# font pango: DejaVuSansMono Nerd Font Mono
-#font pango: Roboto Nerd Font Mono
+font pango: Noto Sans Nerd Font Medium 13
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -67,7 +63,7 @@ font pango: Noto Sans Nerd Font Medium 12
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Lock screen
-bindsym $mod+l exec betterlockscreen -l dimblur
+bindsym $mod+l exec --no-startup-id light-locker-command -l
 
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
@@ -78,28 +74,28 @@ exec --no-startup-id xfce4-power-manager
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-bindsym XF86AudioMute exec pulseaudio-ctl mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down
+bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute
 
 # Use playerctl to control media.
-bindsym XF86AudioPlay exec playerctl play-pause  
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause  
+bindsym XF86AudioPause exec --no-startup-id playerctl pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start ROFI (a program launcher)
 #bindsym $mod+d exec rofi --no-startup-id -show drun -theme Arc
-bindsym $mod+d exec rofi -show drun -columns 3
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/launcher.sh
 
 # change focus
 #bindsym $mod+j focus left
@@ -156,7 +152,7 @@ bindsym $mod+a focus parent
 set $ws1 "1:  "
 set $ws2 "2:  "
 set $ws3 "3:  "
-set $ws4 "4:  "
+set $ws4 "4: ﱘ "
 set $ws5 "5:  "
 set $ws6 "6"
 set $ws7 "7"
@@ -190,9 +186,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # open apps in specific workspaces
 for_window [class="Chromium" title="Google Agenda - Chromium"] move window to workspace $ws2.
-
-# startup apps
-exec --no-startup-id ~/.config/i3/startup_apps.sh
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -229,7 +222,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Defining colors
-set $bg      #333333
+set $black   #000000
+set $bg      #888888
+set $grey    #333333
 set $lg      #666666
 set $fg      #ffffff
 set $cyan    #8be9fd
@@ -237,6 +232,7 @@ set $green   #50fa7b
 set $magenta #ff79c6
 set $comment #6272a4
 set $purple  #bd93f9
+set $red     #ff6b6b
 set $transparent #00000066
 
 # i3bar
@@ -246,43 +242,45 @@ bar {
     # tray_output none
     tray_padding 0
     status_command python ~/.config/i3/pyconfig.py
-    i3bar_command i3bar -t
+    #i3bar_command i3bar -t
     position          bottom
     workspace_buttons yes
     workspace_min_width 60
     strip_workspace_numbers yes
     binding_mode_indicator yes
     colors {
-        focused_workspace   $bg    	    $bg                 $cyan
-	active_workspace    $transparent    $transparent        $purple
-	inactive_workspace  $transparent    $transparent        $fg
-	urgent_workspace    $transparent    $transparent        $magenta
-	background          $transparent
+	focused_workspace   $fg		$fg                 $black
+	active_workspace    $fg    	$fg                 $purple
+	inactive_workspace  $fg         $fg                 $bg
+	urgent_workspace    $fg         $fg                 $magenta
+	background          $fg
 	statusline	    $fg
 	separator	    $fg
     }
 }
 
-# compositor
-exec --no-startup-id picom --experimental-backends --backend glx
+# class                 border  backgr. text    indicator child_border
+client.focused          $fg     $fg     $black  $magenta  $black
+client.focused_inactive $fg     $fg     $black  $fg       $fg
+client.unfocused        $fg     $fg     $bg     $fg       $fg
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-# Set some nice colors      border	 background text     indicator
-client.focused              $comment $comment   $fg      $cyan
-client.unfocused            $bg      $bg        $cyan    $bg
-client.focused_inactive     $bg      $bg        $green   $bg
-client.urgent               $bg      $bg        $magenta $bg
-client.placeholder          $bg      $bg        $cyan    $bg
+client.background       #ffffff
+
+################
+# startup apps #
+################
+
+# start some apps
+exec --no-startup-id ~/.config/i3/startup_apps.sh
 
 # set xwallpaper
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
 
-# run conky
-#exec conky -b -c ~/.config/conky/conky-config/conky1.conf
-#exec conky -b -c ~/.config/conky/conky-config/conky2.conf
-#exec conky -b -c ~/.config/conky/conky-config/conky3.conf
-#exec conky -b -c ~/.config/conky/conky-config/conky4.conf
-#exec conky -b -c ~/.config/conky/conky-config/conky5.conf
+# compositor
+exec --no-startup-id picom --experimental-backends --backend glx
 
-# Set wallpaper to be the same as lockscreen
-# exec --no-startup-id betterlockscreen -w dim
+# lightlocker
+exec --no-startup-id light-locker
