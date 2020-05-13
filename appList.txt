@@ -1,5 +1,7 @@
 adapta-gtk-theme 3.95.0.11-1
+aic94xx-firmware 30-9
 alacritty-git 0.5.0.1525.gf4689a1c-1
+alsa-utils 1.2.2-1
 android-file-transfer 3.9-1
 android-tools 29.0.6-1
 android-udev 20200410-1
@@ -19,6 +21,7 @@ clang 10.0.0-2
 cmake 3.17.2-2
 code 1.44.2-1
 conky-lua-nv 1.11.5-6
+deadd-notification-center 1.7.2-1
 devilspie 0.23-2
 dhcpcd 9.0.2-1
 discord 0.0.10-3
@@ -41,7 +44,7 @@ grub 2:2.04-6
 gtk3 1:3.24.20-1
 hdparm 9.58-3
 htop 2.2.0-3
-i3-gaps-next-git 4.18.1.r98.ga12c3142-1
+i3-wm 4.18.1-1
 i3pystatus-git 3.35.r343.gdb14a88-1
 intellij-idea-community-edition 2:2020.1.1-1
 iotop 0.6-7
@@ -87,6 +90,7 @@ nerd-fonts-roboto-mono 2.1.0-1
 nerd-fonts-source-code-pro 2.1.0-1
 networkmanager 1.24.0-1
 nomacs 3.14.2-2
+notify-send.sh 1.1-1
 noto-fonts 20190926-4
 noto-fonts-emoji 20191016-6
 ntfs-3g 2017.3.23-4
@@ -120,8 +124,8 @@ s-nail 14.9.19-1
 shortwave 1:1.0.1-1
 speedtest-cli 2.1.2-2
 spotify 1:1.1.10.546-4
-steam 1.0.0.61-4
-steam-native-runtime 1.0.0.61-2
+steam 1.0.0.62-1
+steam-native-runtime 1.0.0.62-1
 stress 1.0.4-5
 subversion 1.13.0-2
 sudo 1.8.31.p1-1
@@ -136,6 +140,7 @@ ttf-fira-code 3.1-1
 ttf-nerd-fonts-symbols 2.1.0+36+gd0bf73a1-2
 ttf-opensans 1.101-1
 ttf-windows 1-1
+twmn-git 190.861a323-1
 unzip 6.0-14
 vi 1:070224-4
 vim 8.2.0717-2
@@ -143,6 +148,7 @@ vimb 3.6.0-1
 vimix-gtk-themes-git r370.6e97592-1
 vlc 3.0.10-1
 w3m 0.5.3.git20190105-1
+wd719x-firmware 1-6
 wget 1.20.3-3
 which 2.21-5
 wmctrl 1.07-5

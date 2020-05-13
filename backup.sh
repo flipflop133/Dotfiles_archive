@@ -26,6 +26,7 @@ directories=(
     $HOME/.config/rofi
     $HOME/.config/conky
     $HOME/.config/picom
+    $HOME/.config/alacritty
     $HOME/.config/termite
     "$HOME/.config/Code - OSS/User/settings.json"
     $HOME/.config/fontconfig

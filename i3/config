@@ -30,6 +30,8 @@
 # display window title: xtitle
 # ytop
 # lockscreen: lightlocker
+# notifications: notify-send.py (pip install notify-send.py)
+#                linux-notification-center (https://github.com/phuhl/linux_notification_center)
 
 # Kernel
 # linux-nitrous
@@ -41,14 +43,8 @@
 
 set $mod Mod4
 
-# test
-bindsym $mod+Escape exec --no-startup-id ~/.config/i3/power-menu.sh
-
-# Hide titlebar
-new_window pixel
-
-# i3-gaps
-gaps inner 10
+hide_edge_borders smart
+default_border pixel
 
 # font for window titles
 # font: https://github.com/ryanoasis/nerd-fonts
@@ -74,9 +70,9 @@ exec --no-startup-id xfce4-power-manager
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down
-bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up && python $HOME/.config/i3/volume_indicator.py
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && python $HOME/.config/i3/volume_indicator.py
+bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute && python $HOME/.config/i3/volume_indicator.py
 
 # Use playerctl to control media.
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause  
@@ -284,3 +280,6 @@ exec --no-startup-id picom --experimental-backends --backend glx
 
 # lightlocker
 exec --no-startup-id light-locker
+
+# notification-center
+#exec --no-startup-id deadd-notification-center

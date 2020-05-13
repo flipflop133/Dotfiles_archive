@@ -1,6 +1,9 @@
 from i3pystatus import Status
+from i3pystatus.updates import pacman
 status = Status()
 
+# Notification-center
+status.register("notification_center", format='', color="#000000")
 # Open Rofi power menu
 status.register("power_menu", color="#000000")
 
@@ -13,10 +16,18 @@ status.register("custom_calendar",
                 interval=600,
                 color="#000000")
 
-# xrp
-status.register("xrp", format="XRP {price}€", color="#000000")
+# Pacman updates
+status.register("updates",
+                format=" {count}",
+                backends=[pacman.Pacman()],
+                color="#000000")
 
-# weather
+# XRP
+status.register("xrp",
+                format="XRP {wallet}€ {price}€ {percent}",
+                color="#000000")
+
+# Weather
 status.register("custom_weather", format="{weather}", color="#000000")
 
 # Shows the average load of the last minute and the last 5 minutes
@@ -54,10 +65,7 @@ status.register("mem",
 # Shows disk usage of /
 # Format:
 # 42/128G [86G]
-status.register("disk",
-                path="/",
-                format=" {used}/{total}G [{avail}G]",
-                color="#000000")
+status.register("disk", path="/", format=" {avail}G", color="#000000")
 
 # Shows pulseaudio default sink volume
 #
@@ -74,8 +82,5 @@ status.register("custom_spotify",
                 format=" {song}{artist}",
                 interval=3,
                 color="#000000")
-
-# Displays window
-# status.register("window_title")
 
 status.run()

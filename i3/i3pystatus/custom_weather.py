@@ -8,6 +8,7 @@ class custom_weather(IntervalModule):
     color = "#ffffff"
     on_leftclick = "irm"
     settings = ("format", ("interval", "update interval"), "color")
+    interval = 700
 
     def getWeather(self):
         process = subprocess.run(
@@ -16,10 +17,14 @@ class custom_weather(IntervalModule):
             universal_newlines=True)
         output_list = (process.stdout).splitlines()
         if output_list == []:  # displays no internet and refresh every second
-            cdict = {'weather': "no internet connexion", 'interval': 1}
+            cdict = {
+                'weather': "no internet connexion",
+            }
             return cdict
         else:
-            cdict = {'weather': output_list[0], 'interval': 600}
+            cdict = {
+                'weather': output_list[0],
+            }
             return cdict
 
     def irm(self):
