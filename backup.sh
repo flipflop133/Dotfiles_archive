@@ -30,6 +30,7 @@ directories=(
     $HOME/.config/termite
     "$HOME/.config/Code - OSS/User/settings.json"
     $HOME/.config/fontconfig
+    $HOME/.config/pythons-scripts
 )
 
 # backup files
