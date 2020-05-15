@@ -1,58 +1,51 @@
-import json
-import threading
-import os
-import time
-from i3pystatus import IntervalModule
-from requests import Session
-from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
-import gi
-gi.require_version('Notify', '0.7')
-from gi.repository import Notify
+import requests
+import subprocess
+import pickle
+from bs4 import BeautifulSoup
 
-url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
-parameters = {'start': '1', 'limit': '5000', 'convert': 'EUR'}
-f = open("/home/francois/.config/xrp_api_key.txt", "r")
-apiKey = f.readlines()
-for i in apiKey:
-    i = i.strip('\n')
-    if 'api_key' in i:
-        api_key = i.split('=')
-        api_key = api_key[1]
-    elif 'xrp_amount' in i:
-        xrp_amount = i.split('=')
-        xrp_amount = xrp_amount[1]
 
-f.close()
-headers = {
-    'Accepts': 'application/json',
-    'X-CMC_PRO_API_KEY': str(api_key),
-}
+def get_quote():
 
-session = Session()
-session.headers.update(headers)
+    # get date of the day
+    process = subprocess.run(['date', '+%e'],
+                             stdout=subprocess.PIPE,
+                             universal_newlines=True)
+    day_date = process.stdout
 
-#try:
-response = session.get(url, params=parameters)
-data = json.loads(response.content)
-data = data["data"]
+    f = open("/home/francois/.config/i3/i3pystatus/quote", "rb")
+    page = pickle.load(f)
+    soup = BeautifulSoup(page.content, 'html.parser')
+    f.close()
 
-for x in data:
-    if x['id'] == 52:
-        price = x['quote']['EUR']['price']
-        percent = x['quote']['EUR']['percent_change_24h']
-percent = round(percent, 2)
-if percent > 0:
-    percent = str(percent) + '%'
-elif percent == 0:
-    percent = str(percent) + ''
-else:
-    percent = str(percent) + '%'
-wallet = round((float(xrp_amount) * float(price)), 2)
-price = round(price, 3)
-cdict = {'price': price, 'percent': percent, 'wallet': wallet}
+    # retrieve date in the HTML code
+    quote_date = 0
+    quote_date = (soup.find('div', class_="qotdSubtInf")).text
+    quote_date = quote_date.split()
+    quote_date = quote_date[1].strip("th")
 
-Notify.init("Hello world")
-Hello = Notify.Notification.new("Hello world",
-                                "This is an example notification.",
-                                "dialog-information")
-Hello.show()
+    if int(day_date) != int(quote_date):
+        print("helo")
+        # retrieve page HTML
+        URL = 'https://www.brainyquote.com/quote_of_the_day'
+        page = requests.get(URL)
+        soup = BeautifulSoup(page.content, 'html.parser')
+
+        # save the new HTML page
+        f = open("/home/francois/.config/i3/i3pystatus/quote", "wb")
+        pickle.dump(page, f)
+        f.close()
+
+    # retrieve author and quote in the HTML code
+    job_elems = soup.find_all('div', class_="mblCenterPhot")
+    for job_elem in job_elems:
+        quote = job_elem.find('img')
+        quote = str(quote).split("=")
+        quote = quote[1]
+        quote = quote.split("\"")
+        quote = quote[1].split("-")
+        author = quote[1]
+        quote = quote[0]
+    return quote, author
+
+
+print(get_quote())

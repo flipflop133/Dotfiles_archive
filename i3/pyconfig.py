@@ -1,5 +1,6 @@
 from i3pystatus import Status
 from i3pystatus.updates import pacman
+from i3pystatus.weather import weathercom
 status = Status()
 
 # Notification-center
@@ -28,7 +29,10 @@ status.register("xrp",
                 color="#000000")
 
 # Weather
-status.register("custom_weather", format="{weather}", color="#000000")
+# status.register("custom_weather", format="{weather}", color="#000000")
+
+# Weather
+status.register("weather_com", format="{icon} {temp}°C", color="#000000")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
