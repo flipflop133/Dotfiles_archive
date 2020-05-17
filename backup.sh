@@ -21,16 +21,16 @@ dot=~/dot_files
 
 # dot files directories
 directories=(
-    $HOME/.config/i3
     $HOME/.zshrc
-    $HOME/.config/rofi
-    $HOME/.config/conky
-    $HOME/.config/picom
     $HOME/.config/alacritty
-    $HOME/.config/termite
     "$HOME/.config/Code - OSS/User/settings.json"
+    $HOME/.config/conky
+    $HOME/.config/dunst
     $HOME/.config/fontconfig
+    $HOME/.config/i3  
+    $HOME/.config/picom  
     $HOME/.config/pythons-scripts
+    $HOME/.config/rofi
 )
 
 # backup files

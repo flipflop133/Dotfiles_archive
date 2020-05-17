@@ -56,6 +56,8 @@ class weather_com(IntervalModule):
                     icon = ''
                 elif "rain" in conditions:
                     icon = ''
+                elif "clear" in conditions:
+                    icon = ''
 
             cdict = {"icon": icon, "temp": temp}
         except:

@@ -276,10 +276,11 @@ exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
 
 # compositor
-exec --no-startup-id picom --experimental-backends --backend glx
+exec --no-startup-id picom #--experimental-backends --backend glx
 
 # lightlocker
 exec --no-startup-id light-locker
 
 # notification-center
 #exec --no-startup-id deadd-notification-center
+exec --no-startup-id dunst

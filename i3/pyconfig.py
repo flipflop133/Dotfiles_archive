@@ -38,7 +38,7 @@ status.register("weather_com", format="{icon} {temp}°C", color="#000000")
 # (the default value for format is used)
 # status.register("load")
 
-# Shows avg cpu usage
+# Shows avg cpu freq
 status.register("cpufreq", format=" {freq}Ghz", color="#000000")
 
 # Shows avg cpu usage
@@ -47,7 +47,10 @@ status.register("cpu_usage", format=" {usage}%", color="#000000")
 # Shows avg cpu temp
 status.register("cputemp", format=" {temp}°C", color="#000000")
 
-# Shows avg cpu temp
+# Shows avg gpu usage
+status.register("gpumem", format=" {gpu_mem}Mb")
+
+# Shows mem usage
 status.register("mem",
                 format=" {used_mem}Gb",
                 divisor=1 * (10**9),
