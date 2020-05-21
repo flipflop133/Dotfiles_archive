@@ -1,5 +1,5 @@
 from i3pystatus import Status
-from i3pystatus.updates import pacman
+from i3pystatus.updates import yay
 from i3pystatus.weather import weathercom
 status = Status()
 
@@ -18,21 +18,18 @@ status.register("custom_calendar",
                 color="#000000")
 
 # Pacman updates
-status.register("updates",
-                format=" {count}",
-                backends=[pacman.Pacman()],
-                color="#000000")
+status.register("updates",format = " {count}", backends = [yay.Yay(False)], color="#000000")
 
 # XRP
-status.register("xrp",
-                format="XRP {wallet}€ {price}€ {percent}",
-                color="#000000")
+#status.register("xrp",
+#                format="XRP {wallet}€ {price}€ {percent}",
+#                color="#000000")
 
 # Weather
 # status.register("custom_weather", format="{weather}", color="#000000")
 
 # Weather
-status.register("weather_com", format="{icon} {temp}°C", color="#000000")
+status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
@@ -48,7 +45,7 @@ status.register("cpu_usage", format=" {usage}%", color="#000000")
 status.register("cputemp", format=" {temp}°C", color="#000000")
 
 # Shows avg gpu usage
-status.register("gpumem", format=" {gpu_mem}Mb")
+# status.register("gpumem", format=" {gpu_mem}Mb")
 
 # Shows mem usage
 status.register("mem",

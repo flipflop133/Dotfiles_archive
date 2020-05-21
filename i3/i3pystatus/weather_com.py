@@ -48,9 +48,13 @@ class weather_com(IntervalModule):
                     icon = ''
                 elif "rain" in conditions:
                     icon = ''
+                elif "clear" in conditions:
+                    icon = ''
             # day icons
             else:
-                if "cloud" in conditions:
+                if "partly cloudy" in conditions:
+                    icon = ''
+                elif "cloud" in conditions:
                     icon = ''
                 elif "sun" in conditions:
                     icon = ''

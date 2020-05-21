@@ -29,9 +29,10 @@
 # zsh
 # display window title: xtitle
 # ytop
-# lockscreen: lightlocker
+# lockscreen: betterlockscreen
 # notifications: notify-send.py (pip install notify-send.py)
-#                linux-notification-center (https://github.com/phuhl/linux_notification_center)
+#                xfce4-notifyd
+# quotes: cowfortune
 
 # Kernel
 # linux-nitrous
@@ -59,7 +60,7 @@ font pango: Noto Sans Nerd Font Medium 13
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id light-locker-command -l
+bindsym $mod+l exec --no-startup-id betterlockscreen -l -w
 
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
@@ -90,8 +91,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+q kill
 
 # start ROFI (a program launcher)
-#bindsym $mod+d exec rofi --no-startup-id -show drun -theme Arc
-bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/launcher.sh
+bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -theme .config/rofi/app_launcher/app_launcher.rofi
 
 # change focus
 #bindsym $mod+j focus left
@@ -284,3 +284,6 @@ exec --no-startup-id light-locker
 # notification-center
 #exec --no-startup-id deadd-notification-center
 exec --no-startup-id dunst
+
+# autotiling
+#exec_always --no-startup-id autotiling

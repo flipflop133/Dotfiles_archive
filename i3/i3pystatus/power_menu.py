@@ -12,7 +12,7 @@ class power_menu(IntervalModule):
     settings = ("format", "color")
 
     def powerMenu(self):
-        os.popen("~/.config/rofi/scripts/menu_powermenu.sh")
+        os.popen("~/.config/rofi/power_menu/menu_powermenu.sh")
 
     def run(self):
         self.output = {"full_text": '', "color": self.color}

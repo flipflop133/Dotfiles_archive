@@ -26,6 +26,7 @@ def get_quote():
         quote_date = (soup.find('div', class_="qotdSubtInf")).text
         quote_date = quote_date.split()
         quote_date = quote_date[1].strip("th")
+        quote_date = quote_date.strip("s")
     except:
         pass
     if int(day_date) != int(quote_date):
