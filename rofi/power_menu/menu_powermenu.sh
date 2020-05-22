@@ -21,7 +21,7 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        i3lock
+        ~/.config/i3/lock.sh
         ;;
     $suspend)
         mpc -q pause
@@ -29,7 +29,7 @@ case $chosen in
         systemctl suspend
         ;;
     $logout)
-        openbox --exit
+        i3-msg exit
         ;;
 esac
 

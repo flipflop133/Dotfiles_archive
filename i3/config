@@ -60,7 +60,7 @@ font pango: Noto Sans Nerd Font Medium 13
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id betterlockscreen -l -w
+bindsym $mod+l exec --no-startup-id ~/.config/i3/i3lock/lock.sh
 
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
@@ -231,13 +231,17 @@ set $purple  #bd93f9
 set $red     #ff6b6b
 set $transparent #00000066
 
+# polybar
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # i3bar
 bar {
     separator_symbol " "
     # disable system tray
     # tray_output none
-    tray_padding 0
-    status_command python ~/.config/i3/pyconfig.py
+    tray_padding 2
+    # i3pystatus
+    status_command python ~/.config/i3/i3pystatus/pyconfig.py
     #i3bar_command i3bar -t
     position          bottom
     workspace_buttons yes

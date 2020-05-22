@@ -14,7 +14,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/morteza/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -92,7 +92,7 @@ zstyle ":completion:*:descriptions" format "%B%d%b"
 zstyle ':completion:*:*:*:default' menu yes select search
 
 # alias
-alias ls='ls --color=auto'
+alias ls='ls'
 alias grep='grep --color=auto'
 alias pacman='pacman --color=auto'
 alias nf='neofetch | lolcat'

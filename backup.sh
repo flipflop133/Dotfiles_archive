@@ -28,7 +28,8 @@ directories=(
     $HOME/.config/dunst
     $HOME/.config/fontconfig
     $HOME/.config/i3  
-    $HOME/.config/picom  
+    $HOME/.config/picom
+    $HOME/.config/polybar
     $HOME/.config/pythons-scripts
     $HOME/.config/rofi
 )
