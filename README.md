@@ -1,4 +1,5 @@
 ### Arch Linux setup
+![Preview](.images/setup_preview.png)
 ------
 # My Stuff
 #### System
