@@ -4,40 +4,6 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
-#
-# Required apps
-#
-# i3 gaps
-# file exlorer : pcmanfm
-# screenshot : gscreenshot
-# wallpaper : xwallpaper
-# terminal : alacritty
-# compositor : picom
-# bar : i3pystatus 
-# dmenu : rofi
-# network : network manager + applet
-# theme changer : lxappearance
-# themes : arc
-# icon theme : papirus
-# display manager : lightdm + gtk greeter + lightdm litarvan
-# power manager : xfce power manager
-# media control : playerctl
-# sound control : pulseaudio-ctl
-# ascii displayer : figlet
-# lolcat
-# zsh
-# display window title: xtitle
-# ytop
-# lockscreen: betterlockscreen
-# notifications: notify-send.py (pip install notify-send.py)
-#                xfce4-notifyd
-# quotes: cowfortune
-
-# Kernel
-# linux-nitrous
-# required for a custom kernel : nvidia-dkms
-
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
