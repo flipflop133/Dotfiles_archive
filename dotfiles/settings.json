@@ -27,6 +27,7 @@
     "editor.fontLigatures": true,
     "workbench.iconTheme": "eq-material-theme-icons-light",
     "window.zoomLevel": 0,
+    "python.pythonPath": "/bin/python",
     //extensions:
     //Material Theme Icons
     //Python
