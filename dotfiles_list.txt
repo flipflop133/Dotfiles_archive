@@ -1,0 +1,11 @@
+.zshrc
+.config/alacritty
+.config/Code - OSS/User/settings.json
+.config/conky
+.config/dunst
+.config/fontconfig
+.config/i3
+.config/picom
+.config/polybar
+.config/pythons-scripts
+.config/rofi

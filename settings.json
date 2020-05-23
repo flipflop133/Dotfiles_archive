@@ -28,6 +28,7 @@
     "workbench.iconTheme": "eq-material-theme-icons-light",
     "window.zoomLevel": 0,
     "python.pythonPath": "/bin/python",
+    "sonarlint.ls.javaHome": "/home/francois/.vscode-oss/extensions/sonarsource.sonarlint_managed-jre/jre/jdk-11.0.7+10-jre",
     //extensions:
     //Material Theme Icons
     //Python

@@ -13,7 +13,7 @@ class weather_com(IntervalModule):
     settings = (("format", "Format string used for output."),
                 ("color", "Standard color"), ("interval", "Update interval."))
     format = "{icon}{temp}"
-    interval = 1000
+    interval = 900  # refresh every 15 minutes
 
     def get_weather(self):
         URL = 'https://weather.com/en-BE/temps/aujour/l/9aef22e1a76778d3658a0ad05e4ef5f49e2e44e4404d6e8bbc8603616c162f96'
@@ -28,18 +28,30 @@ class weather_com(IntervalModule):
                     requests.exceptions.RequestException):
                 sleep(60)
                 page = ''
-        soup = BeautifulSoup(page.content, 'html.parser')
-        # retrieve temperature in HTML code
-        job_elems = soup.find_all('div', class_='today_nowcard-temp')
-        temp = job_elems[0]
-        temp = temp.text
-        temp = int(temp.strip('°'))
+        while True:
+            try:
+                soup = BeautifulSoup(page.content, 'html.parser')
+                # retrieve temperature in HTML code
+                job_elems = soup.find_all('div', class_='today_nowcard-temp')
+                temp = job_elems[0]
+                temp = temp.text
+                temp = int(temp.strip('°'))
 
-        # retrieve weather conditions in HTML code
-        job_elems = soup.find_all('div', class_='today_nowcard-phrase')
-        conditions = job_elems[0]
-        conditions = (conditions.text).lower()
+                # retrieve weather conditions in HTML code
+                job_elems = soup.find_all('div', class_='today_nowcard-phrase')
+                conditions = job_elems[0]
+                conditions = (conditions.text).lower()
 
+                # determine the icon
+                icon = self.get_icon(conditions)
+
+                cdict = {"icon": icon, "temp": temp}
+                return cdict
+            except IndexError:
+                sleep(60)
+                self.get_weather()
+
+    def get_icon(self, conditions):
         # determine icon in function of the weather conditions and the hour
         # check the hour
         icon = ''
@@ -70,11 +82,7 @@ class weather_com(IntervalModule):
                 icon = ''
             elif "clear" in conditions:
                 icon = ''
-
-        cdict = {"icon": icon, "temp": temp}
-        return cdict
-
-        # find weather condition in the file
+        return icon
 
     def irm(self):
         os.popen("chromium https://www.meteo.be/fr/belgique")
