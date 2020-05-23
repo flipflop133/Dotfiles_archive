@@ -2,12 +2,9 @@
 # Doc: https://coinmarketcap.com/api/documentation/v1/
 
 import json
-import threading
 import os
-import time
 from i3pystatus import IntervalModule
 from requests import Session
-from requests.exceptions import ConnectionError, Timeout, TooManyRedirects
 
 
 class xrp_price(IntervalModule):

@@ -1,6 +1,5 @@
 from i3pystatus import Status
 from i3pystatus.updates import yay
-from i3pystatus.weather import weathercom
 status = Status()
 
 # Notification-center
@@ -16,9 +15,6 @@ status.register("custom_calendar",
                 format=" {date}",
                 interval=600,
                 color="#000000")
-
-# Pacman updates
-status.register("updates",format = " {count}", backends = [yay.Yay(False)], color="#000000")
 
 # XRP
 #status.register("xrp",
