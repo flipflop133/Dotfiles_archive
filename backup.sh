@@ -14,10 +14,13 @@ DefaultIFS=$IFS
 
 # Display title
 clear
-figlet DOT BACKUP|lolcat || echo -e echo -e "\e[96mDOT BACKUP\e[0m"
+echo "DOT BACKUP"|lolcat || echo -e echo -e "\e[96mDOT BACKUP\e[0m"
 
 # define backup directory
-dot=~/dot_files
+echo -e "\e[96mBackup directory:\e[0m"
+pwd=$(pwd)
+echo "$pwd"
+dot=$pwd
 
 # dot files directories
 directories=(
@@ -34,15 +37,34 @@ directories=(
     $HOME/.config/rofi
 )
 
+# clean old dotfiles
+cleaner(){
+    read -r -p "Clean old dotfiles(those in the cloned repo)? [y/N]" response
+    if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+    then
+        echo -e "\e[96mOld dotfiles will be deleted.\e[0m" 
+        clean="true"
+    else
+        echo -e "\e[96mSkipping cleaning.\e[0m" 
+    fi
+}
+
 # backup files
 backup(){
     # Set IFS to '' so spaces are not ignored
 	IFS=''
     # copy dot files to backup directory
-    echo -e "\e[96mCopying files the following files:\e[0m"
+    echo -e "\e[96mBackuping the following dotfiles:\e[0m"
+    # clean old dotfiles
+    if [ "$clean" = "true" ]
+    then rm -rf $dot/dotfiles
+    fi
+    # backup new dotfiles
+    mkdir $dot/dotfiles
     for dir in ${directories[@]}; do
         echo "$dir"
-        cp -R -f "$dir" $dot
+        # copy the dotfile
+        cp -R -f "$dir" $dot/dotfiles
     done
     # Reset IFS to its default value
     IFS=$DefaultIFS
@@ -69,4 +91,9 @@ git(){
     ${GIT} push
 }
 
-backup && backup_app && git && echo -e "\e[96mBackup completed!\e[0m"
+# execute the functions
+cleaner
+backup
+backup_app
+git
+echo -e "\e[96mBackup completed!\e[0m"
