@@ -27,6 +27,9 @@ status.register("custom_calendar",
 # Weather
 status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
 
+# Weather
+status.register("pacman_updates", format=" {updates}", color="#000000")
+
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
 # status.register("load")

@@ -16,7 +16,7 @@ discord 0.0.10-3
 efibootmgr 17-1
 fakeroot 1.24-2
 feh 3.4-1
-fish 3.1.2-1
+fish 3.1.2-2
 flex 2.6.4-3
 gcc 10.1.0-2
 git 2.26.2-1
@@ -81,7 +81,7 @@ thunderbird 68.8.1-1
 ttf-meslo-nerd-font-powerlevel10k 1.000-2
 ttf-opensans 1.101-1
 vi 1:070224-4
-vim 8.2.0717-2
+vim 8.2.0814-2
 vimix-gtk-themes-git r375.150fd5a-1
 vlc 3.0.10-1
 w3m 0.5.3.git20200507-1
