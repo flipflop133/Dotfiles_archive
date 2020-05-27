@@ -88,19 +88,19 @@
   #multiplier: 3
 
 # Font configuration
-font:
+#font:
   # Normal (roman) font face
-  normal:
+  #normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: SauceCodePro Nerd Font
+    # family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    style: medium
+    #style: medium
 
   # Bold font face
   #bold:
@@ -136,7 +136,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 12.0
+  #size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.

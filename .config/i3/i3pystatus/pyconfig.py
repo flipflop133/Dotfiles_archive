@@ -59,11 +59,15 @@ status.register("mem",
 # (defaults of format_down and color_down)
 #
 # Note: the network module requires PyPI package netifaces
-# status.register(
-#     "network",
-#     interface="enp3s0",
-#     format_up=" {v4cidr}",
-# )
+status.register(
+     "network",
+     interface="enp3s0",
+     format_up=" {v4cidr}   {bytes_recv}MB/s",
+     divisor=(1*(10**6)),
+     color_up="#000000",
+     start_color="#000000",
+     end_color="#000000"
+)
 
 # Shows disk usage of /
 # Format:

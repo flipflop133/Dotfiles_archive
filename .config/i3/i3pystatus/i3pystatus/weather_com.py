@@ -82,6 +82,8 @@ class weather_com(IntervalModule):
                 icon = ''
             elif "clear" in conditions:
                 icon = ''
+            elif "fair" in conditions:
+                icon = ''
         return icon
 
     def irm(self):

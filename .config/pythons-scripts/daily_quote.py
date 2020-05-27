@@ -55,17 +55,14 @@ def get_quote():
 
 
 spaces = len(get_quote()[0])
-print('''
-   ''' + '_' * (spaces + 3) + '''
-   |''' + ' ' * (spaces + 1) + '''|
-   | ''' + get_quote()[0] + '''|
-   | ''' + get_quote()[1] + ' ' * ((spaces) - len(get_quote()[1])) + '''|
-   |''' + ' ' * (spaces + 1) + '''|
-   ''' + '-' * (spaces + 3) + '''
-''')
+# top
+print('╭' + (spaces * '─') + '╮')
+# center + quote
+print('|' + get_quote()[0] + '|')
+print('|' + get_quote()[1] + (spaces - len(get_quote()[1])) * ' ' + '|')
+# bottom
+print('╰' + (spaces * '─') + '╯')
 spaces = ' ' * 10
-print(spaces + '    o')
-print(spaces + '   o')
 print(spaces + '  o')
 print(spaces + ' o')
 print(spaces + 'o')
