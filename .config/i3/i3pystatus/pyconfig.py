@@ -3,7 +3,7 @@ from i3pystatus.updates import yay
 status = Status()
 
 # Notification-center
-status.register("notification_center", format='', color="#000000")
+status.register("notification_center", format='{icon}', color="#000000")
 # Open Rofi power menu
 status.register("power_menu", color="#000000")
 
@@ -59,15 +59,13 @@ status.register("mem",
 # (defaults of format_down and color_down)
 #
 # Note: the network module requires PyPI package netifaces
-status.register(
-     "network",
-     interface="enp3s0",
-     format_up=" {v4cidr}   {bytes_recv}MB/s",
-     divisor=(1*(10**6)),
-     color_up="#000000",
-     start_color="#000000",
-     end_color="#000000"
-)
+status.register("network",
+                interface="enp3s0",
+                format_up=" {v4cidr}   {bytes_recv}MB/s",
+                divisor=(1 * (10**6)),
+                color_up="#000000",
+                start_color="#000000",
+                end_color="#000000")
 
 # Shows disk usage of /
 # Format:
@@ -86,7 +84,7 @@ status.register("pulseaudio",
 
 # Shows Spotify song
 status.register("custom_spotify",
-                format=" {song}{artist}",
+                format="{icon} {song}{artist}",
                 interval=3,
                 color="#000000")
 

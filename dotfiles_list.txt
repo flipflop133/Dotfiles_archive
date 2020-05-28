@@ -2,10 +2,12 @@
 .config/alacritty
 .config/Code - OSS/User/settings.json
 .config/conky
-.config/dunst
+.config/dunst/dunstrc
 .config/fontconfig
 .config/i3
+.config/nvim/init.vim
 .config/picom
 .config/polybar
 .config/pythons-scripts
+.config/ranger
 .config/rofi
