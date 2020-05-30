@@ -1,5 +1,5 @@
 from i3pystatus import Status
-from i3pystatus.updates import yay
+from i3pystatus.updates import pacman, yay
 status = Status()
 
 # Notification-center
@@ -17,7 +17,7 @@ status.register("custom_calendar",
                 color="#000000")
 
 # XRP
-#status.register("xrp",
+# status.register("xrp",
 #                format="XRP {wallet}€ {price}€ {percent}",
 #                color="#000000")
 
@@ -27,8 +27,13 @@ status.register("custom_calendar",
 # Weather
 status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
 
-# Weather
-status.register("pacman_updates", format=" {updates}", color="#000000")
+# Updates
+status.register("updates",
+                format="Updates: {count}",
+                format_no_updates="No updates",
+                backends=[yay.Yay(False)],
+                color="#000000",
+                color_no_updates="#000000")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)

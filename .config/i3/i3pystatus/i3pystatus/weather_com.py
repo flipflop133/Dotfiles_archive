@@ -13,24 +13,40 @@ class weather_com(IntervalModule):
     settings = (("format", "Format string used for output."),
                 ("color", "Standard color"), ("interval", "Update interval."))
     format = "{icon}{temp}"
-    interval = 900  # refresh every 15 minutes
+    interval = 1800  # refresh every 30 minutes
 
-    def get_weather(self):
+    def get_website(self):
+        """try to retrieve the html weather page
+        return
+        ------
+        page: html page(object)
+        """
         URL = 'https://weather.com/en-BE/temps/aujour/l/9aef22e1a76778d3658a0ad05e4ef5f49e2e44e4404d6e8bbc8603616c162f96'
         page = ''
         while page == '':
             # try to retrieve the HTML page
             try:
                 page = requests.get(URL, timeout=5)
-            # if it fails to retrieve the HTML page, check again every 60 seconds
+            # if it fails to retrieve the HTML page, check again every 60
             except (ConnectionError, requests.exceptions.Timeout,
                     requests.exceptions.TooManyRedirects,
                     requests.exceptions.RequestException):
-                sleep(60)
+                sleep(5)
                 page = ''
-        while True:
+        return page
+
+    def get_weather(self):
+        """Find weather informations in the html page
+        return
+        ------
+        cdict: dictionary with icon and temp(dict)
+        """
+        page = self.get_website()
+        cdict = {}
+        while cdict == {}:
             try:
                 soup = BeautifulSoup(page.content, 'html.parser')
+
                 # retrieve temperature in HTML code
                 job_elems = soup.find_all('div', class_='today_nowcard-temp')
                 temp = job_elems[0]
@@ -48,7 +64,7 @@ class weather_com(IntervalModule):
                 cdict = {"icon": icon, "temp": temp}
                 return cdict
             except IndexError:
-                sleep(60)
+                sleep(5)
                 self.get_weather()
 
     def get_icon(self, conditions):

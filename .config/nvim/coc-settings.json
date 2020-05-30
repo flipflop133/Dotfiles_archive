@@ -1,0 +1,14 @@
+{
+// autoformat
+"coc.preferences.formatOnSaveFiletypes": [
+    "python"
+],
+"coc.preferences.hoverTarget": "float",
+"diagnostic.virtualText": true,
+// python config
+"python.linting.enabled": true,
+"python.jediEnabled": true,
+"python.linting.pylintEnabled": false,
+"python.linting.flake8Enabled": true,
+"python.formatting.provider": "yapf",
+}

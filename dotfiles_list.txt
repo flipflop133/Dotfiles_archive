@@ -5,7 +5,7 @@
 .config/dunst/dunstrc
 .config/fontconfig
 .config/i3
-.config/nvim/init.vim
+.config/nvim
 .config/picom
 .config/polybar
 .config/pythons-scripts
