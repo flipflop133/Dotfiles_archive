@@ -24,13 +24,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 
 " Syntax highlighting
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 
 " Linter, formatter and Autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " AutoPairs
-Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 " Code folding
 "Plug 'tmhedberg/SimpylFold'

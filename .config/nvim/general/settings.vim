@@ -39,7 +39,8 @@ set shiftwidth=4
 set signcolumn=yes
 
 " spell languages
-set spell
+nnoremap <silent> <F11> :set spell!<cr>
+inoremap <silent> <F11> <C-O>:set spell!<cr>
 set spelllang=en
 
 " Give more space for displaying messages.
@@ -50,3 +51,4 @@ set completeopt-=preview
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+

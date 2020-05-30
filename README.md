@@ -17,10 +17,19 @@
 | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)                 | The most awesome Powerline theme for ZSH around!                                  |
 | [neofetch](https://github.com/dylanaraps/neofetch)                        | A fast, highly customizable system info script                                    |
 | [ranger](https://github.com/ranger/ranger)                                | Terminal file manager, inspired by vim                                            |
+| [FZF](https://github.com/junegunn/fzf)                                    | General-purpose command-line fuzzy finder                                         |
 | [Figlet](https://github.com/cmatsuoka/figlet)                             | ASCII banners in terminal                                                         |
 | [lolcat](https://github.com/busyloop/lolcat)                              | Just because Unicorns exist                                                       |
 | [htop](https://github.com/hishamhm/htop)                                  | Easier top                                                                        |
 | [cowfortune](https://github.com/anthraxx/cowfortune)                      | In case my quote python script break...                                           |
+
+#### Code Editor
+| Package                                                                   | Description                                                                       |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Neovim](https://github.com/neovim/neovim)                                | Vim-fork focused on extensibility and usability                                   |
+| [Coc](https://github.com/neoclide/coc.nvim)                               | Linter, Formatter and Autocomplete                                                |
+| [Airline](https://github.com/vim-airline/vim-airline)                     | Beautiful StatusLine                                                              |
+| [NERDTree](https://github.com/preservim/nerdtree)                         | Beautiful file manager                                                            |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
@@ -32,7 +41,7 @@
 | [Playerctl](https://github.com/acrisci/playerctl)                         | To control music on i3                                                            |
 | [Pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl)              | To adjust volume on i3                                                            |
 | xfce4-power-manager                                                       | Simple way to monitor battery status                                              |
-| xfce4-notifyd                                                             | Helpful to get GTK notifications like current song or battery status              |
+| [Dunst](https://github.com/dunst-project/dunst)                           | Light but powerful notification daemon                                            |
 | [NetworkManager](https://github.com/NetworkManager/NetworkManager)        | easiest tool to setup your network                                                |
 | [Lxappearance](https://wiki.lxde.org/en/LXAppearance)                     | GTK style configuration tool(from LXDE)                                           |
 | [SDDM](https://github.com/sddm/sddm)                                      | Eyecandy display manager                                                          |
