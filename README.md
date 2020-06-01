@@ -70,6 +70,10 @@
 | [PSD](https://wiki.archlinux.org/index.php/Profile-sync-daemon)           | Guide to enable Profile-sync-daemon                                               |
 | [List of apps](https://wiki.archlinux.org/index.php/List_of_applications) | List of applications by categories                                                |
 | [Kernel stuff](https://wiki.archlinux.org/index.php/Kernel)               | Mainpage of kernel related stuff                                                  |
+| [systemd](https://wiki.archlinux.org/index.php/Systemd#Basic_systemctl_usage)| Guide about how to use systemctl                                               |
+| [Font configuration](https://wiki.archlinux.org/index.php/Font_configuration)| All stuff about font configuration on archlinux                                |
+| [EXT4](https://wiki.archlinux.org/index.php/Ext4)                         | Nice page about our sweet file system ext4 that handle all file transfers         |
+| [MPV](https://wiki.archlinux.org/index.php/Mpv)                           | Open source, light and unbloat media player                                       |
 
 ------
 # Thanks to [Mortezadadgar](https://github.com/mortezadadgar) for his help!
