@@ -61,5 +61,15 @@
 | [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)                     | Iconic font aggregator, collection, & patcher                                     |
 | [Vimix](https://github.com/vinceliuice/vimix-gtk-themes)                  | Material GTK themes(compatible with all my apps not like some other themes...)    |
 | [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)   | The must have icon theme                                                          |
+
+#### Useful Arch wiki links
+| Package                                                                   | Description                                                                       |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Improving performance](https://wiki.archlinux.org/index.php/Improving_performance)| Best tips to improve system performances                                 |
+| [Firefox tweaks](https://wiki.archlinux.org/index.php/Firefox/Tweaks)     | Tips to improve Firefox overall performances                                      |
+| [PSD](https://wiki.archlinux.org/index.php/Profile-sync-daemon)           | Guide to enable Profile-sync-daemon                                               |
+| [List of apps](https://wiki.archlinux.org/index.php/List_of_applications) | List of applications by categories                                                |
+| [Kernel stuff](https://wiki.archlinux.org/index.php/Kernel)               | Mainpage of kernel related stuff                                                  |
+
 ------
 # Thanks to [Mortezadadgar](https://github.com/mortezadadgar) for his help!

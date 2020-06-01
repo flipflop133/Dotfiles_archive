@@ -51,7 +51,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Return exec --no-startup-id alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -217,8 +217,8 @@ bar {
     colors {
 	focused_workspace   $fg		$fg                 $black
 	active_workspace    $fg    	$fg                 $purple
-	inactive_workspace  $fg         $fg                 $bg
-	urgent_workspace    $fg         $fg                 $magenta
+	inactive_workspace  $fg     $fg                 $bg
+	urgent_workspace    $fg     $fg                 $magenta
 	background          $fg
 	statusline	    $fg
 	separator	    $fg

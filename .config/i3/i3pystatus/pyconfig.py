@@ -25,7 +25,7 @@ status.register("custom_calendar",
 # status.register("custom_weather", format="{weather}", color="#000000")
 
 # Weather
-status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
+#status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
 
 # Updates
 status.register("updates",

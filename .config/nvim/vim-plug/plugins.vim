@@ -15,6 +15,11 @@ call plug#begin()
 
 " Theme
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'morhetz/gruvbox'
+Plug 'reedes/vim-colors-pencil'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'kaicataldo/material.vim'
 
 " UI stuff
 Plug 'vim-airline/vim-airline'

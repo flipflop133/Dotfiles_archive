@@ -3,9 +3,9 @@
 "########################
 " Theme
 "https://github.com/NLKNguyen/papercolor-theme
-set t_Co=256   " This is may or may not needed.
+set termguicolors
 set background=light "termguicolors
-colorscheme PaperColor
+colorscheme PaperColor 
 
 " copy/paste
 set clipboard=unnamedplus

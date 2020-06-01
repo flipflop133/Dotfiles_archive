@@ -36,8 +36,8 @@ sleep 4s
 ## WORKSPACE 3 SOCIAL ##
 # Apps to start
 apps=(	
- "chromium https://www.messenger.com/"
- "chromium https://www.facebook.com/"
+ "firefox https://www.messenger.com/"
+ "firefox https://www.facebook.com/"
  "discord"
  "telegram-desktop"
 )
