@@ -38,10 +38,10 @@ class custom_calendar(IntervalModule):
 
     def googleCalendar(self):
         # open a new chromium window and sleep 0.5s
-        os.popen("chromium")
+        os.popen("firefox")
         time.sleep(0.5)
         # open the Google calendar link
-        os.popen("chromium https://calendar.google.com/calendar/r?tab=rc")
+        os.popen("firefox https://calendar.google.com/calendar/r?tab=rc")
 
     def run(self):
         cdict = self.getDate()

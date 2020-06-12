@@ -194,7 +194,7 @@ set $green   #50fa7b
 set $magenta #ff79c6
 set $comment #6272a4
 set $purple  #bd93f9
-set $red     #ff6b6b
+set $red     #ff0000
 set $transparent #00000066
 
 # polybar
@@ -215,13 +215,16 @@ bar {
     strip_workspace_numbers yes
     binding_mode_indicator yes
     colors {
+    # class             border  backgr.             text
 	focused_workspace   $fg		$fg                 $black
 	active_workspace    $fg    	$fg                 $purple
 	inactive_workspace  $fg     $fg                 $bg
-	urgent_workspace    $fg     $fg                 $magenta
+	urgent_workspace    $fg     $fg                 $red
+    binding_mode        $fg     $fg                 $red
+
 	background          $fg
-	statusline	    $fg
-	separator	    $fg
+	statusline	        $fg
+	separator	        $fg
     }
 }
 
@@ -229,7 +232,7 @@ bar {
 client.focused          $fg     $fg     $black  $magenta  $black
 client.focused_inactive $fg     $fg     $black  $fg       $fg
 client.unfocused        $fg     $fg     $bg     $fg       $fg
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.urgent           $fg     $fg     $red    $fg       $fg 
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff

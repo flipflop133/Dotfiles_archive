@@ -74,6 +74,7 @@
 | [Font configuration](https://wiki.archlinux.org/index.php/Font_configuration)| All stuff about font configuration on archlinux                                |
 | [EXT4](https://wiki.archlinux.org/index.php/Ext4)                         | Nice page about our sweet file system ext4 that handle all file transfers         |
 | [MPV](https://wiki.archlinux.org/index.php/Mpv)                           | Open source, light and unbloat media player                                       |
+| [Pacman tricks](https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks)| Some tricks to manage your beloved packages                                     |
 
 ------
 # Thanks to [Mortezadadgar](https://github.com/mortezadadgar) for his help!

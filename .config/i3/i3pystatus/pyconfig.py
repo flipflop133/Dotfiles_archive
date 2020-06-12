@@ -25,15 +25,15 @@ status.register("custom_calendar",
 # status.register("custom_weather", format="{weather}", color="#000000")
 
 # Weather
-#status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
+# status.register("weather_com", format="{icon}  {temp}°C", color="#000000")
 
 # Updates
-status.register("updates",
-                format="Updates: {count}",
-                format_no_updates="No updates",
-                backends=[yay.Yay(False)],
-                color="#000000",
-                color_no_updates="#000000")
+#status.register("updates",
+#                format="Updates: {count}",
+#                format_no_updates="No updates",
+#                backends=[yay.Yay(False)],
+#                color="#000000",
+#                color_no_updates="#000000")
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
