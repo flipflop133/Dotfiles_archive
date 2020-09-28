@@ -1,7 +1,8 @@
 {
 // autoformat
 "coc.preferences.formatOnSaveFiletypes": [
-    "python"
+    "python",
+    "c"
 ],
 "coc.preferences.hoverTarget": "float",
 "diagnostic.virtualText": true,
@@ -11,4 +12,12 @@
 "python.linting.pylintEnabled": false,
 "python.linting.flake8Enabled": true,
 "python.formatting.provider": "yapf",
+
+"languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+    }
+  }
 }
