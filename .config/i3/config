@@ -47,6 +47,10 @@ bindsym XF86AudioPause exec --no-startup-id playerctl pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
+# Backlight control
+bindsym XF86MonBrightnessDown	exec --no-startup-id blight set -10%
+bindsym XF86MonBrightnessUp	exec --no-startup-id blight set +10%
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -111,11 +115,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:  "
-set $ws2 "2:  "
-set $ws3 "3:  "
-set $ws4 "4: ﱘ "
-set $ws5 "5:  "
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -187,7 +191,7 @@ bindsym $mod+r mode "resize"
 set $black   #000000
 set $bg      #888888
 set $grey    #333333
-set $lg      #666666
+set $lg      #cccccc
 set $fg      #ffffff
 set $cyan    #8be9fd
 set $green   #50fa7b
@@ -198,35 +202,35 @@ set $red     #ff0000
 set $transparent #00000066
 
 # polybar
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id polybar top -r
 
 # i3bar
-bar {
-    separator_symbol " "
-    # disable system tray
-    # tray_output none
-    tray_padding 2
-    # i3pystatus
-    status_command python ~/.config/i3/i3pystatus/pyconfig.py
-    #i3bar_command i3bar -t
-    position          bottom
-    workspace_buttons yes
-    workspace_min_width 60
-    strip_workspace_numbers yes
-    binding_mode_indicator yes
-    colors {
-    # class             border  backgr.             text
-	focused_workspace   $fg		$fg                 $black
-	active_workspace    $fg    	$fg                 $purple
-	inactive_workspace  $fg     $fg                 $bg
-	urgent_workspace    $fg     $fg                 $red
-    binding_mode        $fg     $fg                 $red
-
-	background          $fg
-	statusline	        $fg
-	separator	        $fg
-    }
-}
+#bar {
+#    separator_symbol " "
+#    # disable system tray
+#    # tray_output none
+#    tray_padding 2
+#    # i3pystatus
+#    status_command python ~/.config/i3/i3pystatus/pyconfig.py
+#    #i3bar_command i3bar -t
+#    position          bottom
+#    workspace_buttons yes
+#    workspace_min_width 10
+#    strip_workspace_numbers yes
+#    binding_mode_indicator yes
+#    colors {
+#    # class             border  backgr.             text
+#	focused_workspace   $lg		$lg                 $black
+#	active_workspace    $lg    	$lg                 $purple
+#	inactive_workspace  $lg     $lg                 $bg
+#	urgent_workspace    $lg     $lg                 $red
+#    binding_mode        $lg     $lg                 $red
+#
+#	background          $lg
+#	statusline	        $lg
+#	separator	        $lg
+#    }
+#}
 
 # class                 border  backgr. text    indicator child_border
 client.focused          $fg     $fg     $black  $magenta  $black
@@ -242,7 +246,7 @@ client.background       #ffffff
 ################
 
 # start some apps
-exec --no-startup-id ~/.config/i3/startup_apps.sh
+#exec --no-startup-id ~/.config/i3/startup_apps.sh
 
 # set xwallpaper
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png

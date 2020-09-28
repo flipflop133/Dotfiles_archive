@@ -39,6 +39,8 @@ status.register("custom_calendar",
 # (the default value for format is used)
 # status.register("load")
 
+# Shows remaining battery
+status.register("battery", format=" {percentage:.0f}%", color="#000000")
 # Shows avg cpu freq
 status.register("cpufreq", format=" {freq}Ghz", color="#000000")
 
@@ -65,7 +67,7 @@ status.register("mem",
 #
 # Note: the network module requires PyPI package netifaces
 status.register("network",
-                interface="enp3s0",
+                interface="wlp2s0",
                 format_up=" {v4cidr}   {bytes_recv}MB/s",
                 divisor=(1 * (10**6)),
                 color_up="#000000",
