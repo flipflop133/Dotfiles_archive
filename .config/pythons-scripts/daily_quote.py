@@ -54,30 +54,46 @@ def get_quote():
     return quote, author
 
 
-spaces = len(get_quote()[0])
-# top
-print('╭' + (spaces * '─') + '╮')
-# center + quote
-print('|' + get_quote()[0] + '|')
-print('|' + get_quote()[1] + (spaces - len(get_quote()[1])) * ' ' + '|')
-# bottom
-print('╰' + (spaces * '─') + '╯')
-spaces = ' ' * 10
-print(spaces + '  o')
-print(spaces + ' o')
-print(spaces + 'o')
-print('''
-      _      _                        
-     : `.--.' ;              _....,_  
-     .'      `.      _..--'"'       `-._
-    :          :_.-'"                  .`.
-    :  6    6  :                     :  '.;
-    :          :                      `..';
-    `: .----. :'                          ;
-      `._Y _.'               '           ;
-        'U'      .'          `.         ; 
-           `:   ;`-..___       `.     .'`.
-           _:   :  :    ```"''"'``.    `.  `.
-         .'     ;..'            .'       `.'`
-        `.......'              `........-'`                                         
-''')
+def display_quote(quote, author):
+    if len(author) > len(quote):
+        # top
+        print('╭' + ((len(author)) * '─') + '╮')
+        # middle and quote
+        print('|' + quote + ((len(author) - len(quote)) * ' ') + '|')
+        print('|' + author + '|')
+        # bottom
+        print('╰' + ((len(author)) * '─') + '╯')
+
+    else:
+        # top
+        print('╭' + ((len(quote)) * '─') + '╮')
+        # middle and quote
+        print('|' + quote + '|')
+        print('|' + author + ((len(quote) - len(author)) * ' ') + '|')
+        # bottom
+        print('╰' + ((len(quote)) * '─') + '╯')
+
+    spaces = ' ' * 10
+    print(spaces + '  o')
+    print(spaces + ' o')
+    print(spaces + 'o')
+    print('''
+          _      _                        
+         : `.--.' ;              _....,_  
+         .'      `.      _..--'"'       `-._
+        :          :_.-'"                  .`.
+        :  6    6  :                     :  '.;
+        :          :                      `..';
+        `: .----. :'                          ;
+          `._Y _.'               '           ;
+            'U'      .'          `.         ; 
+               `:   ;`-..___       `.     .'`.
+               _:   :  :    ```"''"'``.    `.  `.
+             .'     ;..'            .'       `.'`
+            `.......'              `........-'`                                         
+    ''')
+
+
+quote = get_quote()[0]
+author = get_quote()[1]
+display_quote(quote, author)

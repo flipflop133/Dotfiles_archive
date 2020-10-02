@@ -102,7 +102,11 @@ zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*' group-name ''
 
-# alias
+###########
+# ALIASES #
+###########
+alias hu='sudo du -sh ~' # Home Usage
+alias ud='sudo pacman -Syyu' # UpDate
 alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias pacman='pacman --color=auto'
@@ -114,19 +118,10 @@ alias rf='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pa
 alias svi='sudoedit'
 alias sudo='sudo -v; sudo '
 alias pt='sudo powertop'
-alias mkdef='make shadow_defconfig; cp .config arch/arm64/configs/shadow_defconfig'
 alias rr='ranger'
 alias pacorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias cl='clear'
 alias nf='neofetch | lolcat'
-alias gbb='git branch | fzf | xargs git checkout'
-alias rm='rm -f'
-alias inmea='sudo intel-undervolt measure'
-alias grevn='git revert --no-edit'
-alias glg='git log --no-merges'
-alias gcps='git cherry-pick --skip'
-alias gams='git cmmit --amend -s'
-alias pc='sudo picocom -b 115200 /dev/ttyUSB0'
 alias q='python ~/.config/pythons-scripts/daily_quote.py | lolcat -p 1.5 -a -d 3'
 # make and cd
 function take() {
@@ -136,6 +131,11 @@ function take() {
 # copy contents of a file to clipboard
 function xcp() {
   cat $1 |xclip -selection clipboard
+}
+
+# read markdown files
+rmd () {
+  pandoc $1 | lynx -stdin
 }
 
 # preserve history for new instance

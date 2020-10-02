@@ -4,7 +4,7 @@ import os
 
 def getWeather():
     process = subprocess.run(
-        ['curl', '-s', 'wttr.in/Saint-Léger,Belgium?format=1'],
+        ['curl', '-s', 'wttr.in/Namur,Belgium?format=1'],
         stdout=subprocess.PIPE,
         universal_newlines=True)
     output_list = (process.stdout).splitlines()

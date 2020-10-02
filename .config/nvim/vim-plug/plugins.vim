@@ -26,7 +26,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Better Visual Guide
-Plug 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 
 " Syntax highlighting
 "Plug 'sheerun/vim-polyglot'

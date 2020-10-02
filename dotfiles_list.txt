@@ -11,4 +11,3 @@
 .config/pythons-scripts
 .config/ranger
 .config/rofi
-.config/nvim
