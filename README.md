@@ -2,6 +2,29 @@
 ![Preview](.images/setup_preview.png)
 ------
 # My Stuff
+#### Code Editor
+| Package                                                                   | Description                                                                       |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Neovim](https://github.com/neovim/neovim)                                | Vim-fork focused on extensibility and usability                                   |
+| [Coc](https://github.com/neoclide/coc.nvim)                               | Linter, Formatter and Autocomplete                                                |
+| [Airline](https://github.com/vim-airline/vim-airline)                     | Beautiful StatusLine                                                              |
+| [NERDTree](https://github.com/preservim/nerdtree)                         | Beautiful file manager                                                            |
+
+#### Design
+| Package                                                                   | Description                                                                       |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)                     | Iconic font aggregator, collection, & patcher                                     |
+| [Vimix](https://github.com/vinceliuice/vimix-gtk-themes)                  | Material GTK themes(compatible with all my apps not like some other themes...)    |
+| [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)   | The must have icon theme                                                          |
+
+#### Sound
+| Package                                                                   | Description                                                                       |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Pulseaudio](https://www.archlinux.org/)                                  | Sound server                                                                      |
+| [Playerctl](https://github.com/acrisci/playerctl)                         | To control music on i3                                                            |
+| [Pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl)              | To adjust volume on i3                                                            |
+| [Pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/)   | Graphical front-end to control pulseaudio                                         |
+
 #### System
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
@@ -23,13 +46,15 @@
 | [htop](https://github.com/hishamhm/htop)                                  | Easier top                                                                        |
 | [cowfortune](https://github.com/anthraxx/cowfortune)                      | In case my quote python script break...                                           |
 
-#### Code Editor
+#### Utilities
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [Neovim](https://github.com/neovim/neovim)                                | Vim-fork focused on extensibility and usability                                   |
-| [Coc](https://github.com/neoclide/coc.nvim)                               | Linter, Formatter and Autocomplete                                                |
-| [Airline](https://github.com/vim-airline/vim-airline)                     | Beautiful StatusLine                                                              |
-| [NERDTree](https://github.com/preservim/nerdtree)                         | Beautiful file manager                                                            |
+| [Rofi](https://github.com/DaveDavenport/rofi)                             | A window switcher, application launcher and dmenu replacement                     |
+| [Feh](https://github.com/derf/feh)                                        | Image viewer, useful to set a wallpaper                                           |
+| [Pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)                   | File manager, light with all needed stuff                                         |
+| [Gscreenshot](https://github.com/thenaterhood/gscreenshot)                | Full featured screenshot utility                                                  |
+| [Xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | Wallpaper setting utility for X                                                   |
+| [Powertop](https://wiki.archlinux.org/index.php/Powertop)                 | Powertop Intel's tool to control and monitor battery                              |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
@@ -38,29 +63,11 @@
 | [i3lock](https://github.com/i3/i3lock)                                    | The only locker that goes well with i3(no bloat inside)                           |
 | [i3pystatus](https://github.com/enkore/i3pystatus)                        | A replacement for the default i3status for pythons devs                           |
 | [Picom](https://github.com/yshui/picom)                                   | A lightweight compositor for X11 (previously a compton fork)                      |
-| [Playerctl](https://github.com/acrisci/playerctl)                         | To control music on i3                                                            |
-| [Pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl)              | To adjust volume on i3                                                            |
-| xfce4-power-manager                                                       | Simple way to monitor battery status                                              |
+| [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) | Simple way to monitor battery status                                              |
 | [Dunst](https://github.com/dunst-project/dunst)                           | Light but powerful notification daemon                                            |
 | [NetworkManager](https://github.com/NetworkManager/NetworkManager)        | easiest tool to setup your network                                                |
 | [Lxappearance](https://wiki.lxde.org/en/LXAppearance)                     | GTK style configuration tool(from LXDE)                                           |
 | [SDDM](https://github.com/sddm/sddm)                                      | Eyecandy display manager                                                          |
-
-#### Utilities
-| Package                                                                   | Description                                                                       |
-|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [Rofi](https://github.com/DaveDavenport/rofi)                             | A window switcher, application launcher and dmenu replacement                     |
-| [Feh](https://github.com/derf/feh)                                        | Image viewer, useful to set a wallpaper                                           |
-| [pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)                   | File manager, light with all needed stuff                                         |
-| [gscreenshot](https://github.com/thenaterhood/gscreenshot)                | Full featured screenshot utility                                                  |
-| [xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | wallpaper setting utility for X                                                   |
-
-#### Design
-| Package                                                                   | Description                                                                       |
-|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)                     | Iconic font aggregator, collection, & patcher                                     |
-| [Vimix](https://github.com/vinceliuice/vimix-gtk-themes)                  | Material GTK themes(compatible with all my apps not like some other themes...)    |
-| [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)   | The must have icon theme                                                          |
 
 #### Useful Arch wiki links
 | Package                                                                   | Description                                                                       |
