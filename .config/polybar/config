@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #cccccc
+background = #dddddd
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #000000
@@ -26,13 +26,14 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #0277bd
+warning = #ff0000
 
 [bar/top]
 ; Put the bar at the bottom of the screen
 bottom = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 #radius = 6.0
@@ -47,72 +48,31 @@ line-color = #f00
 border-size = 0 
 border-color = #00000000
 
-padding-left = 0
+padding-left = 0 
 padding-right = 2 
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 1 
+module-margin-right = 1
 
-font-0 = "Noto Sans Nerd Font:style=Regular:size=12;3"
+font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
 font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
-font-2 = "Noto Sans:size=8;3"
 
 modules-left = i3
 modules-center = mpd xwindow
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = weather xkeyboard filesystem xbacklight memory cpu cpufreq temperature wlan eth battery pulseaudio date powermenu
 
-tray-position = right
+;tray
+tray-position = none 
 tray-padding = 2
-;tray-background = #0063ff
+tray-background = #555555
 
-;wm-restack = bspwm
-;wm-restack = i3
+wm-restack = i3
 
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-[module/weather]
-type = custom/script
-exec = python ~/.config/polybar/polybar-scripts/weather_wttr.py
-interval = 600
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-label-empty = Empty
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3]
 type = internal/i3
@@ -123,7 +83,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 2 
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
@@ -132,13 +92,13 @@ label-focused = %icon%
 label-focused-background = ${colors.background}
 label-focused-foreground = #000000
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 1 
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = #666666
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -148,9 +108,9 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-foreground = #ffffff
-label-urgent-padding = 2
+label-urgent-background = ${colors.background} 
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -179,6 +139,42 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+label-empty = Empty
+
+[module/weather]
+type = custom/script
+exec = curl -s "wttr.in/Saint-Léger,Belgium?format=1"
+interval = 600
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = ""
+format-prefix-padding = 1
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/filesystem]
+type = internal/fs
+interval = 10 
+
+mount-0 = /
+mount-1 = /storage
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground-alt}
+
 [module/xbacklight]
 type = internal/xbacklight
 
@@ -201,21 +197,40 @@ inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
-label = %percentage:2%%
-
 [module/memory]
 type = internal/memory
 interval = 10 
 format-prefix = ""
+format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format-prefix = ""
+format-prefix-padding = 1
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage:1%%
+
+[module/cpufreq]
+type = custom/script
+exec = python ~/.config/polybar/polybar-scripts/cpufreq.py
+format-prefix = "龍"
+format-prefix-padding = 1
+interval = 1
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+base-temperature = 20
+warn-temperature = 60
+format-prefix = 
+format-prefix-padding = 1
 
 [module/wlan]
 type = internal/network
@@ -237,51 +252,17 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = enp6s0
-interval = 10
+interface = enp3s0
+interval = 1
 
+format-connected = <label-connected>
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix =
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
+label-connected = %downspeed:8%  %upspeed:7%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-[module/date]
-type = internal/date
-interval = 5
-
-date =
-date-alt = " %Y-%m-%d"
-
-time = %I:%M
-time-alt = %I:%M:%S
-
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
-
-label = %date% %time%
-
-[module/pulseaudio]
-type = internal/pulseaudio
-
-format-volume = <ramp-volume> <label-volume>
-label-volume = %percentage%%
-label-volume-foreground = ${root.foreground}
-
-label-muted = 婢
-label-muted-foreground = #666
-
-; Only applies if <ramp-volume> is used
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 墳
-ramp-volume-3 = 
+format-disconnected = <label-disconnected>
+label-disconnected = not connected
 
 [module/battery]
 type = internal/battery
@@ -358,22 +339,37 @@ animation-discharging-10 = 
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
+[module/pulseaudio]
+type = internal/pulseaudio
 
-format = <ramp> <label>
-format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
 
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-muted = 婢
+label-muted-foreground = #666
 
-ramp-0 = 
-ramp-foreground = ${colors.foreground-alt}
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 墳
+ramp-volume-3 = 
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %I:%M
+time-alt = %I:%M:%S
+
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #0a6cf5
+
+label = %date% %time%
 
 [module/powermenu]
 type = custom/menu

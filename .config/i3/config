@@ -33,12 +33,12 @@ exec --no-startup-id xfce4-power-manager
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up && python $HOME/.config/i3/volume_indicator.py
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && python $HOME/.config/i3/volume_indicator.py
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 2 && python $HOME/.config/i3/volume_indicator.py
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 2 && python $HOME/.config/i3/volume_indicator.py
 bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute && python $HOME/.config/i3/volume_indicator.py
 
 # Use playerctl to control media.
@@ -254,9 +254,6 @@ exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
 
 # compositor
 exec --no-startup-id picom #--experimental-backends --backend glx
-
-# lightlocker
-exec --no-startup-id light-locker
 
 # notification-center
 #exec --no-startup-id deadd-notification-center

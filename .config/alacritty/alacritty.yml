@@ -97,7 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: FiraCode
+    family: JetBrainsMono 
 
     # The `style` can be specified to pick a specific face.
     #style: medium
@@ -136,7 +136,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -170,86 +170,34 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night Bright)
+# Colors (Seabird)
 colors:
   # Default colors
   primary:
-    background: '#ffffff' # base3
-    foreground: '#000000' # base00
-
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '#9a9a9a'
-    #bright_foreground: '#ffffff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-    #text: '#fdf6e3' # base3
-    #cursor: '#657b83' # base00
-
-  # Selection colors
-  #
-  # Colors which should be used to draw the selection area. If selection
-  # background is unset, selection color will be the inverse of the cell colors.
-  # If only text is unset the cell text color will remain the same.
-  #selection:
-  #  text: '#eaeaea'
-  #  background: '#404040'
+    background: '#ffffff'
+    foreground: '#000000'
 
   # Normal colors
-  #normal:
-    # NOTE: Use '#131613' for the `black` color if you'd like to see
-    # black text on the background.
   normal:
-    black:      "#000000"
-    red:        "#d32f2f"
-    green:      "#388e3c"
-    yellow:     "#b08f26"
-    blue:       "#1976d2"
-    magenta:    "#7b1fa2"
-    cyan:       "#0097a7"
-    white:      "#ffffff"
+    black:   '#0b141a'
+    red:     '#ff4053'
+    green:   '#11ab00'
+    yellow:  '#bf8c00'
+    blue:    '#0099ff'
+    magenta: '#9854ff'
+    cyan:    '#00a5ab'
+    white:   '#cccccc'
 
   # Bright colors
   bright:
-    black:      "#333333"
-    red:        "#f44336"
-    green:      "#4caf50"
-    yellow:     "#fdd835"
-    blue:       "#2196f3"
-    magenta:    "#9c27b0"
-    cyan:       "#00bcd4"
-    white:      "#ffffff"
-
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
-  #dim:
-  #  black:   '#000000'
-  #  red:     '#8c3336'
-  #  green:   '#7a8530'
-  #  yellow:  '#97822e'
-  #  blue:    '#506d8f'
-  #  magenta: '#80638e'
-  #  cyan:    '#497e7a'
-  #  white:   '#9a9a9a'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #
-  # Example:
-  #   `- { index: 16, color: '#ff00ff' }`
-  #
-  #indexed_colors: []
+    black:   '#0b141a'
+    red:     '#ff4053'
+    green:   '#11ab00'
+    yellow:  '#bf8c00'
+    blue:    '#0099ff'
+    magenta: '#9854ff'
+    cyan:    '#00a5ab'
+    white:   '#dddddd'
 
 # Visual Bell
 #

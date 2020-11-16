@@ -52,9 +52,9 @@ zinit light romkatv/powerlevel10k
 # o-my-zsh
 # key-binding
 # always load fzf-bindings after key-bindings
-#zinit ice lucid \
-#	 atload"!source /usr/share/fzf/key-bindings.zsh \
-#	 !source /usr/share/fzf/completion.zsh"
+zinit ice lucid \
+	 atload"!source /usr/share/fzf/key-bindings.zsh \
+	 !source /usr/share/fzf/completion.zsh"
 zinit snippet OMZ::lib/key-bindings.zsh
 # git
 zinit ice lucid
@@ -82,14 +82,15 @@ zinit wait lucid for \
 	    zsh-users/zsh-autosuggestions
 
 # completion color
-zinit wait"0c" lucid reset \
- 	atclone"local P=${${(M)OSTYPE:#*darwin*}:+g}
-            \${P}sed -i \
-            '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
-            \${P}dircolors -b LS_COLORS > c.zsh" \
-	atpull'%atclone' pick"c.zsh" nocompile'!' \
-	atload'zstyle ":completion:*:default" list-colors "${(s.:.)LS_COLORS}";' for \
-	    trapd00r/LS_COLORS
+#zinit wait"0c" lucid reset \
+# 	atclone"local P=${${(M)OSTYPE:#*darwin*}:+g}
+#            \${P}sed -i 's/38;5;253/38;5;81/'\
+#            \${P}sed -i \
+#            '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
+#            \${P}dircolors -b LS_COLORS > c.zsh" \
+#            	atpull'%atclone' pick"c.zsh" nocompile'!' \
+#	atload'zstyle ":completion:*:default" list-colors "${(s.:.)LS_COLORS}";' for \
+#	    trapd00r/LS_COLORS
 
 # completion zstyle
 zstyle ':completion:*:*:kill:*' menu yes select
@@ -121,8 +122,9 @@ alias pt='sudo powertop'
 alias rr='ranger'
 alias pacorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias cl='clear'
-alias nf='neofetch | lolcat'
+alias nf='neofetch'
 alias q='python ~/.config/pythons-scripts/daily_quote.py | lolcat -p 1.5 -a -d 3'
+alias top='bpytop'
 # make and cd
 function take() {
   mkdir -p $@ && cd ${@:$#}
@@ -148,9 +150,9 @@ setopt inc_append_history
 setopt share_history
 
 # fzf
-export FZF_DEFAULT_COMMAND="fd --type f -H"
+export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type d -H"o
+export FZF_ALT_C_COMMAND="fd --type d"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

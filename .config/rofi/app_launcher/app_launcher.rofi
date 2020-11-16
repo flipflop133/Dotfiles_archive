@@ -23,7 +23,7 @@ configuration {
 }
 
 * {
-    font:                   "Noto Sans Nerd Font Medium 15";
+    font:                   "Noto Sans Nerd Font Medium 20";
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
     foreground:                  rgba ( 82, 93, 118, 100 % );
     normal-foreground:           @foreground;

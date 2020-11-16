@@ -77,7 +77,7 @@ shrink = yes
 # The transparency of the window.  Range: [0; 100].
 # This option will only work if a compositing windowmanager is
 # present (e.g. xcompmgr, compiz, etc.).
-transparency = 0
+transparency = 0 
 
 # Don't remove messages, if the user is idle (no mouse or keyboard input)
 # for longer than idle_threshold seconds.
@@ -118,7 +118,7 @@ line_height = 3
 # Draw a line of "separatpr_height" pixel height between two
 # notifications.
 # Set to 0 to disable.
-separator_height = 1
+separator_height = 0 
 
 # Padding between text and separator.
 padding = 6
@@ -181,14 +181,14 @@ context = ctrl+shift+period
 # Otherwise the "#" and following would be interpreted as a comment.
 frame_color = "#3B7C87"
 foreground = "#000000"
-background = "#ffffff"
+background = "#dddddd"
 #background = "#2B313C"
 timeout = 10
 
 [urgency_normal]
 frame_color = "#5B8234"
 foreground = "#000000"
-background = "#ffffff"
+background = "#dddddd"
 #background = "#2B313C"
 timeout = 10
 
