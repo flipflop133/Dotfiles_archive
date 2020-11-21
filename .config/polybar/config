@@ -25,10 +25,10 @@ foreground = #000000
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
-alert = #0277bd
+alert = #03a9f4
 warning = #ff0000
 
-[bar/top]
+[bar/bottom]
 ; Put the bar at the bottom of the screen
 bottom = true
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -48,18 +48,18 @@ line-color = #f00
 border-size = 0 
 border-color = #00000000
 
-padding-left = 0 
-padding-right = 2 
+padding-left = 1 
+padding-right = 1 
 
-module-margin-left = 1 
+module-margin-left = 0 
 module-margin-right = 1
 
 font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
 font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
 
-modules-left = i3
-modules-center = mpd xwindow
-modules-right = weather xkeyboard filesystem xbacklight memory cpu cpufreq temperature wlan eth battery pulseaudio date powermenu
+modules-left = powermenu i3
+modules-center = mpd spotify 
+modules-right =  xkeyboard filesystem xbacklight memory cpu cpufreq temperature wlan eth battery pulseaudio 
 
 ;tray
 tray-position = none 
@@ -73,6 +73,98 @@ scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 ;cursor-scroll = ns-resize
+
+[bar/top]
+width = 40%
+height = 30
+offset-x = 30% 
+;offset-y = 10
+;radius = 15
+fixed-center = true 
+;padding = 500
+override-redirect = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0 
+line-color = #f00
+
+border-size = 0 
+border-color = #00000099
+
+padding-left = 3 
+padding-right = 3 
+
+module-margin-left = 0 
+module-margin-right = 1
+
+font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
+font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
+
+modules-left = weather
+modules-center = xwindow  
+modules-right = date
+
+;tray
+tray-position = none 
+tray-padding = 2
+tray-background = #555555
+
+wm-restack = i3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+;cursor-scroll = ns-resize
+;
+
+[bar/top-dummy]
+width = 100%
+height = 30
+;offset-x = 1000
+;offset-y = 10
+;radius = 6.0
+fixed-center = false 
+;padding = 500
+
+background = #00000000
+foreground = ${colors.foreground}
+
+line-size = 0 
+line-color = #f00
+
+;border-size = 10 
+border-color = #00000000
+
+;padding-left = 500
+;padding-right = 50 
+
+module-margin-left = 0 
+module-margin-right = 1
+
+font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
+font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
+
+modules-left = 
+modules-center = dummy 
+modules-right = 
+
+;tray
+tray-position = none 
+tray-padding = 2
+tray-background = #555555
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+;cursor-scroll = ns-resize
+;
+
+[module/dummy]
+type = custom/script
 
 [module/i3]
 type = internal/i3
@@ -120,9 +212,10 @@ label-urgent-padding = 1
 ; Neither <label> nor <icon> can contain a semicolon (;)
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;ﱘ
-ws-icon-4 = 5;
+ws-icon-5 = 3;﨟
+ws-icon-2 = 4;
+ws-icon-3 = 5;ﱘ
+ws-icon-4 = 6;
 ws-icon-default = 
 
 
@@ -139,6 +232,12 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
+[module/spotify]
+type = custom/script
+exec = python $HOME/.config/pythons-scripts/custom_spotify.py
+interval = 3 
+format-foreground = #85702d
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
@@ -147,6 +246,11 @@ label-empty = Empty
 [module/weather]
 type = custom/script
 exec = curl -s "wttr.in/Saint-Léger,Belgium?format=1"
+interval = 600
+
+[module/xrp]
+type = custom/script
+exec = python $HOME/.config/pythons-scripts/xrp.py
 interval = 600
 
 [module/xkeyboard]
@@ -378,27 +482,54 @@ expand-right = true
 
 format-spacing = 2 
 
-label-open = 
-label-open-foreground = 0277bd 
-label-close = 
-label-close-foreground = 0277bd
+label-open = 
+label-open-foreground = ${colors.alert} 
+label-close = 
+label-close-foreground = ${colors.alert} 
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
+;main menu
+menu-0-0 = 襤
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = 累
 menu-0-1-exec = menu-open-2
+menu-0-2 = 鈴
+menu-0-2-exec = menu-open-3
+menu-0-3 = 
+menu-0-3-exec = menu-open-4
+menu-0-4 = 
+menu-0-4-exec = menu-open-5
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
+;poweroff menu
+menu-1-0 = 襤
+menu-1-0-exec = poweroff
+menu-1-1 = ﬋
+menu-1-1-exec = menu-open-0
 
-menu-2-0 = power off
-menu-2-0-exec = poweroff
-menu-2-1 = cancel
+;reboot menu
+menu-2-0 = 累
+menu-2-0-exec = reboot
+menu-2-1 = ﬋
 menu-2-1-exec = menu-open-0
+
+;suspend menu
+menu-3-0 = 鈴
+menu-3-0-exec = systemctl suspend
+menu-3-1 = ﬋
+menu-3-1-exec = menu-open-0
+
+;hibernate menu
+menu-4-0 = 
+menu-4-0-exec = systemctl hibernate
+menu-4-1 = ﬋
+menu-4-1-exec = menu-open-0
+
+;logout menu
+menu-5-0 = 
+menu-5-0-exec = i3-msg exit
+menu-5-1 = ﬋
+menu-5-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true

@@ -35,10 +35,10 @@ spaces=$(printf "%-30s" " ")
 NID=$(<$file_id)
 if [ -z $NID ]; then
     # send notification
-    NID=$(notify-send "Volume$spaces" "$level $bar" --icon=$icon -p -c "device")
+    NID=$(notify-send --hint=int:transient:1 --icon=$icon -p -t 5000 -u "low" "Volume$spaces" "$level $bar" )
 else
     # send notification
-    NID=$(notify-send "Volume$spaces" "$level $bar" --icon=$icon -p -r $NID -c "device")
+    NID=$(notify-send --hint=int:transient:1 --icon=$icon -p -t 5000 -u "low" -r $NID "Volume$spaces" "$level $bar")
 fi
 echo $NID > /tmp/notification_id.txt
 

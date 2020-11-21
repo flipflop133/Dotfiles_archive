@@ -55,7 +55,7 @@ zinit light romkatv/powerlevel10k
 zinit ice lucid \
 	 atload"!source /usr/share/fzf/key-bindings.zsh \
 	 !source /usr/share/fzf/completion.zsh"
-zinit snippet OMZ::lib/key-bindings.zsh
+#zinit snippet OMZ::lib/key-bindings.zsh
 # git
 zinit ice lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh

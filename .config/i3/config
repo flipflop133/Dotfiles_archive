@@ -26,7 +26,8 @@ font pango: Noto Sans Nerd Font Medium 13
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Lock screen
-bindsym $mod+l exec --no-startup-id ~/.config/i3/i3lock/lock.sh
+#bindsym $mod+l exec --no-startup-id ~/.config/i3/i3lock/lock.sh
+bindsym $mod+l exec --no-startup-id dm-tool lock
 
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
@@ -189,11 +190,12 @@ bindsym $mod+r mode "resize"
 
 # Defining colors
 set $black   #000000
-set $bg      #888888
+set $bg      #999999
 set $grey    #333333
 set $lg      #cccccc
 set $fg      #ffffff
 set $cyan    #8be9fd
+set $deepBlue #03a9f4
 set $green   #50fa7b
 set $magenta #ff79c6
 set $comment #6272a4
@@ -203,6 +205,7 @@ set $transparent #00000066
 
 # polybar
 exec --no-startup-id polybar top -r
+exec --no-startup-id polybar bottom -r
 
 # i3bar
 #bar {
@@ -224,7 +227,7 @@ exec --no-startup-id polybar top -r
 #	active_workspace    $lg    	$lg                 $purple
 #	inactive_workspace  $lg     $lg                 $bg
 #	urgent_workspace    $lg     $lg                 $red
-#    binding_mode        $lg     $lg                 $red
+#   binding_mode        $lg     $lg                 $red
 #
 #	background          $lg
 #	statusline	        $lg
@@ -233,13 +236,22 @@ exec --no-startup-id polybar top -r
 #}
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $fg     $fg     $black  $magenta  $black
+client.focused          $fg     $fg     $black  $magenta  $deepBlue 
 client.focused_inactive $fg     $fg     $black  $fg       $fg
-client.unfocused        $fg     $fg     $bg     $fg       $fg
-client.urgent           $fg     $fg     $red    $fg       $fg 
+client.unfocused        $bg     $bg     $grey   $fg       $fg
+client.urgent           $bg     $bg     $red    $fg       $fg 
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+###########
+# i3-gaps #
+###########
+gaps inner 20
+gaps top 20
+#gaps outer current plus 5
+#gaps horizontal current plus 40
+#gaps outer current toggle 60
 
 ################
 # startup apps #

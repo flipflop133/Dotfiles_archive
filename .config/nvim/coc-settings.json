@@ -14,10 +14,20 @@
 "python.formatting.provider": "yapf",
 
 "languageserver": {
-    "clangd": {
-      "command": "clangd",
-      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
-      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
-    }
+  "bash": {
+    "command": "bash-language-server",
+    "args": ["start"],
+    "filetypes": ["sh"],
+    "ignoredRootPaths": ["~"]
   }
 }
+
+}
+//"languageserver": {
+//    "clangd": {
+//      "command": "clangd",
+//      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+//      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
+//    }
+//  }
+//}
