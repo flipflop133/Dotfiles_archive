@@ -1,0 +1,4 @@
+/etc/lightdm/lightdm.conf
+/etc/lightdm/lightdm-mini-greeter.conf
+/etc/lightdm/wallpaper.jpg
+/etc/fstab

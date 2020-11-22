@@ -4,6 +4,7 @@ automake 1.16.2-3
 base 2-2
 binutils 2.35.1-1
 bison 3.7.2-1
+bpytop 1.0.50-1
 code 1.51.1-1
 discord 0.0.12-2
 dunst 1.5.0-1
@@ -20,13 +21,14 @@ i3-gaps 4.19-1
 i3blocks 1.5-3
 i3lock 2.13-1
 i3status 2.13-3
-imagemagick 7.0.10.40-1
+imagemagick 7.0.10.41-1
 libnotify-id 0.7.9-1
 lightdm 1:1.30.0-4
 lightdm-gtk-greeter 1:2.0.8-1
 lightdm-mini-greeter 0.4.0-1
 linux-firmware 20201113.2ea8667-1
 linux-lts 5.4.78-1
+lolcat 100.0.0-2
 lxappearance 0.6.3-4
 m4 1.4.18-3
 make 4.3-3
@@ -37,7 +39,7 @@ nerd-fonts-roboto-mono 2.1.0-1
 networkmanager 1.26.4-1
 noto-fonts-emoji 20200916-1
 numlockx 1.2-5
-nvidia-lts 1:455.38-6
+nvidia-lts 1:455.45.01-1
 papirus-icon-theme 20201031-1
 patch 2.7.6-8
 pavucontrol 1:4.0-2

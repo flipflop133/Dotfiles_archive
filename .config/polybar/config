@@ -23,10 +23,13 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #000000
 foreground-alt = #555
+foreground-light-grey = #888888
 primary = #ffb52a
 secondary = #e60053
 alert = #03a9f4
 warning = #ff0000
+transparent = #00000000
+gold = #85702d
 
 [bar/bottom]
 ; Put the bar at the bottom of the screen
@@ -46,7 +49,7 @@ line-size = 0
 line-color = #f00
 
 border-size = 0 
-border-color = #00000000
+border-color = ${colors.transparent} 
 
 padding-left = 1 
 padding-right = 1 
@@ -61,10 +64,7 @@ modules-left = powermenu i3
 modules-center = mpd spotify 
 modules-right =  xkeyboard filesystem xbacklight memory cpu cpufreq temperature wlan eth battery pulseaudio 
 
-;tray
 tray-position = none 
-tray-padding = 2
-tray-background = #555555
 
 wm-restack = i3
 
@@ -78,20 +78,15 @@ cursor-click = pointer
 width = 40%
 height = 30
 offset-x = 30% 
-;offset-y = 10
-;radius = 15
 fixed-center = true 
-;padding = 500
 override-redirect = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0 
-line-color = #f00
 
 border-size = 0 
-border-color = #00000099
 
 padding-left = 3 
 padding-right = 3 
@@ -106,10 +101,7 @@ modules-left = weather
 modules-center = xwindow  
 modules-right = date
 
-;tray
 tray-position = none 
-tray-padding = 2
-tray-background = #555555
 
 wm-restack = i3
 
@@ -117,63 +109,12 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 cursor-click = pointer
-;cursor-scroll = ns-resize
-;
-
-[bar/top-dummy]
-width = 100%
-height = 30
-;offset-x = 1000
-;offset-y = 10
-;radius = 6.0
-fixed-center = false 
-;padding = 500
-
-background = #00000000
-foreground = ${colors.foreground}
-
-line-size = 0 
-line-color = #f00
-
-;border-size = 10 
-border-color = #00000000
-
-;padding-left = 500
-;padding-right = 50 
-
-module-margin-left = 0 
-module-margin-right = 1
-
-font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
-font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
-
-modules-left = 
-modules-center = dummy 
-modules-right = 
-
-;tray
-tray-position = none 
-tray-padding = 2
-tray-background = #555555
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-;cursor-scroll = ns-resize
-;
-
-[module/dummy]
-type = custom/script
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
 
 label-mode-padding = 2 
 label-mode-foreground = #000
@@ -201,7 +142,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
 label-urgent-background = ${colors.background} 
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = ${colors.warning}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
@@ -236,7 +177,9 @@ label-song-ellipsis = true
 type = custom/script
 exec = python $HOME/.config/pythons-scripts/custom_spotify.py
 interval = 3 
-format-foreground = #85702d
+format-foreground = ${colors.gold}
+click-left = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+click-right = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 [module/xwindow]
 type = internal/xwindow
@@ -251,7 +194,7 @@ interval = 600
 [module/xrp]
 type = custom/script
 exec = python $HOME/.config/pythons-scripts/xrp.py
-interval = 600
+interval = 1800
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -279,35 +222,12 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/xbacklight]
-type = internal/xbacklight
-
-format = <label> <bar>
-label = BL
-
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #fff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
-
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
-
 [module/memory]
 type = internal/memory
 interval = 10 
 format-prefix = ""
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/cpu]
@@ -316,7 +236,6 @@ interval = 0.5
 format-prefix = ""
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
 label = %percentage:1%%
 
 [module/cpufreq]
@@ -342,14 +261,9 @@ interface = wlp2s0
 interval = 10
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 直
 ramp-signal-foreground = ${colors.foreground-alt}
@@ -360,7 +274,6 @@ interface = enp3s0
 interval = 1
 
 format-connected = <label-connected>
-format-connected-underline = #55aa55
 format-connected-prefix =
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %downspeed:8%  %upspeed:7%
@@ -375,7 +288,6 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -451,7 +363,7 @@ label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 婢
-label-muted-foreground = #666
+label-muted-foreground = ${colors.foreground-light-grey} 
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
@@ -471,7 +383,6 @@ time-alt = %I:%M:%S
 
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
 
 label = %date% %time%
 

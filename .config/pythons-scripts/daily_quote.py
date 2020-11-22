@@ -6,20 +6,27 @@ from bs4 import BeautifulSoup
 
 
 def get_quote():
-
     # get date of the day
     process = subprocess.run(['date', '+%e'],
                              stdout=subprocess.PIPE,
                              universal_newlines=True)
     day_date = process.stdout
 
-    home = expanduser("~")
-    quote_dir = home + '/.config/pythons-scripts/quote'
+    quote_dir = '/tmp/quote'
     quote_date = 0
     try:
-        f = open(quote_dir, "rb")
+        f = open(quote_dir, "xrb")
         page = pickle.load(f)
-        soup = BeautifulSoup(page.content, 'html.parser')
+        try:
+            soup = BeautifulSoup(page.content, 'html.parser')
+        except ModuleNotFoundError:
+            print("Installing bs4")
+            try:
+                subprocess.run(["pip", "install", "bs4"], stdout=False)
+            except IOError:
+                print("Cannot install bs4")
+            get_quote()
+
         f.close()
 
         # retrieve date in the HTML code

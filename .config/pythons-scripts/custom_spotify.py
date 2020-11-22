@@ -4,10 +4,18 @@ import subprocess
 import time
 import json
 import dbus
+
+command = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata".split(
+)
+
 # store if the previous song was an ad
-with open("/home/francois/.config/pythons-scripts/spotify.json",
-          "r") as read_file:
-    data = json.load(read_file)
+try:
+    with open("/tmp/spotify.json", "r") as read_file:
+        data = json.load(read_file)
+except IOError:
+    dict = {"ad": False, "isSong": False}
+    with open("/tmp/spotify.json", "w") as read_file:
+        json.dump(dict, read_file)
 ad = bool(data['ad'])
 isSong = bool(data['isSong'])
 
@@ -40,48 +48,48 @@ def blockAds(song, ad):
 
 
 def getSong(isSong):
-    # song name
-    f = os.popen(
-        "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata | sed -n '/title/{n;p}'"# | cut -d '\"' -f 2"
-    )
-    song = (f.read()).split()
-    finalSong = ''
-    for i in range(2,len(song)):
-        finalSong += song[i] + ' '
-    finalSong = finalSong.replace("\"",'')
-    # check for ads
-    global ad
-    ad = blockAds(finalSong, ad)
-    # artist
-    f = os.popen(
-        "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:org.mpris.MediaPlayer2.Player string:Metadata"
-    )
-    artist = (f.read()).split()
-    artistName = ''
-    for i in range(len(artist)):
-        if artist[i] == "\"xesam:artist\"":
-            artistName = artist[i + 5] + ' ' + artist[i + 6]
-            # filter weird characters
-            artistName = artistName.strip(']')
-            artistName = artistName.replace('"', '')
-            artistName = 'by ' + artistName
+    try:
+        # retrieve song data
+        result = subprocess.run(command, capture_output=True, text=True)
+        result = result.stdout
+        result = result.strip()
+        result = result.split("dict entry")
 
-    # determine icon
-    status = get_playBackStatus()
-    if status == "Paused":
-        icon = ''
-    else:
-        icon = ''
-    # display song name
-    if finalSong != '' and 'Advertisement' not in finalSong and artistName != '' and isSong is False:
-        isSong = True
-        print("{} {}".format(icon, finalSong))
+        # Song
+        song = result[9]
+        song = song.replace("(", "").replace(")", "").replace("\"", "").split()
+        finalSong = ""
+        for i in range(4, len(song)):
+            finalSong += song[i] + " "
+        # check for ads
+        global ad
+        ad = blockAds(finalSong, ad)
 
-    # display artist name
-    elif finalSong != '' and 'Advertisement' not in finalSong and artistName != '' and isSong is True:
-        isSong = False
-        print("{} {}".format(icon, artistName))
-    return isSong, ad
+        # artist
+        song = result[6]
+        song = song.replace("\"", "").replace("]", "").replace(")", "").split()
+        artistName = ""
+        for i in range(7, len(song)):
+            artistName += song[i] + " "
+        # determine icon
+        status = get_playBackStatus()
+        if status == "Paused":
+            icon = ''
+        else:
+            icon = ''
+        # display song name
+        if finalSong != '' and 'Advertisement' not in finalSong and artistName != '' and isSong is False:
+            isSong = True
+            print("{} {}".format(icon, finalSong))
+
+        # display artist name
+        elif finalSong != '' and 'Advertisement' not in finalSong and artistName != '' and isSong is True:
+            isSong = False
+            print("{} {}".format(icon, artistName))
+        return isSong, ad
+
+    except subprocess:
+        return "no_process"
 
 
 def get_playBackStatus():
@@ -93,27 +101,12 @@ def get_playBackStatus():
     return properties.Get(Dbus.intf_player, "PlaybackStatus")
 
 
-def set_pause():
-    """Toggle play/pause using dbus
-        """
-    os.popen(
-        "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-    )
-    icon = "play"
-
-
-def play_next():
-    """Play the next song using dbus
-        """
-    os.popen(
-        "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-    )
-
-
 values = getSong(isSong)
-isSong = values[0]
-ad = values[1]
-dict = {"ad": ad, "isSong": isSong}
-with open("/home/francois/.config/pythons-scripts/spotify.json",
-          "w") as read_file:
-    json.dump(dict, read_file)
+if values == "no_process":
+    print("")
+else:
+    isSong = values[0]
+    ad = values[1]
+    dict = {"ad": ad, "isSong": isSong}
+    with open("/tmp/spotify.json", "w") as read_file:
+        json.dump(dict, read_file)
