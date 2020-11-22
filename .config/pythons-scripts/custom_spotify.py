@@ -88,7 +88,7 @@ def getSong(isSong):
             print("{} {}".format(icon, artistName))
         return isSong, ad
 
-    except subprocess:
+    except:
         return "no_process"
 
 
