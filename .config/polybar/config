@@ -22,7 +22,7 @@ background = #dddddd
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #000000
-foreground-alt = #555
+foreground-alt = #777777
 foreground-light-grey = #888888
 primary = #ffb52a
 secondary = #e60053
@@ -61,8 +61,8 @@ font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
 font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
 
 modules-left = powermenu i3
-modules-center = mpd spotify 
-modules-right =  xkeyboard filesystem xbacklight memory cpu cpufreq temperature wlan eth battery pulseaudio 
+modules-center = spotify 
+modules-right = eth filesystem xbacklight memory cpu cpufreq temperature wlan battery pulseaudio xkeyboard
 
 tray-position = none 
 
@@ -153,25 +153,12 @@ label-urgent-padding = 1
 ; Neither <label> nor <icon> can contain a semicolon (;)
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-5 = 3;﨟
-ws-icon-2 = 4;
-ws-icon-3 = 5;ﱘ
-ws-icon-4 = 6;
+ws-icon-2 = 3;﨟
+ws-icon-3 = 4;
+ws-icon-4 = 5;ﱘ
+ws-icon-5 = 6;
+ws-icon-6 = 7;
 ws-icon-default = 
-
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
 
 [module/spotify]
 type = custom/script
@@ -199,17 +186,11 @@ interval = 1800
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-
 format-prefix = ""
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
@@ -224,7 +205,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/memory]
 type = internal/memory
-interval = 10 
+interval = 5
 format-prefix = ""
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
@@ -232,28 +213,30 @@ label = %percentage_used%%
 
 [module/cpu]
 type = internal/cpu
-interval = 0.5
+interval = 1
 format-prefix = ""
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage:1%%
+label = %percentage:2%%
 
 [module/cpufreq]
 type = custom/script
+interval = 1
 exec = python ~/.config/polybar/polybar-scripts/cpufreq.py
 format-prefix = "龍"
 format-prefix-padding = 1
-interval = 1
+format-prefix-foreground = ${colors.foreground-alt}
 
 [module/temperature]
 type = internal/temperature
-interval = 0.5
+interval = 1
 thermal-zone = 0
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 base-temperature = 20
 warn-temperature = 60
 format-prefix = 
 format-prefix-padding = 1
+format-prefix-foreground = ${colors.foreground-alt}
 
 [module/wlan]
 type = internal/network
@@ -276,7 +259,7 @@ interval = 1
 format-connected = <label-connected>
 format-connected-prefix =
 format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %downspeed:8%  %upspeed:7%
+label-connected = %downspeed%  %upspeed%
 
 format-disconnected = <label-disconnected>
 label-disconnected = not connected
@@ -370,6 +353,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 墳
 ramp-volume-3 = 
+ramp-volume-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -448,7 +432,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = false
+;pseudo-transparency = true 
 
 [global/wm]
 margin-top = 0 
