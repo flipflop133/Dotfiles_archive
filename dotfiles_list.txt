@@ -1,5 +1,6 @@
 .zshrc
 .config/alacritty
+.config/bpytop
 .config/Code - OSS/User/settings.json
 .config/conky
 .config/dunst

@@ -1,0 +1,54 @@
+23/11/20 (14:23:02) | ERROR: 'update_ms'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 514, in <module>
+    CONFIG: Config = Config(CONFIG_FILE)
+  File "/usr/bin/bpytop", line 427, in __init__
+    conf: Dict[str, Union[str, int, bool]] = self.load_config()
+  File "/usr/bin/bpytop", line 493, in load_config
+    if isinstance(new_config["update_ms"], int) and new_config["update_ms"] < 100:
+KeyError: 'update_ms'
+23/11/20 (14:23:03) | ERROR: 'update_ms'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 514, in <module>
+    CONFIG: Config = Config(CONFIG_FILE)
+  File "/usr/bin/bpytop", line 427, in __init__
+    conf: Dict[str, Union[str, int, bool]] = self.load_config()
+  File "/usr/bin/bpytop", line 493, in load_config
+    if isinstance(new_config["update_ms"], int) and new_config["update_ms"] < 100:
+KeyError: 'update_ms'
+23/11/20 (14:23:05) | ERROR: 'update_ms'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 514, in <module>
+    CONFIG: Config = Config(CONFIG_FILE)
+  File "/usr/bin/bpytop", line 427, in __init__
+    conf: Dict[str, Union[str, int, bool]] = self.load_config()
+  File "/usr/bin/bpytop", line 493, in load_config
+    if isinstance(new_config["update_ms"], int) and new_config["update_ms"] < 100:
+KeyError: 'update_ms'
+23/11/20 (14:23:40) | ERROR: 'update_ms'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 514, in <module>
+    CONFIG: Config = Config(CONFIG_FILE)
+  File "/usr/bin/bpytop", line 427, in __init__
+    conf: Dict[str, Union[str, int, bool]] = self.load_config()
+  File "/usr/bin/bpytop", line 493, in load_config
+    if isinstance(new_config["update_ms"], int) and new_config["update_ms"] < 100:
+KeyError: 'update_ms'
+23/11/20 (14:24:08) | ERROR: 'update_ms'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 514, in <module>
+    CONFIG: Config = Config(CONFIG_FILE)
+  File "/usr/bin/bpytop", line 427, in __init__
+    conf: Dict[str, Union[str, int, bool]] = self.load_config()
+  File "/usr/bin/bpytop", line 493, in load_config
+    if isinstance(new_config["update_ms"], int) and new_config["update_ms"] < 100:
+KeyError: 'update_ms'
+23/11/20 (14:24:19) | ERROR: 'update_ms'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 514, in <module>
+    CONFIG: Config = Config(CONFIG_FILE)
+  File "/usr/bin/bpytop", line 427, in __init__
+    conf: Dict[str, Union[str, int, bool]] = self.load_config()
+  File "/usr/bin/bpytop", line 493, in load_config
+    if isinstance(new_config["update_ms"], int) and new_config["update_ms"] < 100:
+KeyError: 'update_ms'
