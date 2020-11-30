@@ -44,3 +44,5 @@ let airline#extensions#coc#warning_symbol = 'W:'
 " Always show tabs
 set showtabline=2
 
+
+

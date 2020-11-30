@@ -1,0 +1,8 @@
+start=7628.580886
+deinterlace=yes
+af=@acompressor:acompressor=attack=20:makeup=24dB:threshold=-30dB:release=240:knee=10dB:ratio=20
+aid=1
+sid=no
+sub-delay=-0.000000
+sub-visibility=no
+ab-loop-a=3428.522724

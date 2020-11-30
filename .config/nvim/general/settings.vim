@@ -52,3 +52,8 @@ set completeopt-=preview
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+" Transparent background
+highlight Normal ctermbg=NONE guibg=NONE
+highlight NonText ctermbg=NONE guibg=NONE
+highlight number ctermbg=NONE guibg=NONE
+

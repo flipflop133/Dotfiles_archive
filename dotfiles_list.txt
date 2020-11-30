@@ -1,11 +1,12 @@
 .zshrc
 .config/alacritty
+.config/archive
 .config/bpytop
 .config/Code - OSS/User/settings.json
-.config/conky
 .config/dunst
 .config/fontconfig
 .config/i3
+.config/mpv
 .config/nvim/coc-settings.json
 .config/nvim/general
 .config/nvim/init.vim

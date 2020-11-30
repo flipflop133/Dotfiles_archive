@@ -122,8 +122,8 @@ alias pt='sudo powertop'
 alias rr='ranger'
 alias pacorph='sudo pacman -Rns $(pacman -Qtdq)'
 alias cl='clear'
-alias nf='neofetch'
-alias q='python ~/.config/pythons-scripts/daily_quote.py | lolcat -p 1.5 -a -d 3'
+alias nf='clear; neofetch'
+alias q='python ~/.config/pythons-scripts/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
 alias top='bpytop'
 # make and cd
 function take() {

@@ -22,13 +22,20 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     //font
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "JetBrains Mono",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "workbench.iconTheme": "eq-material-theme-icons-light",
     "window.zoomLevel": 0,
     "python.pythonPath": "/bin/python",
-    "sonarlint.ls.javaHome": "/home/francois/.vscode-oss/extensions/sonarsource.sonarlint_managed-jre/jre/jdk-11.0.7+10-jre",
+    "sonarlint.ls.javaHome": "/usr/lib/jvm/java-14-openjdk/",
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
     //extensions:
     //Material Theme Icons
     //Python
