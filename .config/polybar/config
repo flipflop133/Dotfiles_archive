@@ -309,7 +309,7 @@ label = %percentage:2%%
 [module/cpufreq]
 type = custom/script
 interval = 1
-exec = python ~/.config/polybar/polybar-scripts/cpufreq.py
+exec = python ~/.config/pythons-scripts/cpufreq.py
 format-prefix = "龍"
 format-prefix-padding = 1
 format-prefix-foreground = ${colors.foreground-alt}
