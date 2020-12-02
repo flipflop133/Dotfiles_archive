@@ -10,9 +10,7 @@
 .config/nvim/coc-settings.json
 .config/nvim/general
 .config/nvim/init.vim
-.config/nvim/keys
 .config/nvim/plug-config
-.config/nvim/themes
 .config/nvim/vim-plug
 .config/picom
 .config/polybar
