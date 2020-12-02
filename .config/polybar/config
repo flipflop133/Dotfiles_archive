@@ -16,6 +16,9 @@
 ;
 ;==========================================================
 
+[general]
+format-prefix-padding = 1 
+
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #dddddd
@@ -36,13 +39,13 @@ gold = #85702d
 bottom = true
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 30
+height = 35
 ;offset-x = 1%
 ;offset-y = 1%
 #radius = 6.0
 fixed-center = false 
 
-background = ${colors.transparent}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0 
@@ -58,7 +61,6 @@ module-margin-left = 1
 module-margin-right = 0
 
 font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
-;font-1 = "Noto Color Emoji:style=Regular:scale=14;3"
 
 modules-left = powermenu i3
 modules-center = spotify 
@@ -75,13 +77,13 @@ cursor-click = pointer
 ;cursor-scroll = ns-resize
 
 [bar/top-right]
-width = 24%
-height = 30
-offset-x = 76% 
+width = 27%
+height = 35
+offset-x = 73% 
 fixed-center = true 
 override-redirect = true
 
-background = ${colors.transparent}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0 
@@ -94,8 +96,7 @@ padding-right = 1
 module-margin-left = 1 
 module-margin-right = 0
 
-font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
-font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
+font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
 
 modules-right = weather calendar date
 
@@ -110,12 +111,12 @@ cursor-click = pointer
 
 [bar/top-middle]
 width = 20%
-height = 30
+height = 35
 offset-x = 40% 
 fixed-center = true 
 override-redirect = true
 
-background = ${colors.transparent}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0 
@@ -128,8 +129,7 @@ padding-right = 3
 module-margin-left = 0 
 module-margin-right = 1
 
-font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
-font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
+font-0 = "OpenSans-Regular:style=Regular:size=14;3"
 
 modules-left = 
 modules-center = xwindow  
@@ -146,12 +146,12 @@ cursor-click = pointer
 
 [bar/top-left]
 width = 30%
-height = 30
+height = 35
 offset-x = 0% 
 fixed-center = true 
 override-redirect = true
 
-background = ${colors.transparent}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0 
@@ -164,8 +164,7 @@ padding-right = 3
 module-margin-left = 0 
 module-margin-right = 1
 
-font-0 = "RobotoMono Nerd Font:style=Regular:size=13;3"
-font-1 = "Noto Color Emoji:style=Regular:scale=7;3"
+font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
 
 modules-left = crypto 
 modules-center =   
@@ -192,14 +191,14 @@ label-mode-background = ${colors.transparent}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
-label-focused-background = ${colors.transparent}
+label-focused-background = ${colors.background}
 label-focused-foreground = #000000
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1 
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
-label-unfocused-background = ${colors.transparent}
+label-unfocused-background = ${colors.background}
 label-unfocused-foreground = #666666
 label-unfocused-padding = 1
 
@@ -211,7 +210,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
-label-urgent-background = ${colors.transparent} 
+label-urgent-background = ${colors.background} 
 label-urgent-foreground = ${colors.warning}
 label-urgent-padding = 1
 
@@ -250,7 +249,7 @@ interval = 60
 click-left = python $HOME/.config/pythons-scripts/calendar.py -c True
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding} 
 
 [module/weather]
 type = custom/script
@@ -259,7 +258,7 @@ interval = 1800
 click-left = python $HOME/.config/weather-script/weather.py -a True
 format-prefix = " " 
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 
 [module/crypto]
 type = custom/script
@@ -271,7 +270,7 @@ interval = 1
 type = internal/xkeyboard
 blacklist-0 = num lock
 format-prefix = ""
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 format-prefix-foreground = ${colors.foreground-alt}
 label-layout = %layout%
 label-indicator-background = ${colors.secondary}
@@ -287,14 +286,14 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 spacing = 0
-label-mounted-padding = 1 
-label-unmounted-padding = 1
+label-mounted-padding = ${general.format-prefix-padding} 
+label-unmounted-padding = ${general.format-prefix-padding}
 
 [module/memory]
 type = internal/memory
 interval = 5
 format-prefix = ""
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage_used%%
 
@@ -302,7 +301,7 @@ label = %percentage_used%%
 type = internal/cpu
 interval = 1
 format-prefix = ""
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 format-prefix-foreground = ${colors.foreground-alt}
 label = %percentage:2%%
 
@@ -311,7 +310,7 @@ type = custom/script
 interval = 1
 exec = python ~/.config/pythons-scripts/cpufreq.py
 format-prefix = "龍"
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 format-prefix-foreground = ${colors.foreground-alt}
 
 [module/temperature]
@@ -322,7 +321,7 @@ hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 base-temperature = 20
 warn-temperature = 60
 format-prefix = 
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 format-prefix-foreground = ${colors.foreground-alt}
 
 [module/wlan]
@@ -433,7 +432,7 @@ label-volume-foreground = ${root.foreground}
 
 label-muted = 婢
 label-muted-foreground = ${colors.foreground-light-grey} 
-label-muted-padding = 1
+label-muted-padding = ${general.format-prefix-padding}
 
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
@@ -441,7 +440,7 @@ ramp-volume-1 = 
 ramp-volume-2 = 墳
 ramp-volume-3 = 
 ramp-volume-foreground = ${colors.foreground-alt}
-ramp-volume-padding = 1
+ramp-volume-padding = ${general.format-prefix-padding}
 
 [module/date]
 type = internal/date
@@ -451,7 +450,7 @@ time = %I:%M
 
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-padding = 1
+format-prefix-padding = ${general.format-prefix-padding}
 
 label = %time%
 

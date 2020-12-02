@@ -3,7 +3,15 @@ import os
 import subprocess
 import time
 import json
-import dbus
+try:
+    import dbus
+except ModuleNotFoundError:
+    n = os.fork()
+    if n == 0:
+        subprocess.run(["pip", "install", "dbus-python"])
+        import dbus
+    else:
+        os.wait()
 
 
 class Dbus:

@@ -38,10 +38,6 @@ zinit light-mode for \
 export SUDO_EDITOR=/usr/bin/nvim
 # set nvim as default
 export EDITOR=nvim
-# arm32 toolchain
-# export PATH="$HOME/arm-linux-gnueabi/bin:$PATH"
-# clang toolchain
-# export PATH="$HOME/proton_clang/bin:$PATH"
 # always clear screen after exit ls
 export LESS=R
 
@@ -52,56 +48,48 @@ zinit light romkatv/powerlevel10k
 # o-my-zsh
 # key-binding
 # always load fzf-bindings after key-bindings
-zinit ice lucid \
+zinit ice \
 	 atload"!source /usr/share/fzf/key-bindings.zsh \
 	 !source /usr/share/fzf/completion.zsh"
-#zinit snippet OMZ::lib/key-bindings.zsh
+zinit snippet OMZ::lib/key-bindings.zsh
 # git
-zinit ice lucid
+zinit ice wait lucid
 zinit snippet OMZ::plugins/git/git.plugin.zsh
 # archlinux yarem,yain...
-zinit ice wait"2" lucid
+zinit ice wait"1" lucid
 zinit snippet OMZ::plugins/archlinux/archlinux.plugin.zsh
 # systemd
-zinit ice wait"2" lucid
+zinit ice wait"1" lucid
 zinit snippet OMZ::plugins/systemd/systemd.plugin.zsh
-# colored man-pages
-zinit ice wait"3" lucid
-zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 # double esc
 zinit ice wait"3" lucid
 zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 
-# fast-syntax and autosuggestions
+# fast-syntax-highlighting, autosuggestions and completions
 zinit wait lucid for \
 	atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
 	    zdharma/fast-syntax-highlighting \
 	blockf \
 	    zsh-users/zsh-completions \
-	atload"_zsh_autosuggest_start" \
+	atload"!_zsh_autosuggest_start" \
 	    zsh-users/zsh-autosuggestions
 
-# completion color
-#zinit wait"0c" lucid reset \
-# 	atclone"local P=${${(M)OSTYPE:#*darwin*}:+g}
-#            \${P}sed -i 's/38;5;253/38;5;81/'\
-#            \${P}sed -i \
-#            '/DIR/c\DIR 38;5;63;1' LS_COLORS; \
-#            \${P}dircolors -b LS_COLORS > c.zsh" \
-#            	atpull'%atclone' pick"c.zsh" nocompile'!' \
-#	atload'zstyle ":completion:*:default" list-colors "${(s.:.)LS_COLORS}";' for \
-#	    trapd00r/LS_COLORS
+# ls colors
+zinit pack for ls_colors
+
+# fzf-tab
+zinit ice wait lucid
+zinit load Aloxaf/fzf-tab
 
 # completion zstyle
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*' force-list always
-zstyle ":completion:*:descriptions" format "%B%d%b"
-zstyle ':completion:*:*:*:default' menu yes select search
+zstyle ":completion:*:git-checkout:*" sort false
+zstyle ':completion:*:descriptions' format brief
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -1 --color=always $realpath'
 zstyle ':completion:*files' ignored-patterns '*?.o'
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path $ZSH_CACHE_DIR
-zstyle ':completion:*:matches' group 'yes'
-zstyle ':completion:*' group-name ''
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 ###########
 # ALIASES #
@@ -150,9 +138,18 @@ setopt inc_append_history
 setopt share_history
 
 # fzf
-export FZF_DEFAULT_COMMAND="fd --type f"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type d"
+export FZF_CTRL_T_COMMAND="fd --type f --follow"
+export FZF_ALT_C_COMMAND="fd --type d --follow"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+    --color=fg:#4d4d4c,bg:-1,hl:#d7005f
+    --color=fg+:#4d4d4c,bg+:-1,hl+:#d7005f
+    --color=info:#4271ae,prompt:#8959a8,pointer:#d7005f
+    --color=marker:#4271ae,spinner:#4271ae,header:#4271ae'
+
+# P10K extra customizations
+typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n'
+typeset -g POWERLEVEL9K_STATUS_EXTENDED_STATES=false
+unset POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
