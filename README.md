@@ -68,7 +68,7 @@
 | [Rofi](https://github.com/DaveDavenport/rofi)                             | A window switcher, application launcher and dmenu replacement                     |
 | [Feh](https://github.com/derf/feh)                                        | Image viewer, useful to set a wallpaper                                           |
 | [Pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)                   | File manager, light with all needed stuff                                         |
-| [Gscreenshot](https://github.com/thenaterhood/gscreenshot)                | Full featured screenshot utility                                                  |
+| [Flameshot](https://github.com/flameshot-org/flameshot)                   | Screenshot utility                                                  |
 | [Xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | Wallpaper setting utility for X                                                   |
 | [Powertop](https://wiki.archlinux.org/index.php/Powertop)                 | Powertop Intel's tool to control and monitor battery                              |
 | [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) | Simple way to monitor battery status                                            |
