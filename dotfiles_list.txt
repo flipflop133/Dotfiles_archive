@@ -4,9 +4,9 @@
 .config/bpytop
 .config/Code - OSS/User/settings.json
 .config/dunst
-.config/fontconfig
 .config/i3
 .config/mpv
+.config/nnn
 .config/nvim/coc-settings.json
 .config/nvim/general
 .config/nvim/init.vim
@@ -15,5 +15,4 @@
 .config/picom
 .config/polybar
 .config/pythons-scripts
-.config/ranger
 .config/rofi
