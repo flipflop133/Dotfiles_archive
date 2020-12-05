@@ -8,7 +8,8 @@
 | [Neovim](https://github.com/neovim/neovim)                                | Vim-fork focused on extensibility and usability                                   |
 | [Coc](https://github.com/neoclide/coc.nvim)                               | Linter, Formatter and Autocomplete                                                |
 | [Airline](https://github.com/vim-airline/vim-airline)                     | Beautiful StatusLine                                                              |
-| [NERDTree](https://github.com/preservim/nerdtree)                         | Beautiful file manager                                                            |
+| [nnn.vim](https://github.com/mcchrish/nnn.vim)                            | Beautiful file manager                                                            |
+| [fzf.vim](https://github.com/junegunn/fzf.vim)                            | Fzf for neovim                                                                    |
 
 #### Fonts
 | Package                                                                   | Description                                                                       |
@@ -39,7 +40,7 @@
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [Arch Linux](https://www.archlinux.org/)                                  | The best distro ever!                                                             |
 | [yay](https://github.com/Jguer/yay)                                       | An AUR Helper written in Go                                                       |
-| [nvidia-lts] | Long time support Nvidia driver |
+| [nvidia-lts]                                                              | Long time support Nvidia driver                                                   |
 | [nvidia-dkms](https://github.com/hhfeuer/nvhda)                           | To patch custom kernels with an Nvidia GC                                         |
 
 #### Terminal
@@ -47,10 +48,14 @@
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [Alacritty](https://github.com/alacritty/alacritty)                       | The best fatest terminal(powered by your graphic card)                            |
 | [Zsh](https://github.com/zsh-users/zsh)                                   | The most powerful shell out there!                                                |
+| [Zinit](https://github.com/zdharma/zinit)                                 | Zsh plugin manager                                                                |
+| [fzf](https://github.com/junegunn/fzf)                                    | General-purpose command-line fuzzy finder                                         |
+| [fzf-tab](https://github.com/Aloxaf/fzf-tab)                              | Replace zsh's default completion selection menu with fzf!                         |
+| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Syntax highlighting for zsh                                                 |
+| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)   | Autosuggestions for zsh                                                           |
+| [zsh-completions](https://github.com/zsh-users/zsh-completions)           | Completions for zsh                                                               |
 | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)                 | The most awesome Powerline theme for ZSH around!                                  |
 | [neofetch](https://github.com/dylanaraps/neofetch)                        | A fast, highly customizable system info script                                    |
-| [ranger](https://github.com/ranger/ranger)                                | Terminal file manager, inspired by vim                                            |
-| [FZF](https://github.com/junegunn/fzf)                                    | General-purpose command-line fuzzy finder                                         |
 | [Figlet](https://github.com/cmatsuoka/figlet)                             | ASCII banners in terminal                                                         |
 | [lolcat](https://github.com/busyloop/lolcat)                              | Just because Unicorns exist                                                       |
 | [htop](https://github.com/hishamhm/htop)                                  | Easier top                                                                        |
@@ -66,9 +71,10 @@
 | [efibootmgr]                                                              | required for uefi grub                                                            |
 | [sudo](https://wiki.archlinux.org/index.php/Sudo)                         | System administrator to manage root users accesses                                |
 | [Rofi](https://github.com/DaveDavenport/rofi)                             | A window switcher, application launcher and dmenu replacement                     |
-| [Feh](https://github.com/derf/feh)                                        | Image viewer, useful to set a wallpaper                                           |
-| [Pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)                   | File manager, light with all needed stuff                                         |
-| [Flameshot](https://github.com/flameshot-org/flameshot)                   | Screenshot utility                                                  |
+| [sxiv](https://github.com/muennich/sxiv)                                  | Image viewer                                                                      |
+| [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          |                                                                    
+| [nnn](https://github.com/jarun/nnn)                                       | Light terminal file manager                                                       |
+| [Flameshot](https://github.com/flameshot-org/flameshot)                   | Screenshot utility                                                                |
 | [Xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | Wallpaper setting utility for X                                                   |
 | [Powertop](https://wiki.archlinux.org/index.php/Powertop)                 | Powertop Intel's tool to control and monitor battery                              |
 | [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) | Simple way to monitor battery status                                            |
