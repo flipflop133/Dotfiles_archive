@@ -20,29 +20,23 @@
 format-prefix-padding = 1 
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #dddddd
+background = #ffffff
 background-alt = #444
-;foreground = ${xrdb:color7:#222}
 foreground = #000000
 foreground-alt = #777777
-foreground-light-grey = #888888
+foreground-light-grey = #999999
 primary = #ffb52a
 secondary = #e60053
 alert = #03a9f4
 warning = #ff0000
 transparent = #aaffffff
-gold = #85702d
+gold = #5B4C20
+purple = #ff0066
 
 [bar/bottom]
-; Put the bar at the bottom of the screen
 bottom = true
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 35
-;offset-x = 1%
-;offset-y = 1%
-#radius = 6.0
 fixed-center = false 
 
 background = ${colors.background}
@@ -55,16 +49,16 @@ border-size = 0
 border-color = ${colors.transparent} 
 
 padding-left = 1 
-padding-right = 0 
+padding-right = 1 
 
 module-margin-left = 1 
 module-margin-right = 0
 
 font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
 
-modules-left = powermenu i3
+modules-left = powermenu i3 xwindow
 modules-center = spotify 
-modules-right = eth filesystem xbacklight memory cpu cpufreq temperature wlan battery pulseaudio xkeyboard
+modules-right =  weather pulseaudio calendar date
 
 tray-position = none 
 
@@ -75,109 +69,6 @@ scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 ;cursor-scroll = ns-resize
-
-[bar/top-right]
-width = 27%
-height = 35
-offset-x = 73% 
-fixed-center = true 
-override-redirect = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0 
-
-border-size = 0 
-
-padding-left = 0 
-padding-right = 1 
-
-module-margin-left = 1 
-module-margin-right = 0
-
-font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
-
-modules-right = weather calendar date
-
-tray-position = none 
-
-wm-restack = i3
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-
-[bar/top-middle]
-width = 20%
-height = 35
-offset-x = 40% 
-fixed-center = true 
-override-redirect = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0 
-
-border-size = 0 
-
-padding-left = 3 
-padding-right = 3 
-
-module-margin-left = 0 
-module-margin-right = 1
-
-font-0 = "OpenSans-Regular:style=Regular:size=14;3"
-
-modules-left = 
-modules-center = xwindow  
-modules-right = 
-
-tray-position = none 
-
-wm-restack = i3
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-
-[bar/top-left]
-width = 30%
-height = 35
-offset-x = 0% 
-fixed-center = true 
-override-redirect = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 0 
-
-border-size = 0 
-
-padding-left = 3 
-padding-right = 3 
-
-module-margin-left = 0 
-module-margin-right = 1
-
-font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
-
-modules-left = crypto 
-modules-center =   
-modules-right = 
-
-tray-position = none 
-
-wm-restack = i3
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
-
-cursor-click = pointer
 
 [module/i3]
 type = internal/i3
@@ -192,14 +83,14 @@ label-mode-background = ${colors.transparent}
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-foreground = #000000
+label-focused-foreground = ${colors.alert}
 label-focused-underline= ${colors.primary}
 label-focused-padding = 1 
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = #666666
+label-unfocused-foreground = ${colors.foreground-light-grey} 
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
@@ -214,33 +105,28 @@ label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.warning}
 label-urgent-padding = 1
 
-; Separator in between workspaces
-; label-separator = |
-
-; ws-icon-[0-9]+ = <label>;<icon>
-; NOTE: The <label> needs to match the name of the i3 workspace
-; Neither <label> nor <icon> can contain a semicolon (;)
+; workspaces
 ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;﨟
-ws-icon-3 = 4;
-ws-icon-4 = 5;ﱘ
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-default = 
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;﨟
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;ﱘ
+ws-icon-default = 
 
 [module/spotify]
 type = custom/script
 exec = python $HOME/.config/pythons-scripts/spotify.py
 interval = 3 
-format-foreground = ${colors.gold}
+format-foreground = ${colors.purple}
 click-left = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 click-right = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-label-empty = Empty
+label-empty =
 
 [module/calendar]
 type = custom/script
@@ -253,7 +139,7 @@ format-prefix-padding = ${general.format-prefix-padding}
 
 [module/weather]
 type = custom/script
-exec = python $HOME/.config/weather-script/weather.py
+exec = python $HOME/.config/weather-script/weather.py -s 2 
 interval = 1800
 click-left = python $HOME/.config/weather-script/weather.py -a True
 format-prefix = " " 
@@ -264,7 +150,6 @@ format-prefix-padding = ${general.format-prefix-padding}
 type = custom/script
 exec = python $HOME/.config/crypto-script/crypto.py
 interval = 1
-
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -435,10 +320,9 @@ label-muted-foreground = ${colors.foreground-light-grey}
 label-muted-padding = ${general.format-prefix-padding}
 
 ; Only applies if <ramp-volume> is used
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 墳
-ramp-volume-3 = 
+ramp-volume-0 = 
+ramp-volume-1 = 墳
+ramp-volume-2 = 
 ramp-volume-foreground = ${colors.foreground-alt}
 ramp-volume-padding = ${general.format-prefix-padding}
 
@@ -462,7 +346,7 @@ expand-right = true
 format-spacing = 2 
 
 label-open = 
-label-open-foreground = ${colors.alert} 
+label-open-foreground = ${colors.foreground} 
 label-close = 
 label-close-foreground = ${colors.alert} 
 label-separator = |

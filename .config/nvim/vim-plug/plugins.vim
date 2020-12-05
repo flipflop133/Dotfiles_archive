@@ -30,8 +30,11 @@ Plug 'ryanoasis/vim-devicons'
 " Snippets
 Plug 'honza/vim-snippets'
 
-" File navigation -> ranger + Nerd Tree
-Plug 'preservim/nerdtree'
+" File manager
+Plug 'mcchrish/nnn.vim'
 
+" FZF
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 call plug#end()
 

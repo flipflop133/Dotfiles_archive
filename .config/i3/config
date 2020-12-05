@@ -9,6 +9,12 @@ font pango: Open Sans:style=Regular 14
 # Lock screen
 bindsym $mod+x exec --no-startup-id dm-tool lock
 
+# Screenshot
+bindsym $mod+Print exec --no-startup-id flameshot gui
+
+# nnn
+bindsym $mod+Shift+f exec --no-startup-id alacritty --command nnn -e
+
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
 
@@ -154,9 +160,6 @@ set $red         #ff0000
 set $transparent #00000066
 
 # polybar
-exec --no-startup-id polybar top-right -r
-exec --no-startup-id polybar top-middle -r
-exec --no-startup-id polybar top-left -r
 exec --no-startup-id polybar bottom -r
 
 # class                 border  backgr. text    indicator child_border
@@ -177,8 +180,4 @@ exec --no-startup-id picom #--experimental-backends --backend glx
 
 # notifications
 exec --no-startup-id dunst
-
-# i3-gaps
-gaps inner 20
-gaps top 35
 
