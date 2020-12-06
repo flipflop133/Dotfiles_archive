@@ -1,9 +1,9 @@
-.zshrc
 .config/alacritty
 .config/archive
 .config/bpytop
 .config/Code - OSS/User/settings.json
 .config/dunst
+.config/fish/config.fish
 .config/i3
 .config/mpv
 .config/nnn

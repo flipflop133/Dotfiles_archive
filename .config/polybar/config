@@ -27,11 +27,12 @@ foreground-alt = #777777
 foreground-light-grey = #999999
 primary = #ffb52a
 secondary = #e60053
-alert = #03a9f4
-warning = #ff0000
+alert = #007DB7
+warning = #EE0000
 transparent = #aaffffff
 gold = #5B4C20
-purple = #ff0066
+purple = #DB00B3
+green = #008A00
 
 [bar/bottom]
 bottom = true
@@ -109,17 +110,17 @@ label-urgent-padding = 1
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;﨟
+ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
-ws-icon-6 = 7;ﱘ
+ws-icon-6 = 7;奈
 ws-icon-default = 
 
 [module/spotify]
 type = custom/script
 exec = python $HOME/.config/pythons-scripts/spotify.py
 interval = 3 
-format-foreground = ${colors.purple}
+format-foreground = ${colors.green}
 click-left = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 click-right = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 
