@@ -47,14 +47,6 @@
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [Alacritty](https://github.com/alacritty/alacritty)                       | The best fatest terminal(powered by your graphic card)                            |
-| [Zsh](https://github.com/zsh-users/zsh)                                   | The most powerful shell out there!                                                |
-| [Zinit](https://github.com/zdharma/zinit)                                 | Zsh plugin manager                                                                |
-| [fzf](https://github.com/junegunn/fzf)                                    | General-purpose command-line fuzzy finder                                         |
-| [fzf-tab](https://github.com/Aloxaf/fzf-tab)                              | Replace zsh's default completion selection menu with fzf!                         |
-| [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) | Syntax highlighting for zsh                                                 |
-| [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)   | Autosuggestions for zsh                                                           |
-| [zsh-completions](https://github.com/zsh-users/zsh-completions)           | Completions for zsh                                                               |
-| [Powerlevel10k](https://github.com/romkatv/powerlevel10k)                 | The most awesome Powerline theme for ZSH around!                                  |
 | [neofetch](https://github.com/dylanaraps/neofetch)                        | A fast, highly customizable system info script                                    |
 | [Figlet](https://github.com/cmatsuoka/figlet)                             | ASCII banners in terminal                                                         |
 | [lolcat](https://github.com/busyloop/lolcat)                              | Just because Unicorns exist                                                       |
