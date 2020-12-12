@@ -5,6 +5,7 @@
 .config/dunst
 .config/fish/config.fish
 .config/i3
+.config/mimeapps.list
 .config/mpv
 .config/nnn
 .config/nvim/coc-settings.json

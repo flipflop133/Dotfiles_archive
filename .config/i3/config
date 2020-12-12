@@ -1,7 +1,7 @@
 set $mod Mod4
 
 hide_edge_borders smart
-default_border pixel
+default_border pixel 3
 
 # font: https://github.com/ryanoasis/nerd-fonts
 font pango: Open Sans:style=Regular 14
@@ -9,11 +9,15 @@ font pango: Open Sans:style=Regular 14
 # Lock screen
 bindsym $mod+x exec --no-startup-id dm-tool lock
 
+# screen timeout
+exec --no-startup-id xset s 1800
+exec --no-startup-id xset dpms 0 0 3600
+
 # Screenshot
 bindsym $mod+Print exec --no-startup-id flameshot gui
 
 # nnn
-bindsym $mod+Shift+f exec --no-startup-id alacritty --command nnn -e
+bindsym $mod+Shift+f exec --no-startup-id alacritty -e fish -c "nnn -e"
 
 # xfce power manager
 exec --no-startup-id xfce4-power-manager
@@ -150,25 +154,24 @@ set $bg          #999999
 set $grey        #333333
 set $lg          #cccccc
 set $fg          #ffffff
-set $cyan        #8be9fd
+set $cyan        #007DB7
 set $deepBlue    #03a9f4
 set $green       #50fa7b
 set $magenta     #ff79c6
 set $comment     #6272a4
 set $purple      #bd93f9
-set $red         #ff0000
+set $red         #EE0000
 set $transparent #00000066
 
 # polybar
 exec --no-startup-id polybar bottom -r
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $fg     $fg     $black  $magenta  $deepBlue 
+client.focused          $fg     $fg     $black  $red      $cyan 
 client.focused_inactive $fg     $fg     $black  $fg       $fg
 client.unfocused        $bg     $bg     $grey   $fg       $fg
 client.urgent           $bg     $bg     $red    $fg       $fg 
 client.placeholder      $black  #0c0c0c $fg     $black    #0c0c0c
-
 client.background       $fg
 
 # set xwallpaper

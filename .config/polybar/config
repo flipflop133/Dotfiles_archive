@@ -30,15 +30,13 @@ secondary = #e60053
 alert = #007DB7
 warning = #EE0000
 transparent = #aaffffff
-gold = #5B4C20
+gold = #b8860b
 purple = #DB00B3
 green = #008A00
 
 [bar/bottom]
 bottom = true
-width = 100%
 height = 35
-fixed-center = false 
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -61,7 +59,7 @@ modules-left = powermenu i3 xwindow
 modules-center = spotify 
 modules-right =  weather pulseaudio calendar date
 
-tray-position = none 
+tray-position = right 
 
 wm-restack = i3
 
@@ -69,7 +67,6 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 cursor-click = pointer
-;cursor-scroll = ns-resize
 
 [module/i3]
 type = internal/i3
@@ -114,13 +111,14 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;奈
+ws-icon-7 = 8;
 ws-icon-default = 
 
 [module/spotify]
 type = custom/script
 exec = python $HOME/.config/pythons-scripts/spotify.py
 interval = 3 
-format-foreground = ${colors.green}
+format-foreground = ${colors.gold}
 click-left = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 click-right = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 

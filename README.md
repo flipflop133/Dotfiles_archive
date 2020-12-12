@@ -79,6 +79,7 @@
 | [ImageMagick](https://imagemagick.org/index.php)                          | Image modifications utility                                                       |
 | [Xclip](https://github.com/astrand/xclip)                                 | Copy-paste utility(used for Neovim)                                               |
 | [numlockx]                                                                | numlock key enabled on X11 start(used with lightdm)                               |
+| [handlr](https://github.com/chmln/handlr)                                 | Utility to set your default applications                                          |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |

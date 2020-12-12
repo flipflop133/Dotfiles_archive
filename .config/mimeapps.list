@@ -1,0 +1,5 @@
+[Added Associations]
+
+[Default Applications]
+image/png=sxiv-rifle.desktop;
+x-scheme-handler/msteams=teams.desktop;

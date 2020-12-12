@@ -21,7 +21,7 @@ colors:
     white:   '#999999'
 
   bright:
-    black:   '#aaaaaa'
+    black:   '#cccccc'
     red:     '#f44336'
     green:   '#4caf50'
     yellow:  '#fbc02d'

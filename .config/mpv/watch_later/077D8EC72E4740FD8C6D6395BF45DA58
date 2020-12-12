@@ -1,0 +1,5 @@
+start=2717.506000
+deinterlace=yes
+af=@acompressor:acompressor=ratio=5:threshold=-20dB:release=240:makeup=6dB:knee=2dB:attack=20
+aid=1
+sid=1
