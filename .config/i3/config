@@ -7,23 +7,13 @@ default_border pixel 3
 font pango: Open Sans:style=Regular 14
 
 # Lock screen
-bindsym $mod+x exec --no-startup-id dm-tool lock
-
-# screen timeout
-exec --no-startup-id xset s 1800
-exec --no-startup-id xset dpms 0 0 3600
+bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 1920 RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin
 
 # Screenshot
 bindsym $mod+Print exec --no-startup-id flameshot gui
 
 # nnn
 bindsym $mod+Shift+f exec --no-startup-id alacritty -e fish -c "nnn -e"
-
-# xfce power manager
-exec --no-startup-id xfce4-power-manager
-
-# NetworkManager applet 
-exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -177,10 +167,4 @@ client.background       $fg
 # set xwallpaper
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
-
-# compositor
-exec --no-startup-id picom #--experimental-backends --backend glx
-
-# notifications
-exec --no-startup-id dunst
 

@@ -1,3 +1,4 @@
+.xinitrc
 .config/alacritty
 .config/archive
 .config/bpytop

@@ -59,12 +59,13 @@
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [Xorg](https://wiki.archlinux.org/index.php/Xorg)                         | Display server                                                                    |
+| [xorg-xinit](https://wiki.archlinux.org/index.php/Xinit)                  | Start Xorg                                                                        |
 | [Picom](https://wiki.archlinux.org/index.php/Picom)                       | Xorg compositor                                                                   |
 | [efibootmgr]                                                              | required for uefi grub                                                            |
 | [sudo](https://wiki.archlinux.org/index.php/Sudo)                         | System administrator to manage root users accesses                                |
 | [Rofi](https://github.com/DaveDavenport/rofi)                             | A window switcher, application launcher and dmenu replacement                     |
 | [sxiv](https://github.com/muennich/sxiv)                                  | Image viewer                                                                      |
-| [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          |                                                                    
+| [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          | 
 | [nnn](https://github.com/jarun/nnn)                                       | Light terminal file manager                                                       |
 | [Flameshot](https://github.com/flameshot-org/flameshot)                   | Screenshot utility                                                                |
 | [Xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | Wallpaper setting utility for X                                                   |
@@ -85,13 +86,6 @@
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [i3-gaps](https://github.com/i3/i3)                                       | i3wm with few more features                                                       |
-
-#### Display Manager
-| Package                                                                   | Description                                                                       |
-|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [lightdm](https://github.com/canonical/lightdm)                           | Minimalist display manager                                                        |
-| [https://github.com/prikhi/lightdm-mini-greeter](https://github.com/prikhi/lightdm-mini-greeter) | Minimalist greeter for lightdm (also used as lockscreen)   |
-
 
 #### Useful Arch wiki links
 | Package                                                                   | Description                                                                       |
