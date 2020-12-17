@@ -30,3 +30,10 @@ alias xrp='python ~/.config/crypto-script/crypto.py'
 # NNN #
 #######
 source $HOME/.config/nnn/config.nnn
+
+##########
+# startx #
+##########
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+	exec startx
+end

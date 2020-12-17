@@ -36,6 +36,7 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
+    "tabnine.experimentalAutoImports": true,
     //extensions:
     //Material Theme Icons
     //Python

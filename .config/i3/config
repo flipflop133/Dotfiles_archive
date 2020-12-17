@@ -7,7 +7,7 @@ default_border pixel 3
 font pango: Open Sans:style=Regular 14
 
 # Lock screen
-bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 1920 RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin
+bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 100% RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin
 
 # Screenshot
 bindsym $mod+Print exec --no-startup-id flameshot gui
@@ -40,8 +40,8 @@ bindsym $mod+Return exec --no-startup-id alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start ROFI (program launcher)
-bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -theme .config/rofi/app_launcher/app_launcher.rofi
+# dmenu
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -l 5" 
 
 # change focus
 bindsym $mod+h focus left
