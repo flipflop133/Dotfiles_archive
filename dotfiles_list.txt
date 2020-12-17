@@ -17,4 +17,3 @@
 .config/picom
 .config/polybar
 .config/pythons-scripts
-.config/rofi

@@ -63,7 +63,8 @@
 | [Picom](https://wiki.archlinux.org/index.php/Picom)                       | Xorg compositor                                                                   |
 | [efibootmgr]                                                              | required for uefi grub                                                            |
 | [sudo](https://wiki.archlinux.org/index.php/Sudo)                         | System administrator to manage root users accesses                                |
-| [Rofi](https://github.com/DaveDavenport/rofi)                             | A window switcher, application launcher and dmenu replacement                     |
+| [dmenu](https://tools.suckless.org/dmenu/)                                | Suckless menu                                                                     |
+| [j4-menu-desktop](https://github.com/enkore/j4-dmenu-desktop)             | To use dmenu as app launcher                                                      |
 | [sxiv](https://github.com/muennich/sxiv)                                  | Image viewer                                                                      |
 | [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          | 
 | [nnn](https://github.com/jarun/nnn)                                       | Light terminal file manager                                                       |
