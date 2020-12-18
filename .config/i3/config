@@ -41,7 +41,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+q kill
 
 # dmenu
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -l 5" 
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -l 10" 
 
 # change focus
 bindsym $mod+h focus left

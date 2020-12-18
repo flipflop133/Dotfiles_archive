@@ -48,7 +48,7 @@ jdk-openjdk 14.0.2.u12-1
 joplin-desktop 1.4.19-1
 jq 1.6-4
 libnotify-id 0.7.9-1
-libreoffice-fresh 7.0.3-6
+libreoffice-fresh 7.0.4-1
 linux 5.9.14.arch1-1
 linux-firmware 20201120.bc9cd0b-1
 lolcat 100.0.0-2

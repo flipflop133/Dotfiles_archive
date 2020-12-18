@@ -74,7 +74,6 @@
 | [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) | Simple way to monitor battery status                                            |
 | [Dunst](https://github.com/dunst-project/dunst)                           | Light but powerful notification daemon                                            |
 | [NetworkManager](https://github.com/NetworkManager/NetworkManager)        | easiest tool to setup your network                                                |
-| [Lxappearance](https://wiki.lxde.org/en/LXAppearance)                     | GTK style configuration tool(from LXDE)                                           |
 | [Polybar](https://github.com/polybar/polybar)                             | Easy and beautiful status bar                                                     |
 | [Dunst](https://wiki.archlinux.org/index.php/Dunst)                       | Notifications                                                                     |
 | [Libnotify-id](https://aur.archlinux.org/packages/libnotify-id/)          | Modified package of libnotify to get IDs of notifications(used for my volume notification script) |
