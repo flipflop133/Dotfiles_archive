@@ -1,5 +1,4 @@
 [global]
-font = OpenSans 12
 format = "<b>%s</b>\n%b"
 markup = full
 alignment = left
@@ -29,9 +28,10 @@ background = "#dddddd"
 timeout = 10
 
 [urgency_normal]
-frame_color = "#5B8234"
+frame_color = "#000000"
 foreground = "#000000"
 background = "#dddddd"
+highlight = "#000000"
 timeout = 10
 
 [urgency_critical]
