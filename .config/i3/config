@@ -3,8 +3,7 @@ set $mod Mod4
 hide_edge_borders smart
 default_border pixel 3
 
-# font: https://github.com/ryanoasis/nerd-fonts
-font pango: Open Sans:style=Regular 14
+font pango:RobotoMono Nerd Font 14 
 
 # Lock screen
 bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 100% RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin

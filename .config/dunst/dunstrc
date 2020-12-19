@@ -1,38 +1,20 @@
 [global]
 font = OpenSans 12
-markup = yes
-plain_text = no
 format = "<b>%s</b>\n%b"
-sort = no
-indicate_hidden = yes
+markup = full
 alignment = left
-bounce_freq = 0
-show_age_threshold = -1
+vertical_alignment = top
 word_wrap = yes
-ignore_newline = no
-stack_duplicates = no
-hide_duplicates_count = yes
-geometry = "300x0-10-45"
-shrink = yes
-transparency = 0 
-idle_threshold = 0
-monitor = 0
-follow = none
-sticky_history = yes
-history_length = 15
-show_indicators = no
-line_height = 3
+geometry = "300x5-10-45"
 separator_height = 0 
-padding = 6
-horizontal_padding = 6
-separator_color = "#333333"
-startup_notification = false
+padding = 8 
+horizontal_padding = 8
 browser = /usr/bin/firefox -new-tab
+sort = yes
+idle_threshold = 120
 icon_position = left
 max_icon_size = 80
 icon_path = /usr/share/icons/Papirus-Light/16x16/mimetypes/:/usr/share/icons/Papirus-Light/48x48/status/:/usr/share/icons/Papirus-Light/16x16/devices/:/usr/share/icons/Papirus-Light/48x48/notifications/:/usr/share/icons/Papirus-Light/48x48/emblems/
-frame_width = 0
-frame_color = "#8EC07C"
 
 [shortcuts]
 close = ctrl+space

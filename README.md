@@ -67,7 +67,7 @@
 | [j4-menu-desktop](https://github.com/enkore/j4-dmenu-desktop)             | To use dmenu as app launcher                                                      |
 | [sxiv](https://github.com/muennich/sxiv)                                  | Image viewer                                                                      |
 | [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          | 
-| [nnn](https://github.com/jarun/nnn)                                       | Light terminal file manager                                                       |
+| [nnn-nerd](https://github.com/jarun/nnn)                                  | Light terminal file manager (nerd version with icon support)                      |
 | [Flameshot](https://github.com/flameshot-org/flameshot)                   | Screenshot utility                                                                |
 | [Xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | Wallpaper setting utility for X                                                   |
 | [Powertop](https://wiki.archlinux.org/index.php/Powertop)                 | Powertop Intel's tool to control and monitor battery                              |
