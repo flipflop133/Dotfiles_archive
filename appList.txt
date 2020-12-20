@@ -40,7 +40,7 @@ i3-wm 4.19-1
 i3blocks 1.5-3
 i3lock 2.13-1
 i3status 2.13-3
-imagemagick 7.0.10.51-1
+imagemagick 7.0.10.52-1
 intel-gpu-tools 1.25-2
 j4-dmenu-desktop 2.18-1
 jdk-openjdk 14.0.2.u12-1
@@ -97,11 +97,11 @@ scrot 1.4-1
 slock 1.4-4
 spicetify-cli-git v1.1.0.r20.g3848e0f-1
 spotify 1:1.1.42.622-2
-sudo 1.9.4-2
+sudo 1.9.4.p1-2
 sxiv 26-1
 sxiv-rifle 1.3-1
 teams 1.3.00.25560-1
-telegram-desktop 2.4.7-4
+telegram-desktop 2.4.7-5
 texinfo 6.7-3
 thunderbird 78.6.0-1
 ttf-comfortaa 3.100-2

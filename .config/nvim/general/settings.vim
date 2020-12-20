@@ -1,9 +1,9 @@
 "########################
-"# NEOVIM CONFIGURATION # 
+"# NEOVIM CONFIGURATION #
 "########################
 " Theme
 set background=light
-colorscheme PaperColor 
+colorscheme PaperColor
 
 " UI configuration
 set number
@@ -19,3 +19,6 @@ nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
 set spelllang=en
 
+" highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
