@@ -15,10 +15,9 @@ set clipboard=unnamedplus
 let mapleader="\<SPACE>"
 
 " spell languages
-nnoremap <silent> <F11> :set spell!<cr>
+nnoremap <silent> <F11>:set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
 set spelllang=en
 
-" highlight trailing whitespaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+" auto delete trailing whitespaces on write
+autocmd BufWritePre * :%s/\s\+$//e

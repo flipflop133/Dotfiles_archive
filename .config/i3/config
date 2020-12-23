@@ -13,6 +13,13 @@ bindsym $mod+Shift+r restart
 # exit i3
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+###########
+# i3-gaps #
+###########
+smart_borders on
+gaps inner 30
+gaps bottom 35
+
 ##################
 # WINDOWS DESIGN #
 ##################
@@ -174,9 +181,9 @@ bindsym $mod+Shift+f exec --no-startup-id alacritty -e fish -c "nnn -e"
 # app launcher
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -l 10"
 
-# bar
-exec --no-startup-id polybar bottom -r
-
 # wallpaper
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
+
+# bar
+exec --no-startup-id polybar -r bottom

@@ -1,23 +1,5 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
-
 [general]
-format-prefix-padding = 1 
+format-prefix-padding = 1
 
 [colors]
 background = #ffffff
@@ -37,31 +19,31 @@ green = #008A00
 [bar/bottom]
 bottom = true
 height = 35
-
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 0 
+line-size = 0
 line-color = #f00
 
-border-size = 0 
-border-color = ${colors.transparent} 
+border-size = 0
+border-color = ${colors.transparent}
 
-padding-left = 1 
-padding-right = 1 
+padding-left = 1
+padding-right = 1
 
-module-margin-left = 1 
+module-margin-left = 1
 module-margin-right = 0
 
 font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
 
 modules-left = powermenu i3 xwindow
-modules-center = spotify 
+modules-center = spotify
 modules-right =  weather pulseaudio calendar date
 
-tray-position = right 
+tray-position = right
 
 wm-restack = i3
+override-redirect = true
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -74,7 +56,7 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-label-mode-padding = 2 
+label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.transparent}
 
@@ -83,12 +65,12 @@ label-focused = %icon%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.alert}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 1 
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground-light-grey} 
+label-unfocused-foreground = ${colors.foreground-light-grey}
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
@@ -99,7 +81,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
-label-urgent-background = ${colors.background} 
+label-urgent-background = ${colors.background}
 label-urgent-foreground = ${colors.warning}
 label-urgent-padding = 1
 
@@ -117,7 +99,7 @@ ws-icon-default = 
 [module/spotify]
 type = custom/script
 exec = python $HOME/.config/pythons-scripts/spotify.py
-interval = 3 
+interval = 3
 format-foreground = ${colors.gold}
 click-left = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 click-right = exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
@@ -134,14 +116,14 @@ interval = 60
 click-left = python $HOME/.config/pythons-scripts/calendar.py -c True
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-padding = ${general.format-prefix-padding} 
+format-prefix-padding = ${general.format-prefix-padding}
 
 [module/weather]
 type = custom/script
-exec = python $HOME/.config/weather-script/weather.py -s 2 
+exec = python $HOME/.config/weather-script/weather.py -s 2
 interval = 1800
 click-left = python $HOME/.config/weather-script/weather.py -a True
-format-prefix = " " 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-padding = ${general.format-prefix-padding}
 
@@ -161,7 +143,7 @@ label-indicator-background = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-interval = 10 
+interval = 10
 
 mount-0 = /
 mount-1 = /storage
@@ -170,7 +152,7 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 spacing = 0
-label-mounted-padding = ${general.format-prefix-padding} 
+label-mounted-padding = ${general.format-prefix-padding}
 label-unmounted-padding = ${general.format-prefix-padding}
 
 [module/memory]
@@ -310,12 +292,15 @@ animation-discharging-framerate = 750
 [module/pulseaudio]
 type = internal/pulseaudio
 
+; volume interval
+interval = 2
+
 format-volume = <ramp-volume><label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 婢
-label-muted-foreground = ${colors.foreground-light-grey} 
+label-muted-foreground = ${colors.foreground-light-grey}
 label-muted-padding = ${general.format-prefix-padding}
 
 ; Only applies if <ramp-volume> is used
@@ -327,7 +312,7 @@ ramp-volume-padding = ${general.format-prefix-padding}
 
 [module/date]
 type = internal/date
-interval = 5 
+interval = 5
 
 time = %I:%M
 
@@ -342,12 +327,12 @@ type = custom/menu
 
 expand-right = true
 
-format-spacing = 2 
+format-spacing = 2
 
 label-open = 
-label-open-foreground = ${colors.foreground} 
+label-open-foreground = ${colors.foreground}
 label-close = 
-label-close-foreground = ${colors.alert} 
+label-close-foreground = ${colors.alert}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
@@ -399,10 +384,10 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-;pseudo-transparency = true 
+;pseudo-transparency = true
 
 [global/wm]
-margin-top = 0 
+margin-top = 0
 margin-bottom = 0
 
 ; vim:ft=dosini
