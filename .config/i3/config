@@ -163,8 +163,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # backlight control
-bindsym XF86MonBrightnessDown	exec --no-startup-id blight set -10%
-bindsym XF86MonBrightnessUp	exec --no-startup-id blight set +10%
+bindsym $mod+KP_Add exec light -A 2
+bindsym $mod+KP_Subtract exec light -U 2
 
 # lockscreen
 bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 100% RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin
@@ -187,3 +187,7 @@ exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
 
 # bar
 exec --no-startup-id polybar -r bottom
+
+# touchpad tapping & natural scrolling
+exec --no-startup-id xinput set-prop "MSFT0001:01 04F3:3140 Touchpad" "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop "MSFT0001:01 04F3:3140 Touchpad" "libinput Natural Scrolling Enabled" 1
