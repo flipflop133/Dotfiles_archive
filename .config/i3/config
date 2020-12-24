@@ -152,9 +152,12 @@ mode "resize" {
 # OTHER CONTROLS AND STARTUP STUFF #
 ####################################
 # volume control
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 2;exec --no-startup-id $HOME/.config/i3/volume.sh
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 2;exec --no-startup-id $HOME/.config/i3/volume.sh
-bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute;exec --no-startup-id $HOME/.config/i3/volume.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 2;exec --no-startup-id $HOME/.config/i3/notifications.sh volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 2;exec --no-startup-id $HOME/.config/i3/notifications.sh volume
+bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute;exec --no-startup-id $HOME/.config/i3/notifications.sh volume
+
+# microphone control
+bindsym XF86AudioMicMute exec --no-startup-id pulseaudio-ctl mute-input;exec --no-startup-id $HOME/.config/i3/notifications.sh microphone
 
 # media control
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -163,8 +166,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # backlight control
-bindsym $mod+KP_Add exec light -A 2
-bindsym $mod+KP_Subtract exec light -U 2
+bindsym $mod+KP_Add exec light -A 2;exec --no-startup-id $HOME/.config/i3/notifications.sh brightness
+bindsym $mod+KP_Subtract exec light -U 2;exec --no-startup-id $HOME/.config/i3/notifications.sh brightness
 
 # lockscreen
 bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 100% RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin
@@ -175,6 +178,9 @@ bindsym $mod+Return exec --no-startup-id alacritty
 # screenshot
 bindsym $mod+Print exec --no-startup-id flameshot gui
 
+# calculator
+bindsym XF86Calculator exec --no-startup-id galculator
+
 # file manager
 bindsym $mod+Shift+f exec --no-startup-id alacritty -e fish -c "nnn -e"
 
@@ -184,6 +190,7 @@ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -l 10"
 # wallpaper
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.png
 exec --no-startup-id xwallpaper --stretch ~/Images/wallpaper/*.jpg
+exec --no-startup-id nitrogen --restore
 
 # bar
 exec --no-startup-id polybar -r bottom
@@ -191,3 +198,18 @@ exec --no-startup-id polybar -r bottom
 # touchpad tapping & natural scrolling
 exec --no-startup-id xinput set-prop "MSFT0001:01 04F3:3140 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "MSFT0001:01 04F3:3140 Touchpad" "libinput Natural Scrolling Enabled" 1
+
+# numlock
+exec --no-startup-id numlockx on
+
+# compositor
+exec --no-startup-id picom
+
+# screenshot utility
+exec --no-startup-id flameshot
+
+# notification daemon
+exec --no-startup-id dunst
+
+# screen dpms flags: standby | suspend | off
+exec --no-startup-id xset dpms 200 400 600

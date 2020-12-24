@@ -34,6 +34,8 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 0
 
+fixed-center = false
+
 font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
 
 modules-left = powermenu i3 xwindow
@@ -371,17 +373,3 @@ menu-5-0 = 
 menu-5-0-exec = i3-msg exit
 menu-5-1 = ﬋
 menu-5-1-exec = menu-open-0
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = true
-
-[global/wm]
-margin-top = 0
-margin-bottom = 0
-
-; vim:ft=dosini
