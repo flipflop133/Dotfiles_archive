@@ -81,6 +81,7 @@
 | [Xclip](https://github.com/astrand/xclip)                                 | Copy-paste utility(used for Neovim)                                               |
 | [numlockx]                                                                | numlock key enabled on X11 start(used with lightdm)                               |
 | [handlr](https://github.com/chmln/handlr)                                 | Utility to set your default applications                                          |
+| [shellcheck](https://github.com/koalaman/shellcheck)                      | Shell scripts analysis                                                            |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
