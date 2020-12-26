@@ -19,3 +19,5 @@
 .config/picom
 .config/polybar
 .config/pythons-scripts
+.config/sway
+.config/waybar

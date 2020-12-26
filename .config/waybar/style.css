@@ -1,0 +1,66 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: RobotoMono Nerd Font;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar{
+	background: #ffffff;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #999999;
+}
+
+
+#workspaces button.focused {
+    color: #007DB7;
+    border-radius: 5px;
+}
+
+#workspaces button.urgent {
+	background-color: #ff0000;
+}
+
+#workspaces button:hover {
+	background-color: #333333;
+}
+
+#window, #pulseaudio, #network, #backlight, #battery, #custom-calendar, #clock, #tray{
+	padding: 0px 10px;
+	margin: 0px 4px;
+}
+
+#custom-media{
+	color: #b8860b;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
