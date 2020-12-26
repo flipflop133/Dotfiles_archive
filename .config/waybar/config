@@ -1,11 +1,15 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 35, // Waybar height (to be removed for auto height)
-    // Choose the order of the modules
+    // General
+    "layer": "top",
+    "position": "bottom",
+    "height": 35,
+
+    // Modules order
     "modules-left": ["sway/workspaces", "sway/mode","sway/window"],
     "modules-center": ["custom/media"],
     "modules-right": ["pulseaudio", "network","backlight", "battery", "custom/calendar", "clock", "tray"],
+
+
     // Modules configuration
     "sway/workspaces": {
          "disable-scroll": true,
@@ -27,6 +31,9 @@
     },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/window":{
+    	"max-length": 35
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
@@ -88,21 +95,19 @@
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
-        "format-icons": ["", ""]
+        "format-icons": ["","","","","","",""]
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-full": "",
+        "format-icons": ["","","","","","","","","","",""]
     },
     "battery#bat2": {
         "bat": "BAT2"

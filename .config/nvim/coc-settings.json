@@ -2,7 +2,8 @@
 // autoformat
 "coc.preferences.formatOnSaveFiletypes": [
     "python",
-    "c"
+    "c",
+    "css"
 ],
 // python config
 "python.linting.enabled": true,

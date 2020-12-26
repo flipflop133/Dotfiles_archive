@@ -1,66 +1,90 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: RobotoMono Nerd Font;
-    font-size: 16px;
-    min-height: 0;
+  border: none;
+  border-radius: 0;
+  font-family: RobotoMono Nerd Font;
+  font-size: 20px;
+  min-height: 0;
 }
 
-window#waybar{
-	background: #ffffff;
+window#waybar {
+  background: #ffffff;
 }
 
 #workspaces button {
-    padding: 0 6px;
-    color: #999999;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: #999999;
 }
 
-
 #workspaces button.focused {
-    color: #007DB7;
-    border-radius: 5px;
+  color: #007db7;
 }
 
 #workspaces button.urgent {
-	background-color: #ff0000;
+  background-color: #ff0000;
 }
 
 #workspaces button:hover {
-	background-color: #333333;
+  background-color: #333333;
 }
 
-#mode, #window, #pulseaudio, #network, #backlight, #battery, #custom-calendar, #clock, #tray{
-	padding: 0px 10px;
-	margin: 0px 4px;
+#window {
+  padding-left: 6px;
+  padding-right: 0px;
+}
+#clock {
+  padding-left: 15px;
+  padding-right: 8px;
+}
+#mode,
+#pulseaudio,
+#network,
+#backlight,
+#battery,
+#custom-calendar,
+#tray {
+  padding-left: 15px;
+  padding-right: 10px;
 }
 
-#custom-media{
-	color: #b8860b;
+#custom-media {
+  color: #b8860b;
 }
 
 #battery {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@keyframes charge {
+  0% {
     background-color: #ffffff;
-    color: #000000;
+  }
+  50% {
+    background-color: #66ffa6;
+  }
+  100% {
+    background-color: #ffffff;
+  }
 }
 
 #battery.charging {
-    color: #ffffff;
-    background-color: #26A65B;
+  animation-name: charge;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
+  to {
+    color: #ff0000;
+  }
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
