@@ -172,6 +172,9 @@ bindsym $mod+KP_Subtract exec light -U 2;exec --no-startup-id $HOME/.config/i3/n
 # lockscreen
 bindsym $mod+x exec --no-startup-id convert $HOME/Images/wallpaper/* -scale 100% RGB:- | i3lock --no-unlock-indicator --raw=1920x1080:rgb --image /dev/stdin
 
+# powermenu
+bindsym $mod+p exec --no-startup-id $HOME/.config/i3/dmenupower.sh
+
 # terminal
 bindsym $mod+Return exec --no-startup-id alacritty
 

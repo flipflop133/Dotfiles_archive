@@ -22,11 +22,7 @@ height = 35
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 0
-line-color = #f00
-
 border-size = 0
-border-color = ${colors.transparent}
 
 padding-left = 1
 padding-right = 1
@@ -38,11 +34,12 @@ fixed-center = false
 
 font-0 = "RobotoMono Nerd Font:style=Regular:size=14;3"
 
-modules-left = powermenu i3 xwindow
+modules-left = i3 xwindow
 modules-center = spotify
 modules-right =  battery pulseaudio calendar date
 
 tray-position = right
+tray-maxsize = 25
 
 wm-restack = i3
 override-redirect = true
@@ -58,9 +55,9 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.transparent}
+label-mode-padding = 0
+label-mode-foreground = ${colors.alert}
+label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
