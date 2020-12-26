@@ -66,27 +66,26 @@
 | [dmenu](https://tools.suckless.org/dmenu/)                                | Suckless menu                                                                     |
 | [j4-menu-desktop](https://github.com/enkore/j4-dmenu-desktop)             | To use dmenu as app launcher                                                      |
 | [sxiv](https://github.com/muennich/sxiv)                                  | Image viewer                                                                      |
-| [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          | 
+| [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          |
 | [nnn-nerd](https://github.com/jarun/nnn)                                  | Light terminal file manager (nerd version with icon support)                      |
-| [Flameshot](https://github.com/flameshot-org/flameshot)                   | Screenshot utility                                                                |
-| [Xwallpaper](https://github.com/stoeckmann/xwallpaper)                    | Wallpaper setting utility for X                                                   |
+| [grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot)   | Screenshot utility script using grim & slurp                                      |
 | [Powertop](https://wiki.archlinux.org/index.php/Powertop)                 | Powertop Intel's tool to control and monitor battery                              |
 | [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) | Simple way to monitor battery status                                            |
 | [Dunst](https://github.com/dunst-project/dunst)                           | Light but powerful notification daemon                                            |
 | [NetworkManager](https://github.com/NetworkManager/NetworkManager)        | easiest tool to setup your network                                                |
-| [Polybar](https://github.com/polybar/polybar)                             | Easy and beautiful status bar                                                     |
+| [waybar](https://github.com/Alexays/Waybar)                               | Status bar for wayland                                                            |
 | [Dunst](https://wiki.archlinux.org/index.php/Dunst)                       | Notifications                                                                     |
-| [Libnotify-id](https://aur.archlinux.org/packages/libnotify-id/)          | Modified package of libnotify to get IDs of notifications(used for my volume notification script) |
 | [ImageMagick](https://imagemagick.org/index.php)                          | Image modifications utility                                                       |
-| [Xclip](https://github.com/astrand/xclip)                                 | Copy-paste utility(used for Neovim)                                               |
+| [wl-clipboard](https://github.com/bugaevc/wl-clipboard)                   | Command-line clipboard for wayland                                                |
 | [numlockx]                                                                | numlock key enabled on X11 start(used with lightdm)                               |
 | [handlr](https://github.com/chmln/handlr)                                 | Utility to set your default applications                                          |
 | [shellcheck](https://github.com/koalaman/shellcheck)                      | Shell scripts analysis                                                            |
+| [light](https://github.com/haikarainen/light)                             | Program to control backlights                                                     |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [i3-gaps](https://github.com/i3/i3)                                       | i3wm with few more features                                                       |
+| [sway](https://github.com/swaywm/sway)                                    | i3 but using wayland                                                              |
 
 #### Useful Arch wiki links
 | Package                                                                   | Description                                                                       |
