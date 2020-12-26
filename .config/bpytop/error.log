@@ -69,3 +69,15 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 665, in __exit__
     termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
 termios.error: (5, 'Input/output error')
+26/12/20 (10:29:25) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1199, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+26/12/20 (10:35:40) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 872, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 665, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')

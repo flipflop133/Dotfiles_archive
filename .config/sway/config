@@ -7,6 +7,9 @@ set $mod Mod4
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
+# exit sway
+bindsym $mod+Shift+e exit
+
 #########
 # INPUT #
 #########
@@ -23,6 +26,10 @@ output * {
     bg ~/Images/wallpaper/* fill
 }
 
+############
+# SWAYIDLE #
+############
+
 ########
 # gaps #
 ########
@@ -35,6 +42,7 @@ gaps inner 30
 # borders
 hide_edge_borders smart
 default_border pixel 3
+default_floating_border pixel 3
 
 # window titles font
 font pango:RobotoMono Nerd Font 14
@@ -51,8 +59,8 @@ set $red         #EE0000
 # set colors
 # class                 border  backgr. text    indicator child_border
 client.focused          $fg     $fg     $black  $red      $cyan
-client.focused_inactive $fg     $fg     $black  $fg       $fg
-client.unfocused        $bg     $bg     $grey   $fg       $fg
+client.focused_inactive $bg     $fg     $black  $fg       $bg
+client.unfocused        $bg     $bg     $grey   $fg       $bg
 client.urgent           $bg     $bg     $red    $fg       $fg
 client.placeholder      $black  #0c0c0c $fg     $black    #0c0c0c
 client.background       $fg
@@ -180,6 +188,9 @@ bindsym $mod+KP_Subtract exec light -U 2;exec $HOME/.config/sway/notifications.s
 
 # lockscreen
 bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
+
+# power management
+exec swayidle -w timeout 300 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
 
 # powermenu
 bindsym $mod+p exec $HOME/.config/sway/dmenupower.sh

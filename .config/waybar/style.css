@@ -29,7 +29,7 @@ window#waybar{
 	background-color: #333333;
 }
 
-#window, #pulseaudio, #network, #backlight, #battery, #custom-calendar, #clock, #tray{
+#mode, #window, #pulseaudio, #network, #backlight, #battery, #custom-calendar, #clock, #tray{
 	padding: 0px 10px;
 	margin: 0px 4px;
 }
