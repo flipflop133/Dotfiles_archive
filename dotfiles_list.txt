@@ -7,7 +7,6 @@
 .config/fish/config.fish
 .config/gtk-2.0
 .config/gtk-3.0
-.config/i3
 .config/mimeapps.list
 .config/mpv
 .config/nnn

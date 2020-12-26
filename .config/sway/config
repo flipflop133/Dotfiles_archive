@@ -161,12 +161,12 @@ mode "resize" {
 # OTHER CONTROLS AND STARTUP STUFF #
 ####################################
 # volume control
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 2;exec $HOME/.config/i3/notifications.sh volume
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 2;exec $HOME/.config/i3/notifications.sh volume
-bindsym XF86AudioMute exec pulseaudio-ctl mute;exec $HOME/.config/i3/notifications.sh volume
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 2;exec $HOME/.config/sway/notifications.sh volume
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 2;exec $HOME/.config/sway/notifications.sh volume
+bindsym XF86AudioMute exec pulseaudio-ctl mute;exec $HOME/.config/sway/notifications.sh volume
 
 # microphone control
-bindsym XF86AudioMicMute exec pulseaudio-ctl mute-input;exec $HOME/.config/i3/notifications.sh microphone
+bindsym XF86AudioMicMute exec pulseaudio-ctl mute-input;exec $HOME/.config/sway/notifications.sh microphone
 
 # media control
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -175,14 +175,14 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # backlight control
-bindsym $mod+KP_Add exec light -A 2;exec $HOME/.config/i3/notifications.sh brightness
-bindsym $mod+KP_Subtract exec light -U 2;exec $HOME/.config/i3/notifications.sh brightness
+bindsym $mod+KP_Add exec light -A 2;exec $HOME/.config/sway/notifications.sh brightness
+bindsym $mod+KP_Subtract exec light -U 2;exec $HOME/.config/sway/notifications.sh brightness
 
 # lockscreen
 bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
 
 # powermenu
-bindsym $mod+p exec $HOME/.config/i3/dmenupower.sh
+bindsym $mod+p exec $HOME/.config/sway/dmenupower.sh
 
 # terminal
 bindsym $mod+Return exec alacritty
