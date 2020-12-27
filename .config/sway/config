@@ -13,6 +13,13 @@ bindsym $mod+Shift+e exit
 #########
 # INPUT #
 #########
+# keyboard
+input * {
+    xkb_layout "be"
+    xkb_numlock enabled
+}
+
+# touchpad
 input * {
     xkb_layout "be"
     tap enabled

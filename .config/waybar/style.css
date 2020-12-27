@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   font-family: RobotoMono Nerd Font;
-  font-size: 20px;
+  font-size: 18px;
   min-height: 0;
 }
 
@@ -28,7 +28,7 @@ window#waybar {
   background-color: #333333;
 }
 
-#window {
+#mode #window {
   padding-left: 6px;
   padding-right: 0px;
 }
@@ -36,7 +36,10 @@ window#waybar {
   padding-left: 15px;
   padding-right: 8px;
 }
-#mode,
+#disk,
+#cpu,
+#memory,
+#temperature,
 #pulseaudio,
 #network,
 #backlight,
@@ -45,6 +48,15 @@ window#waybar {
 #tray {
   padding-left: 15px;
   padding-right: 10px;
+}
+
+#temperature.critical {
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #custom-media {

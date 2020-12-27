@@ -7,7 +7,7 @@
     // Modules order
     "modules-left": ["sway/workspaces", "sway/mode","sway/window"],
     "modules-center": ["custom/media"],
-    "modules-right": ["pulseaudio", "network","backlight", "battery", "custom/calendar", "clock", "tray"],
+    "modules-right": ["disk","memory","cpu","temperature","pulseaudio", "network","backlight", "battery", "clock", "tray"],
 
 
     // Modules configuration
@@ -24,9 +24,7 @@
 	     "6": "",
 	     "7": "奈",
 	     "8": "",
-             "urgent": "",
-             "focused": "",
-             "default": ""
+             "default": ""
          }
     },
     "sway/mode": {
@@ -73,24 +71,28 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+    "disk": {
+	"format": "{percentage_used}% ",
+	"on-click":"alacritty -e fish -c \"nnn -e\""
+    },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": "{usage}% ",
+	"on-click": "alacritty -e bpytop"
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+	"format-alt": "{used:0.1f}G/{total:0.1f}G"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
+        //"thermal-zone": 2,
+        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 60,
+        "format-critical": "{temperatureC}°C ",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", "","",""]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -114,18 +116,20 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "{signalStrength}% ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"format-icons": [""],
+	"tooltip-format-wifi": "{essid} ({signalStrength}%)"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 2,
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "ﱝ {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -135,14 +139,16 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "","墳", ""]
         },
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{}",
+        "format": "<span style=\"italic\">{}</span>",
 	"interval": 3,
-        "exec": "python $HOME/.config/pythons-scripts/spotify.py"
+        "exec": "python $HOME/.config/pythons-scripts/spotify.py",
+	"on-click": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause",
+	"on-click-right": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
     },
     "custom/calendar": {
         "format": "{}",
