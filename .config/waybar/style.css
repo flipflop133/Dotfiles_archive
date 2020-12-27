@@ -1,3 +1,4 @@
+/*GENERAL*/
 * {
   border: none;
   border-radius: 0;
@@ -5,7 +6,9 @@
   font-size: 18px;
   min-height: 0;
 }
-
+/****************/
+/* MODULES LEFT */
+/****************/
 window#waybar {
   background: #ffffff;
 }
@@ -32,10 +35,22 @@ window#waybar {
   padding-left: 6px;
   padding-right: 0px;
 }
+
+/*****************/
+/*MODULES MIDDLE*/
+/*****************/
+#custom-media {
+  color: #b8860b;
+}
+
+/*****************/
+/* MODULES RIGHT */
+/*****************/
 #clock {
   padding-left: 15px;
   padding-right: 8px;
 }
+
 #disk,
 #cpu,
 #memory,
@@ -59,13 +74,32 @@ window#waybar {
   animation-direction: alternate;
 }
 
-#custom-media {
-  color: #b8860b;
-}
-
+/*BATTERY*/
 #battery {
   background-color: #ffffff;
   color: #000000;
+}
+
+#battery.charging {
+  animation-name: charge;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#battery.critical:not(.charging) {
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/*ANIMATIONS*/
+@keyframes blink {
+  to {
+    color: #ff0000;
+  }
 }
 
 @keyframes charge {
@@ -78,25 +112,4 @@ window#waybar {
   100% {
     background-color: #ffffff;
   }
-}
-
-#battery.charging {
-  animation-name: charge;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes blink {
-  to {
-    color: #ff0000;
-  }
-}
-
-#battery.critical:not(.charging) {
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.8s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
