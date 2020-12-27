@@ -1,161 +1,115 @@
 {
-    // General
-    "layer": "top",
-    "position": "bottom",
-    "height": 35,
+	// General
+	"layer": "top",
+	"position": "bottom",
+	"height": 35,
 
-    // Modules order
-    "modules-left": ["sway/workspaces", "sway/mode","sway/window"],
-    "modules-center": ["custom/media"],
-    "modules-right": ["disk","memory","cpu","temperature","pulseaudio", "network","backlight", "battery", "clock", "tray"],
+	// Modules order
+	"modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+	"modules-center": ["custom/media"],
+	"modules-right": ["disk", "memory", "cpu", "temperature", "pulseaudio", "network", "backlight", "battery", "clock", "tray"],
 
-
-    // Modules configuration
-    "sway/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{icon}",
-         "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
-	     "6": "",
-	     "7": "奈",
-	     "8": "",
-             "default": ""
-         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/window":{
-    	"max-length": 35
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 2,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "disk": {
-	"format": "{percentage_used}% ",
-	"on-click":"alacritty -e fish -c \"nnn -e\""
-    },
-    "cpu": {
-        "format": "{usage}% ",
-	"interval": 1,
-	"on-click": "alacritty -e bpytop"
-    },
-    "memory": {
-        "format": "{}% ",
-	"interval": 1,
-	"format-alt": "{used:0.1f}G/{total:0.1f}G"
-    },
-    "temperature": {
-        //"thermal-zone": 2,
-        "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
-        "critical-threshold": 60,
-	"interval": 1,
-        "format-critical": "{temperatureC}°C ",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", "","",""]
-    },
-    "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["","","","","","",""]
-    },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        "format-full": "",
-        "format-icons": ["","","","","","","","","","",""]
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-	"format-icons": [""],
-	"tooltip-format-wifi": "{essid} ({signalStrength}%)"
-    },
-    "pulseaudio": {
-        "scroll-step": 2,
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "ﱝ {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "","墳", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "<span style=\"italic\">{}</span>",
-	"interval": 3,
-        "exec": "python $HOME/.config/pythons-scripts/spotify.py",
-	"on-click": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause",
-	"on-click-right": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-    },
-    "custom/calendar": {
-        "format": "{}",
-	"interval": 5,
-        "exec": "python $HOME/.config/pythons-scripts/calendar.py"
-    }
+	// Modules configuration
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "",
+			"7": "奈",
+			"8": "",
+			"default": ""
+		}
+	},
+	"sway/mode": {
+		"format": "<span style=\"italic\">{}</span>"
+	},
+	"sway/window":{
+		"max-length": 35
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+	"disk": {
+		"format": "{percentage_used}% ",
+		"on-click":"alacritty -e fish -c \"nnn -e\""
+	},
+	"cpu": {
+		"format": "{usage}% ",
+		"interval": 1,
+		"on-click": "alacritty -e bpytop"
+	},
+	"memory": {
+		"format": "{}% ",
+		"interval": 1,
+		"format-alt": "{used:0.1f}G/{total:0.1f}G"
+	},
+	"temperature": {
+		"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input",
+		"critical-threshold": 60,
+		"interval": 1,
+		"format-critical": "{temperatureC}°C ",
+		"format": "{temperatureC}°C {icon}",
+		"format-icons": ["", "", "","",""]
+	},
+	"backlight": {
+		"format": "{percent}% {icon}",
+		"format-icons": ["","","","","","",""]
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 15,
+			"critical": 5
+		},
+		"format": "{capacity}% {icon}",
+		"format-charging": "{capacity}% ",
+		"format-alt": "{time} {icon}",
+		"format-icons": ["","","","","","","","","","",""],
+	},
+	"network": {
+		"format-wifi": "{signalStrength}% ",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+		"format-linked": "{ifname} (No IP) ",
+		"format-disconnected": "Disconnected ⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"format-icons": [""],
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)"
+	},
+	"pulseaudio": {
+		"scroll-step": 2,
+		"format": "{volume}% {icon} {format_source}",
+		"format-bluetooth": "{volume}% {icon} {format_source}",
+		"format-bluetooth-muted": " {icon} {format_source}",
+		"format-muted": "ﱝ {format_source}",
+		"format-source": "{volume}% ",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "","墳", ""]
+		},
+		"on-click": "pavucontrol"
+	},
+	"custom/media": {
+		"format": "<span style=\"italic\">{}</span>",
+		"interval": 3,
+		"exec": "python $HOME/.config/pythons-scripts/spotify.py",
+		"on-click": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause",
+		"on-click-right": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+	},
 }
