@@ -54,7 +54,6 @@
 | [bpytop](https://github.com/aristocratos/bpytop)                          | Ressource monitor, with style                                                     |
 | [cowfortune](https://github.com/anthraxx/cowfortune)                      | In case my quote python script break...                                           |
 
-
 #### Utilities
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
@@ -81,6 +80,11 @@
 | [handlr](https://github.com/chmln/handlr)                                 | Utility to set your default applications                                          |
 | [shellcheck](https://github.com/koalaman/shellcheck)                      | Shell scripts analysis                                                            |
 | [light](https://github.com/haikarainen/light)                             | Program to control backlights                                                     |
+| [mpv](https://github.com/mpv-player/mpv)                                  | Media player for movies                                                           |
+| [mpd](https://github.com/MusicPlayerDaemon/MPD)                           | Media player daemon (for music)                                                   |
+| [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)                             | Terminal music player                                                             |
+| [pulseEffects](https://github.com/wwmm/pulseeffects)                      | Sound effects for pulseaudio                                                      |
+| [pulseEffects presets](https://github.com/JackHack96/PulseEffects-Presets)| Nice presets for pulseEffects
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
