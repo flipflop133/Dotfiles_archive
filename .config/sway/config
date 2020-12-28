@@ -184,10 +184,11 @@ bindsym XF86AudioMute exec pulseaudio-ctl mute;exec $HOME/.config/sway/notificat
 bindsym XF86AudioMicMute exec pulseaudio-ctl mute-input;exec $HOME/.config/sway/notifications.sh microphone
 
 # media control
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause || mpc toggle
+bindsym XF86AudioPause exec playerctl pause || mpc pause
+bindsym XF86AudioNext exec playerctl next || mpc next
+bindsym XF86AudioPrev exec playerctl previous || mpc previous
+bindsym XF86AudioStop exec playerctl stop || mpc stop
 
 # backlight control
 bindsym $mod+KP_Add exec light -A 2;exec $HOME/.config/sway/notifications.sh brightness

@@ -82,6 +82,7 @@
 | [light](https://github.com/haikarainen/light)                             | Program to control backlights                                                     |
 | [mpv](https://github.com/mpv-player/mpv)                                  | Media player for movies                                                           |
 | [mpd](https://github.com/MusicPlayerDaemon/MPD)                           | Media player daemon (for music)                                                   |
+| [mpc](https://www.musicpd.org/clients/mpc/)                               | Command line interface to MPD                                                     |
 | [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)                             | Terminal music player                                                             |
 | [pulseEffects](https://github.com/wwmm/pulseeffects)                      | Sound effects for pulseaudio                                                      |
 | [pulseEffects presets](https://github.com/JackHack96/PulseEffects-Presets)| Nice presets for pulseEffects

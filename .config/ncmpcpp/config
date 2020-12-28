@@ -1,3 +1,9 @@
+##### music visualizer #####
+visualizer_output_name = "pulse audio"
+visualizer_in_stereo = "yes"
+visualizer_type = "ellipse"
+visualizer_look = "+|"
+
 ##### song format #####
 now_playing_prefix = $b$(cyan)
 now_playing_suffix = $(end)$/b
