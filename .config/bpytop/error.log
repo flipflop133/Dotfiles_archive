@@ -101,3 +101,8 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 824, in _get_key
     input_key += sys.stdin.read(1)						#* Read 1 key safely with blocking on
 OSError: [Errno 5] Input/output error
+27/12/20 (19:02:41) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1199, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'

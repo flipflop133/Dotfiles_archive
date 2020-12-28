@@ -17,6 +17,7 @@
 .config/nvim/vim-plug
 .config/picom
 .config/polybar
+.config/pulse/daemon.conf
 .config/pythons-scripts
 .config/sway
 .config/waybar

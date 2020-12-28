@@ -27,15 +27,11 @@ window#waybar {
   color: #ff0000;
 }
 
-/* This remove all hover effects on workspaces buttons*/
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
   background: #ffffff;
   border: #ffffff;
-  /*original padding +1*/
-  padding-left: 9px;
-  padding-right: 9px;
 }
 
 #mode #window {

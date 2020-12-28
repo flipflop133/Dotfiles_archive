@@ -84,7 +84,7 @@
 		"format-disconnected": "Disconnected ⚠",
 		"format-alt": "{ifname}: {ipaddr}/{cidr}",
 		"format-icons": [""],
-		"tooltip-format-wifi": "{essid} ({signalStrength}%)"
+		"tooltip-format-wifi": "{essid}"
 	},
 	"pulseaudio": {
 		"scroll-step": 2,

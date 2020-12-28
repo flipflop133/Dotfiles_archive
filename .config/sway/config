@@ -191,13 +191,11 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # backlight control
 bindsym $mod+KP_Add exec light -A 2;exec $HOME/.config/sway/notifications.sh brightness
-bindsym $mod+KP_Subtract exec light -U 2;exec $HOME/.config/sway/notifications.sh brightness
-
-# lockscreen
+bindsym $mod+KP_Subtract exec light -U 2;exec $HOME/.config/sway/notifications.sh brightness# lockscreen
 bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
 
 # power management
-exec swayidle -w timeout 300 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
+exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*' timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
 
 # powermenu
 bindsym $mod+p exec $HOME/.config/sway/dmenupower.sh
