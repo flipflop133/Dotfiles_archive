@@ -46,8 +46,12 @@ window#waybar {
 /******************/
 /* MODULES MIDDLE */
 /******************/
+#mpd,
 #custom-media {
   color: #b8860b;
+}
+#mpd {
+  font-size: 16px;
 }
 
 /*****************/

@@ -8,7 +8,9 @@
 .config/gtk-2.0
 .config/gtk-3.0
 .config/mimeapps.list
+.config/mpd/mpd.conf
 .config/mpv
+.config/ncmpcpp/config
 .config/nnn
 .config/nvim/coc-settings.json
 .config/nvim/general

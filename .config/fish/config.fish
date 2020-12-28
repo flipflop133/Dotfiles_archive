@@ -4,6 +4,7 @@
 set fish_greeting
 set -x EDITOR nvim
 set -x VISUAL nvim
+export MAKEFLAGS="-j'(nproc)'"
 
 ##########
 # COLORS #
