@@ -226,4 +226,4 @@ exec dunst -layer overlay
 exec mpd
 
 # music player
-bindsym $mod+m exec alacritty -e fish -c "ncmpcpp"
+bindsym $mod+m exec alacritty -e fish -c "ncmpcpp & mpDris2"
