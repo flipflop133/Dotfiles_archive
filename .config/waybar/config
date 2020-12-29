@@ -113,7 +113,7 @@
 		"on-click-right": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 	},
 	"mpd": {
-		"format": "<span style=\"italic\">{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title}</span> {elapsedTime:%M:%S}/{totalTime:%M:%S}  ",
+		"format": "<span style=\"italic\">{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title}</span>  ",
 		"format-disconnected": "",
 		"format-stopped": "",
 		"interval": 10,
