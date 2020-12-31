@@ -33,9 +33,8 @@ window#waybar {
   text-shadow: inherit;
   background: #ffffff;
   border: #ffffff;
-  /*original padding +1*/
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 #mode #window {
@@ -61,6 +60,7 @@ window#waybar {
 #clock,
 #idle_inhibitor,
 #disk,
+#disk.home,
 #cpu,
 #memory,
 #temperature,

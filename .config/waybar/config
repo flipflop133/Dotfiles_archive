@@ -7,7 +7,7 @@
 	// Modules order
 	"modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
 	"modules-center": ["custom/media","mpd"],
-	"modules-right": ["disk", "memory", "cpu", "temperature", "pulseaudio", "network", "backlight", "battery", "clock", "tray"],
+	"modules-right": ["disk#root", "disk#home", "memory", "cpu", "temperature", "pulseaudio", "network", "backlight", "battery", "clock", "tray"],
 
 	// Modules configuration
 	"sway/workspaces": {
@@ -40,9 +40,14 @@
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format-alt": "{:%Y-%m-%d}"
 	},
-	"disk": {
+	"disk#root": {
 		"format": "{percentage_used}% ",
 		"on-click":"alacritty -e fish -c \"nnn -e\""
+	},
+	"disk#home": {
+		"format": "{percentage_used}% ",
+		"on-click":"alacritty -e fish -c \"nnn -e\"",
+		"path":"/home"
 	},
 	"cpu": {
 		"format": "{usage}% ",

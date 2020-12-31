@@ -33,10 +33,6 @@ output * {
     bg ~/Images/wallpaper/* fill
 }
 
-############
-# SWAYIDLE #
-############
-
 ########
 # gaps #
 ########
@@ -172,6 +168,17 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+#######
+# GTK #
+#######
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'vimix-light-laptop-doder'
+    gsettings set $gnome-schema icon-theme 'Papirus-Light'
+    gsettings set $gnome-schema font-name 'Open Sans 14'
+}
+exec_always import-gsettings
+
 ####################################
 # OTHER CONTROLS AND STARTUP STUFF #
 ####################################
@@ -227,3 +234,6 @@ exec mpd
 
 # music player
 bindsym $mod+m exec alacritty -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
+
+# web browser
+bindsym $mod+b exec MOZ_ENABLE_WAYLAND=1 firefox
