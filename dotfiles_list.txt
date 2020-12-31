@@ -1,4 +1,4 @@
-.xinitrc
+.pam_environment
 .config/alacritty
 .config/archive
 .config/bpytop
@@ -17,9 +17,7 @@
 .config/nvim/init.vim
 .config/nvim/plug-config
 .config/nvim/vim-plug
-.config/picom
-.config/polybar
 .config/pulse/daemon.conf
-.config/pythons-scripts
+.config/scripts
 .config/sway
 .config/waybar

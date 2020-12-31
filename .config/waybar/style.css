@@ -48,6 +48,8 @@ window#waybar {
 #mpd,
 #custom-media {
   color: #b8860b;
+  padding-left: 15px;
+  padding-right: 8px;
 }
 #mpd {
   font-size: 16px;

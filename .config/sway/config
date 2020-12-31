@@ -62,9 +62,9 @@ set $red         #EE0000
 # set colors
 # class                 border  backgr. text    indicator child_border
 client.focused          $fg     $fg     $black  $red      $cyan
-client.focused_inactive $bg     $fg     $black  $fg       $bg
-client.unfocused        $bg     $bg     $grey   $fg       $bg
-client.urgent           $bg     $bg     $red    $fg       $fg
+client.focused_inactive $fg     $fg     $black  $fg       $bg
+client.unfocused        $fg     $bg     $grey   $fg       $bg
+client.urgent           $fg     $bg     $red    $fg       $fg
 client.placeholder      $black  #0c0c0c $fg     $black    #0c0c0c
 client.background       $fg
 
@@ -198,8 +198,10 @@ bindsym XF86AudioPrev exec playerctl previous || mpc previous
 bindsym XF86AudioStop exec playerctl stop || mpc stop
 
 # backlight control
-bindsym $mod+KP_Add exec light -A 2;exec $HOME/.config/sway/notifications.sh brightness
-bindsym $mod+KP_Subtract exec light -U 2;exec $HOME/.config/sway/notifications.sh brightness# lockscreen
+bindsym $mod+KP_Add exec light -A 1;exec $HOME/.config/sway/notifications.sh brightness
+bindsym $mod+KP_Subtract exec light -U 1;exec $HOME/.config/sway/notifications.sh brightness
+
+# lockscreen
 bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
 
 # power management
@@ -213,6 +215,10 @@ bindsym $mod+Return exec alacritty
 
 # screenshot
 bindsym $mod+Print exec $HOME/.config/sway/grimshot.sh --notify copy area
+
+# screenrecorder
+bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4")
+bindsym $mod+alt+r exec killall -s SIGINT wf-recorder
 
 # calculator
 bindsym XF86Calculator exec galculator
