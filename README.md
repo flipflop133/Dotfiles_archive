@@ -86,7 +86,9 @@
 | [mpDris2](https://github.com/eonpatapon/mpDris2)                          | To get notifications with album icon with mpd                                     |
 | [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)                             | Terminal music player                                                             |
 | [pulseEffects](https://github.com/wwmm/pulseeffects)                      | Sound effects for pulseaudio                                                      |
-| [pulseEffects presets](https://github.com/JackHack96/PulseEffects-Presets)| Nice presets for pulseEffects
+| [pulseEffects presets](https://github.com/JackHack96/PulseEffects-Presets)| Nice presets for pulseEffects                                                     |
+| [NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)     | To manager network connections                                                    |
+| [nmcli](https://wiki.archlinux.org/index.php/NetworkManager#nmcli_examples)| CLI to manage NetworkManager                                                     |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
