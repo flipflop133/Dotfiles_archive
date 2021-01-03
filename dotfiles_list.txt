@@ -21,3 +21,4 @@
 .config/scripts
 .config/sway
 .config/waybar
+.config/zathura

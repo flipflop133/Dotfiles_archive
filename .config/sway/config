@@ -183,12 +183,12 @@ exec_always import-gsettings
 # OTHER CONTROLS AND STARTUP STUFF #
 ####################################
 # volume control
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 2;exec $HOME/.config/sway/notifications.sh volume
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 2;exec $HOME/.config/sway/notifications.sh volume
-bindsym XF86AudioMute exec pulseaudio-ctl mute;exec $HOME/.config/sway/notifications.sh volume
+bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $HOME/.config/sway/notifications.sh volume
+bindsym XF86AudioLowerVolume exec pamixer -d 2;exec $HOME/.config/sway/notifications.sh volume
+bindsym XF86AudioMute exec pamixer -t;exec $HOME/.config/sway/notifications.sh mute
 
 # microphone control
-bindsym XF86AudioMicMute exec pulseaudio-ctl mute-input;exec $HOME/.config/sway/notifications.sh microphone
+bindsym XF86AudioMicMute exec pamixer --source 5 -t;exec $HOME/.config/sway/notifications.sh microphone
 
 # media control
 bindsym XF86AudioPlay exec playerctl play-pause || mpc toggle
@@ -243,3 +243,6 @@ bindsym $mod+m exec alacritty -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
 
 # web browser
 bindsym $mod+b exec MOZ_ENABLE_WAYLAND=1 firefox
+
+# night light
+exec gammastep

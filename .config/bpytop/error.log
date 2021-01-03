@@ -258,3 +258,229 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 672, in __exit__
     termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
 termios.error: (5, 'Input/output error')
+31/12/20 (19:28:47) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1206, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+31/12/20 (19:35:01) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1206, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+31/12/20 (19:35:13) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 879, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 672, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+01/01/21 (09:36:08) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1206, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:33:25) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:36:47) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:38:42) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:38:44) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:40:26) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:41:05) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:41:22) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:41:50) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:42:27) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:45:52) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:46:55) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:47:12) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:47:38) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:51:11) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:51:26) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:51:53) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:52:31) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (14:52:46) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (15:43:32) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (15:43:50) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (15:44:15) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 880, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 673, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+01/01/21 (16:28:20) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (16:29:43) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 880, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 673, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+01/01/21 (21:19:02) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+01/01/21 (21:19:16) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 880, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 673, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+01/01/21 (21:34:14) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+02/01/21 (10:37:16) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (09:16:14) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (09:33:48) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (13:30:05) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1207, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (16:53:59) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1209, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (16:54:16) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 882, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 675, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+03/01/21 (17:02:06) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1209, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (17:02:10) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 882, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 675, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+03/01/21 (17:11:12) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1209, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (17:11:56) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 882, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 675, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')
+03/01/21 (17:12:20) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1209, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+03/01/21 (17:12:25) | ERROR: Input thread failed with exception: (5, 'Input/output error')
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 882, in _get_key
+    input_key = ""
+  File "/usr/bin/bpytop", line 675, in __exit__
+    termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
+termios.error: (5, 'Input/output error')

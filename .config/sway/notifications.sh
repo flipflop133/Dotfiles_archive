@@ -16,11 +16,11 @@ brightness(){
 	if [ "$brightness" -lt 34 ]; then
 		icon=$icon_path$brightness_low
 	elif [ "$brightness" -lt 67 ]; then
-	    icon=$icon_path$brightness_medium
+		icon=$icon_path$brightness_medium
 	elif [ "$brightness" -lt 100 ]; then
-	    icon=$icon_path$brightness_high
+		icon=$icon_path$brightness_high
 	else
-	    icon=$icon_path$brightness_full
+		icon=$icon_path$brightness_full
 	fi
 
 	# Send the notification
@@ -31,49 +31,51 @@ volume(){
 	volume_low="notification-audio-volume-low.svg"
 	volume_medium="notification-audio-volume-medium.svg"
 	volume_high="notification-audio-volume-high.svg"
-	volume_muted="notification-audio-volume-muted.svg"
 
-	sleep 0.1 # This gives time to get accurate mute status
-	volume=$(pulseaudio-ctl full-status)
-	volume=($volume)
-	level=${volume[0]}
-	mute_status=${volume[1]}
+	sleep 0.1 # This gives time to get accurate status
+	volume=$(pamixer --get-volume)
 
 	# Set the icon depending on the volume level
-	if [ "$mute_status" = "yes" ]; then
-	    icon=$icon_path$volume_muted
-	    level="muted"
-	elif [ $level -lt 34 ]; then
-	    icon=$icon_path$volume_low
-	    level=$level%
-	elif [ $level -lt 67 ]; then
-	    icon=$icon_path$volume_medium
-	    level=$level%
+	if [ $volume -lt 34 ]; then
+		icon=$icon_path$volume_low
+	elif [ $volume -lt 67 ]; then
+		icon=$icon_path$volume_medium
 	else
-	    icon=$icon_path$volume_high
-	    level=$level%
+		icon=$icon_path$volume_high
 	fi
 
 	# Send the notification
-	dunstify -h string:x-canonical-private-synchronous:audio "Volume [$level] " -h int:value:"$level" --icon $icon
+	dunstify -h string:x-canonical-private-synchronous:audio "Volume" "$volume%" -h int:value:"$volume" --icon $icon
+}
+mute(){
+	icon_path="/usr/share/icons/Papirus/48x48/status/"
+	volume_muted="notification-audio-volume-muted.svg"
+	mute_status=$(pamixer --get-mute)
+	if [ "$mute_status" = "true" ]; then
+		icon=$icon_path$volume_muted
+		level="muted"
+	else
+		volume
+		exit
+	fi
+	# Send the notification
+	dunstify -h string:x-canonical-private-synchronous:audio "Volume" "Muted" -h int:value:"$volume" --icon $icon
 }
 microphone(){
 	icon_path="/usr/share/icons/Papirus/48x48/status/"
 	mic_off="mic-off.svg"
-	mic_on="mic-on.svg"
+	mic_on="mic-ready.svg"
 
 	sleep 0.1 # This gives time to get accurate mute status
-	full_status=$(pulseaudio-ctl full-status)
-	full_status=($full_status)
-	mute_status=${full_status[2]}
+	status=$(pamixer --source 5 --get-mute)
 
 	# Set the icon depending on the volume level
-	if [ "$mute_status" = "yes" ]; then
-	    icon=$icon_path$mic_off
-	    micro="muted"
+	if [ "$status" = "true" ]; then
+		icon=$icon_path$mic_off
+		micro="muted"
 	else
-	    icon=$icon_path$mic_on
-	    micro="unmuted"
+		icon=$icon_path$mic_on
+		micro="unmuted"
 	fi
 
 	# Send the notification
@@ -85,6 +87,9 @@ case "$1" in
 		;;
 	volume)
 		volume
+		;;
+	mute)
+		mute
 		;;
 	brightness)
 		brightness

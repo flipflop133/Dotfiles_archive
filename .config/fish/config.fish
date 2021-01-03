@@ -14,18 +14,28 @@ set -U fish_pager_color_description   '#0097a7'
 ###########
 # ALIASES #
 ###########
-alias n='nnn -e'
-alias ud='sudo pacman -Syyu'
-alias ls='ls --color=auto --group-directories-first'
-alias grep='grep --color=auto'
+# packages
 alias pacman='pacman --color=auto'
 alias yay='yay --color=auto'
-alias vi='nvim'
+alias pu='yay -Syu'
+alias pr='yay -Rns'
+
+# system
+alias df='df -h'
+alias du='du -h'
+alias lsblk='lsblk -afm'
+alias fdisk='fdisk -L'
+alias ls='ls --color=never --group-directories-first'
+alias grep='grep --color=auto'
 alias cl='clear'
+
+# other
+alias n='nnn -e'
+alias vi='nvim'
 alias nf='clear; neofetch'
-alias q='python ~/.config/pythons-scripts/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
 alias top='bpytop'
 alias xrp='python ~/.config/crypto-script/crypto.py'
+alias q='python ~/.config/scripts/python/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
 
 #######
 # NNN #

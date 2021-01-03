@@ -1,0 +1,15 @@
+set selection-clipboard clipboard
+set completion-bg "#FFFFFF"
+set completion-fg "#000000"
+set completion-group-bg "#FFFFFF"
+set completion-group-fg "#000000"
+set completion-highlight-bg "#FFFFFF"
+set completion-highlight-fg "#000000"
+set default-bg "#FFFFFF"
+set default-fg "#000000"
+set inputbar-bg "#FFFFFF"
+set inputbar-fg "#000000"
+set statusbar-bg "#FFFFFF"
+set statusbar-fg "#000000"
+set font "RobotoMono Nerd Font 12"
+
