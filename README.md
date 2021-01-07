@@ -87,8 +87,8 @@
 | [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp)                             | Terminal music player                                                             |
 | [pulseEffects](https://github.com/wwmm/pulseeffects)                      | Sound effects for pulseaudio                                                      |
 | [pulseEffects presets](https://github.com/JackHack96/PulseEffects-Presets)| Nice presets for pulseEffects                                                     |
-| [NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)     | To manager network connections                                                    |
-| [nmcli](https://wiki.archlinux.org/index.php/NetworkManager#nmcli_examples)| CLI to manage NetworkManager                                                     |
+| [iwd](https://wiki.archlinux.org/index.php/Iwd)                           | To manage network connections                                                     |
+| [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd)                     | DHCP client                                                                       |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
