@@ -42,17 +42,17 @@
 	},
 	"disk#root": {
 		"format": "{percentage_used}% ",
-		"on-click":"alacritty -e fish -c nnn -e"
+		"on-click":"kitty -e fish -c nnn -e"
 	},
 	"disk#home": {
 		"format": "{percentage_used}% ",
-		"on-click":"alacritty -e fish -c nnn -e",
+		"on-click":"kitty -e fish -c nnn -e",
 		"path":"/home"
 	},
 	"cpu": {
 		"format": "{usage}% ",
 		"interval": 1,
-		"on-click": "alacritty -e bpytop"
+		"on-click": "kitty -e bpytop"
 	},
 	"memory": {
 		"format": "{}% ",
@@ -60,8 +60,8 @@
 		"format-alt": "{used:0.1f}G/{total:0.1f}G"
 	},
 	"temperature": {
-		"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
-		"critical-threshold": 60,
+		"thermal-zone": 5,
+		"critical-threshold": 70,
 		"interval": 1,
 		"format-critical": "{temperatureC}°C ",
 		"format": "{temperatureC}°C {icon}",
@@ -81,7 +81,6 @@
 		"format-charging": "{capacity}% ",
 		"format-alt": "{time} {icon}",
 		"format-icons": ["","","","","","","","","","",""],
-		"on-click-right": "alacritty -e sudo $HOME/.config/scripts/bash/Tools/powersave.sh"
 	},
 	"network": {
 		"format-wifi": "{signalStrength}% ",

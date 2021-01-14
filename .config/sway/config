@@ -8,29 +8,32 @@ set $mod Mod4
 bindsym $mod+Shift+c reload
 
 # exit sway
-bindsym $mod+Shift+e exit
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg exit'
+
+# terminal
+set $term kitty
 
 #########
 # INPUT #
 #########
 # keyboard
 input * {
-    xkb_layout "be"
-    xkb_numlock enabled
+	xkb_layout "be"
+	xkb_numlock enabled
 }
 
 # touchpad
 input * {
-    xkb_layout "be"
-    tap enabled
-    natural_scroll disabled
+	xkb_layout "be"
+	tap enabled
+	natural_scroll enabled
 }
 
 ##########
 # OUTPUT #
 ##########
 output * {
-    bg ~/Images/wallpaper/* fill
+	bg ~/Images/wallpaper/* fill
 }
 
 ########
@@ -53,17 +56,15 @@ font pango:RobotoMono Nerd Font 14
 # colors
 # define colors
 set $black       #000000
-set $bg          #999999
-set $grey        #333333
-set $lg          #cccccc
+set $bg          #cccccc
 set $fg          #ffffff
 set $cyan        #007DB7
 set $red         #EE0000
 # set colors
 # class                 border  backgr. text    indicator child_border
 client.focused          $fg     $fg     $black  $red      $cyan
-client.focused_inactive $fg     $fg     $black  $fg       $bg
-client.unfocused        $fg     $bg     $grey   $fg       $bg
+client.focused_inactive $fg     $fg     $black     $fg       $bg
+client.unfocused        $fg     $bg     $black     $fg       $bg
 client.urgent           $fg     $bg     $red    $fg       $fg
 client.placeholder      $black  #0c0c0c $fg     $black    #0c0c0c
 client.background       $fg
@@ -116,6 +117,16 @@ bindsym $mod+a focus parent
 bindsym $mod+z focus child
 
 ##############
+# SCRATCHPAD #
+##############
+# Move the currently focused window to the scratchpad
+bindsym $mod+Shift+u move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+u scratchpad show
+
+##############
 # WORKSPACES #
 ##############
 # Define names for default workspaces for which we configure key bindings later on.
@@ -157,15 +168,15 @@ bindsym $mod+Shift+agrave move container to workspace number $ws10
 # resize window
 bindsym $mod+r mode "resize"
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+	# back to normal: Enter or Escape or $mod+r
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
 
 #######
@@ -173,22 +184,26 @@ mode "resize" {
 #######
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-    gsettings set $gnome-schema gtk-theme 'vimix-light-laptop-doder'
-    gsettings set $gnome-schema icon-theme 'Papirus-Light'
-    gsettings set $gnome-schema font-name 'Open Sans 14'
+	gsettings set $gnome-schema gtk-theme 'vimix-light-laptop-doder'
+	gsettings set $gnome-schema icon-theme 'Papirus-Light'
+	gsettings set $gnome-schema font-name 'Open Sans 14'
 }
-exec_always import-gsettings
 
 ####################################
 # OTHER CONTROLS AND STARTUP STUFF #
 ####################################
+# notifications script path
+set $notifications $HOME/.config/sway/notifications.sh
+
 # volume control
-bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $HOME/.config/sway/notifications.sh volume
-bindsym XF86AudioLowerVolume exec pamixer -d 2;exec $HOME/.config/sway/notifications.sh volume
-bindsym XF86AudioMute exec pamixer -t;exec $HOME/.config/sway/notifications.sh mute
+bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $notifications volume
+bindsym XF86AudioLowerVolume exec pamixer -d 2;exec $notifications volume
+bindsym XF86AudioMute exec pamixer -t;exec $notifications mute
 
 # microphone control
-bindsym XF86AudioMicMute exec pamixer --source 5 -t;exec $HOME/.config/sway/notifications.sh microphone
+bindsym XF86AudioRaiseVolume+alt exec pamixer --source 5 -i 2;exec $notifications microphone
+bindsym XF86AudioLowerVolume+alt exec pamixer --source 5 -d 2;exec $notifications microphone
+bindsym XF86AudioMicMute exec pamixer --source 5 -t;exec $notifications microphone_mute
 
 # media control
 bindsym XF86AudioPlay exec playerctl play-pause || mpc toggle
@@ -198,51 +213,51 @@ bindsym XF86AudioPrev exec playerctl previous || mpc previous
 bindsym XF86AudioStop exec playerctl stop || mpc stop
 
 # backlight control
-bindsym $mod+KP_Add exec light -A 1;exec $HOME/.config/sway/notifications.sh brightness
-bindsym $mod+KP_Subtract exec light -U 1;exec $HOME/.config/sway/notifications.sh brightness
+bindsym $mod+KP_Add exec light -A 1;exec $notifications brightness
+bindsym $mod+KP_Subtract exec light -U 1;exec $notifications brightness
 
 # lockscreen
 bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
 
 # power management
-exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*' timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
+exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'\
+                 timeout 300 'swaymsg "output * dpms off"'\
+                 resume 'swaymsg "output * dpms on"'\
+                 before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
 
 # powermenu
 bindsym $mod+p exec $HOME/.config/sway/dmenupower.sh
 
 # terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $term
 
 # screenshot
 bindsym $mod+Print exec $HOME/.config/sway/grimshot.sh --notify copy area
+bindsym $mod+alt+Print exec $HOME/.config/sway/grimshot.sh --notify copy screen
 
 # screenrecorder
-bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4")
-bindsym $mod+alt+r exec killall -s SIGINT wf-recorder
+bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording..."
+bindsym $mod+alt+r exec killall -s SIGINT wf-recorder & notify-send "Stopped recording" "Record is located in ~/Videos"
 
 # calculator
 bindsym XF86Calculator exec galculator
 
 # file manager
-bindsym $mod+Shift+f exec alacritty -e fish -c "nnn -e"
+bindsym $mod+Shift+f exec $term -e fish -c "nnn -e"
 
 # app launcher
-bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -i -l 10"
+bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -c -i -l 10"
 
 # bar
 exec waybar
 
 # notification daemon
-exec dunst -layer overlay
-
-# music daemon
-exec mpd
+exec dunst
 
 # music player
-bindsym $mod+m exec alacritty -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
+bindsym $mod+m exec mpd & exec $term -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
 
 # web browser
-bindsym $mod+b exec MOZ_ENABLE_WAYLAND=1 firefox
-
+bindsym $mod+b exec firefox
 # night light
 exec gammastep

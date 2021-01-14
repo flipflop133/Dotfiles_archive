@@ -52,14 +52,14 @@ if [ "$ACTION" != "save" ] && [ "$ACTION" != "copy" ] && [ "$ACTION" != "check" 
 fi
 
 notify() {
-  notify-send -t 3000 -a grimshot "$@"
+  dunstify -a grimshot "$1" "$2" -i $3
 }
 notifyOk() {
   [ "$NOTIFY" = "no" ] && return
 
   TITLE=${2:-"Screenshot"}
   MESSAGE=${1:-"OK"}
-  notify "$TITLE" "$MESSAGE"
+  notify "$TITLE" "$MESSAGE" $3
 }
 notifyError() {
   if [ $NOTIFY = "yes" ]; then
@@ -140,14 +140,16 @@ else
 fi
 
 if [ "$ACTION" = "copy" ] ; then
-  takeScreenshot - "$GEOM" "$OUTPUT" | wl-copy --type image/png || die "Clipboard error"
-  notifyOk "$WHAT copied to buffer"
+  image=$(takeScreenshot - "$GEOM" "$OUTPUT" | base64)
+  echo "$image" | base64 --decode > /tmp/tmp.png
+  echo "$image" | base64 --decode | wl-copy --type image/png || die "Clipboard error"
+  notifyOk "$WHAT copied to buffer" "" "/tmp/tmp.png"
 else
   if takeScreenshot "$FILE" "$GEOM" "$OUTPUT"; then
     TITLE="Screenshot of $SUBJECT"
     MESSAGE=$(basename "$FILE")
-    notifyOk "$MESSAGE" "$TITLE"
-    ech $FILE
+    notifyOk "$MESSAGE" "$TITLE" $FILE
+    echo $FILE
   else
     notifyError "Error taking screenshot with grim"
   fi

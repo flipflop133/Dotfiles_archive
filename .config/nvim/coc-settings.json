@@ -1,13 +1,9 @@
 {
-// autoformat
-"coc.preferences.formatOnSaveFiletypes": [
-    "python",
-    "c",
-    "css"
-],
-// python config
-"python.linting.enabled": true,
-"python.jediEnabled": true,
-"python.linting.flake8Enabled": true,
-"python.formatting.provider": "yapf"
+  // autoformat
+  "coc.preferences.formatOnSaveFiletypes": ["python", "css", "json"],
+  // python config
+  "python.linting.enabled": true,
+  "python.jediEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "yapf"
 }

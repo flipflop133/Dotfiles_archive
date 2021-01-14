@@ -63,6 +63,28 @@ mute(){
 }
 microphone(){
 	icon_path="/usr/share/icons/Papirus/48x48/status/"
+	volume_low="notification-audio-volume-low.svg"
+	volume_medium="notification-audio-volume-medium.svg"
+	volume_high="notification-audio-volume-high.svg"
+
+	sleep 0.1 # This gives time to get accurate status
+	volume=$(pamixer --source 5 --get-volume)
+
+	# Set the icon depending on the volume level
+	if [ $volume -lt 34 ]; then
+		icon=$icon_path$volume_low
+	elif [ $volume -lt 67 ]; then
+		icon=$icon_path$volume_medium
+	else
+		icon=$icon_path$volume_high
+	fi
+
+	# Send the notification
+	dunstify -h string:x-canonical-private-synchronous:audio "Microphone volume" "$volume%" -h int:value:"$volume" --icon $icon
+}
+
+microphone_mute(){
+	icon_path="/usr/share/icons/Papirus/48x48/status/"
 	mic_off="mic-off.svg"
 	mic_on="mic-ready.svg"
 
@@ -81,9 +103,13 @@ microphone(){
 	# Send the notification
 	dunstify -h string:x-canonical-private-synchronous:microphone "Microphone status" "$micro" --icon $icon
 }
+
 case "$1" in
 	microphone)
 		microphone
+		;;
+	microphone_mute)
+		microphone_mute
 		;;
 	volume)
 		volume

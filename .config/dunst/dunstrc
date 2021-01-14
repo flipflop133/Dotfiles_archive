@@ -14,6 +14,7 @@ idle_threshold = 180
 icon_position = left
 max_icon_size = 80
 frame_width = 2
+show_indicators = no
 
 [shortcuts]
 close = mod4+comma
