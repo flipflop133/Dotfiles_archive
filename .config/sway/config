@@ -1,263 +1,63 @@
-###########
-# GENERAL #
-###########
-# key modifier
-set $mod Mod4
+#!/bin/bash
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
+# icons
+icon_path="/usr/share/icons/Papirus/48x48/apps/"
+shutdown="system-shutdown.svg"
+reboot="system-reboot.svg"
+log_out="system-log-out.svg"
+suspend="system-suspend.svg"
+suspend_hibernate="system-suspend-hibernate.svg"
+screen="cs-screen.svg"
 
-# exit sway
-bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg exit'
+# menu
+font="RobotoMono 25"
+menu="bemenu --fn \"$font\" -l 7"
 
-# terminal
-set $term kitty
+LOGOFF_CMD="sway exit"
 
-#########
-# INPUT #
-#########
-# keyboard
-input * {
-	xkb_layout "be"
-	xkb_numlock enabled
-}
+SELECT=$(printf " Poweroff\nﰇ Reboot\n﫼 Logout\n鈴 Suspend\n Hibernate\n PowerMode\n祥 Screen timeout" | $menu)
 
-# touchpad
-input * {
-	xkb_layout "be"
-	tap enabled
-	natural_scroll enabled
-}
-
-##########
-# OUTPUT #
-##########
-output * {
-	bg ~/Images/wallpaper/* fill
-}
-
-########
-# gaps #
-########
-smart_borders on
-gaps inner 30
-
-##################
-# WINDOWS DESIGN #
-##################
-# borders
-hide_edge_borders smart
-default_border pixel 3
-default_floating_border pixel 3
-
-# window titles font
-font pango:RobotoMono Nerd Font 14
-
-# colors
-# define colors
-set $black       #000000
-set $bg          #cccccc
-set $fg          #ffffff
-set $cyan        #007DB7
-set $red         #EE0000
-# set colors
-# class                 border  backgr. text    indicator child_border
-client.focused          $fg     $fg     $black  $red      $cyan
-client.focused_inactive $fg     $fg     $black     $fg       $bg
-client.unfocused        $fg     $bg     $black     $fg       $bg
-client.urgent           $fg     $bg     $red    $fg       $fg
-client.placeholder      $black  #0c0c0c $fg     $black    #0c0c0c
-client.background       $fg
-
-####################
-# WINDOWS CONTROLS #
-####################
-# use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# split in horizontal orientation
-bindsym $mod+c split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+z focus child
-
-##############
-# SCRATCHPAD #
-##############
-# Move the currently focused window to the scratchpad
-bindsym $mod+Shift+u move scratchpad
-
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+u scratchpad show
-
-##############
-# WORKSPACES #
-##############
-# Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
-
-# switch to workspace
-bindsym $mod+ampersand workspace number $ws1
-bindsym $mod+eacute workspace number $ws2
-bindsym $mod+quotedbl workspace number $ws3
-bindsym $mod+apostrophe workspace number $ws4
-bindsym $mod+parenleft workspace number $ws5
-bindsym $mod+section workspace number $ws6
-bindsym $mod+egrave workspace number $ws7
-bindsym $mod+exclam workspace number $ws8
-bindsym $mod+ccedilla workspace number $ws9
-bindsym $mod+agrave workspace number $ws10
-
-# move focused container to workspace
-bindsym $mod+Shift+ampersand move container to workspace number $ws1
-bindsym $mod+Shift+eacute move container to workspace number $ws2
-bindsym $mod+Shift+quotedbl move container to workspace number $ws3
-bindsym $mod+Shift+apostrophe move container to workspace number $ws4
-bindsym $mod+Shift+parenleft move container to workspace number $ws5
-bindsym $mod+Shift+section move container to workspace number $ws6
-bindsym $mod+Shift+egrave move container to workspace number $ws7
-bindsym $mod+Shift+exclam move container to workspace number $ws8
-bindsym $mod+Shift+ccedilla move container to workspace number $ws9
-bindsym $mod+Shift+agrave move container to workspace number $ws10
-
-# resize window
-bindsym $mod+r mode "resize"
-mode "resize" {
-	bindsym h resize shrink width 10 px or 10 ppt
-	bindsym j resize grow height 10 px or 10 ppt
-	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow width 10 px or 10 ppt
-
-	# back to normal: Enter or Escape or $mod+r
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
-	bindsym $mod+r mode "default"
-}
-
-#######
-# GTK #
-#######
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-	gsettings set $gnome-schema gtk-theme 'vimix-light-laptop-doder'
-	gsettings set $gnome-schema icon-theme 'Papirus-Light'
-	gsettings set $gnome-schema font-name 'Open Sans 14'
-}
-
-####################################
-# OTHER CONTROLS AND STARTUP STUFF #
-####################################
-# notifications script path
-set $notifications $HOME/.config/sway/notifications.sh
-
-# volume control
-bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $notifications volume
-bindsym XF86AudioLowerVolume exec pamixer -d 2;exec $notifications volume
-bindsym XF86AudioMute exec pamixer -t;exec $notifications mute
-
-# microphone control
-bindsym XF86AudioRaiseVolume+alt exec pamixer --source 5 -i 2;exec $notifications microphone
-bindsym XF86AudioLowerVolume+alt exec pamixer --source 5 -d 2;exec $notifications microphone
-bindsym XF86AudioMicMute exec pamixer --source 5 -t;exec $notifications microphone_mute
-
-# media control
-bindsym XF86AudioPlay exec playerctl play-pause || mpc toggle
-bindsym XF86AudioPause exec playerctl pause || mpc pause
-bindsym XF86AudioNext exec playerctl next || mpc next
-bindsym XF86AudioPrev exec playerctl previous || mpc previous
-bindsym XF86AudioStop exec playerctl stop || mpc stop
-
-# backlight control
-bindsym $mod+KP_Add exec light -A 1;exec $notifications brightness
-bindsym $mod+KP_Subtract exec light -U 1;exec $notifications brightness
-
-# lockscreen
-bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
-
-# power management
-exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'\
-                 timeout 300 'swaymsg "output * dpms off"'\
-                 resume 'swaymsg "output * dpms on"'\
-                 before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
-
-# powermenu
-bindsym $mod+p exec $HOME/.config/sway/dmenupower.sh
-
-# terminal
-bindsym $mod+Return exec $term
-
-# screenshot
-bindsym $mod+Print exec $HOME/.config/sway/grimshot.sh --notify copy area
-bindsym $mod+alt+Print exec $HOME/.config/sway/grimshot.sh --notify copy screen
-
-# screenrecorder
-bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording..."
-bindsym $mod+alt+r exec killall -s SIGINT wf-recorder & notify-send "Stopped recording" "Record is located in ~/Videos"
-
-# calculator
-bindsym XF86Calculator exec galculator
-
-# file manager
-bindsym $mod+Shift+f exec $term -e fish -c "nnn -e"
-
-# app launcher
-bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -c -i -l 10"
-
-# bar
-exec waybar
-
-# notification daemon
-exec dunst
-
-# music player
-bindsym $mod+m exec mpd & exec $term -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
-
-# web browser
-bindsym $mod+b exec firefox
-# night light
-exec gammastep
+case $SELECT in
+	" Poweroff")
+		notify-send -i $icon_path$shutdown "Shutting down..."
+		sleep 1
+		poweroff
+		;;
+	"ﰇ Reboot")
+		notify-send -i $icon_path$reboot "Rebooting..."
+		sleep 1
+		reboot
+		;;
+	"﫼 Logout")
+		notify-send -i $icon_path$log_out "Logging off..."
+		sleep 1
+		$LOGOFF_CMD
+		;;
+	"鈴 Suspend")
+		notify-send -i $icon_path$suspend "Suspending..."
+		sleep 1
+		systemctl suspend
+		;;
+	" Hibernate")
+		notify-send -i $icon_path$suspend_hibernate "Hibernating..."
+		sleep 1
+		systemctl hibernate
+		;;
+	" PowerMode")
+		kitty -e sudo "$HOME"/.config/scripts/bash/Tools/powersave.sh
+		;;
+	"祥 Screen timeout")
+		TIMEOUT=$(printf "鈴 Enable screen timeout\n零 Disable screen timeout" |$menu)
+		;;
+esac
+case $TIMEOUT in
+	"鈴 Enable screen timeout")
+		"$HOME"/.config/scripts/bash/Tools/idle.sh
+		notify-send -i $icon_path$screen "Screen timeout enabled"
+		;;
+	"零 Disable screen timeout")
+		if "$HOME"/.config/scripts/bash/Tools/idle.sh 0;then
+			notify-send -i $icon_path$screen "Screen timeout disabled"
+		fi
+		;;
+esac
