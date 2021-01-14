@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # icons
 icon_path="/usr/share/icons/Papirus/48x48/apps/"
@@ -9,9 +9,13 @@ suspend="system-suspend.svg"
 suspend_hibernate="system-suspend-hibernate.svg"
 screen="cs-screen.svg"
 
+# menu
+font="RobotoMono 25"
+menu="bemenu-run --fn \"$font\""
+
 LOGOFF_CMD="sway exit"
 
-SELECT=$(printf " Poweroff\nﰇ Reboot\n﫼 Logout\n鈴 Suspend\n Hibernate\n PowerMode\n祥 Screen timeout" |dmenu -i -l 10)
+SELECT=$(printf " Poweroff\nﰇ Reboot\n﫼 Logout\n鈴 Suspend\n Hibernate\n PowerMode\n祥 Screen timeout" | $menu)
 
 case $SELECT in
 	" Poweroff")
@@ -43,7 +47,7 @@ case $SELECT in
 		kitty -e sudo "$HOME"/.config/scripts/bash/Tools/powersave.sh
 		;;
 	"祥 Screen timeout")
-		TIMEOUT=$(printf "鈴 Enable screen timeout\n零 Disable screen timeout" |dmenu -i -l 10)
+		TIMEOUT=$(printf "鈴 Enable screen timeout\n零 Disable screen timeout" |$menu)
 		;;
 esac
 case $TIMEOUT in
