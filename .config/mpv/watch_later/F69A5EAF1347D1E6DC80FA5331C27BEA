@@ -1,3 +1,0 @@
-start=2443.754000
-deinterlace=yes
-af=@acompressor:acompressor=attack=20:threshold=-20dB:ratio=5:release=240:makeup=6dB:knee=2dB

@@ -1,4 +1,0 @@
-start=2591.631000
-af=@acompressor:!acompressor=ratio=5:makeup=6dB:release=240:attack=20:knee=2dB:threshold=-20dB
-sid=1
-sub-delay=-0.000000
