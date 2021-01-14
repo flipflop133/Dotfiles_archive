@@ -1,5 +1,4 @@
 .pam_environment
-.config/alacritty
 .config/archive
 .config/bpytop
 .config/Code - OSS/User/settings.json
