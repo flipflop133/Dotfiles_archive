@@ -4,7 +4,8 @@
 set fish_greeting
 set -x EDITOR nvim
 set -x VISUAL nvim
-export MAKEFLAGS="-j$nproc"
+export MAKEFLAGS="-j(nproc)"
+export LS_COLORS=(vivid generate ayu)
 
 ##########
 # COLORS #
@@ -27,7 +28,6 @@ alias dush='du -hsx * | sort -rh | head -10'
 alias fsh='find . -printf \'%s %p\n\'| sort -nr | head -10'
 alias lsblk='lsblk -afm'
 alias fdisk='fdisk -L'
-alias ls='ls --color=never --group-directories-first'
 alias grep='grep --color=auto'
 alias cl='clear'
 alias cpu='cd /sys/devices/system/cpu'
@@ -38,8 +38,8 @@ alias n='nnn -e'
 alias vi='nvim'
 alias nf='clear; neofetch'
 alias bt='bpytop'
-alias xrp='python $HOME/.config/crypto-script/crypto.py'
-alias q='python $HOME/.config/scripts/python/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
+alias xrp='python -O $HOME/.config/crypto-script/crypto.py'
+alias q='python -O $HOME/.config/scripts/python/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
 
 #######
 # NNN #

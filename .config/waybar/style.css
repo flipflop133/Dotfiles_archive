@@ -5,39 +5,33 @@
   font-family: RobotoMono Nerd Font;
   font-size: 18px;
 }
-
-/****************/
-/* MODULES LEFT */
-/****************/
 window#waybar {
   background: #ffffff;
 }
 
+/****************/
+/* MODULES LEFT */
+/****************/
 #workspaces button {
   padding-left: 8px;
   padding-right: 8px;
-  color: #999999;
+  color: rgba(0, 0, 0, 0.38);
 }
 
 #workspaces button.focused {
-  color: #007db7;
+  color: #000000;
 }
 
 #workspaces button.urgent {
-  color: #ff0000;
+  color: #b00020;
 }
 
-/* This remove all hover effects on workspaces buttons*/
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  background: #ffffff;
-  border: #ffffff;
-  padding-left: 8px;
-  padding-right: 8px;
+  background: rgba(0, 0, 0, 0.15);
 }
 
-#mode #window {
+#mode,
+#window {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -114,6 +108,6 @@ window#waybar {
 /**************/
 @keyframes blink {
   to {
-    color: #ff0000;
+    color: #b00020;
   }
 }

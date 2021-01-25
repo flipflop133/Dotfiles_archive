@@ -11,8 +11,6 @@
 
 	// Modules configuration
 	"sway/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": true,
 		"format": "{icon}",
 		"format-icons": {
 			"1": "",
@@ -113,7 +111,7 @@
 	"custom/media": {
 		"format": "<span style=\"italic\">{}</span>",
 		"interval": 3,
-		"exec": "python $HOME/.config/scripts/python/spotify.py",
+		"exec": "python -O $HOME/.config/scripts/python/spotify.py",
 		"on-click": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause",
 		"on-click-right": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 	},

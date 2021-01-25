@@ -2,14 +2,13 @@
 .config/archive
 .config/bpytop
 .config/Code - OSS/User/settings.json
-.config/dunst
 .config/fish/config.fish
 .config/gtk-2.0
 .config/gtk-3.0
 .config/kitty
 .config/mimeapps.list
 .config/mpd/mpd.conf
-.config/mpv
+.config/mpv/mpv.conf
 .config/ncmpcpp/config
 .config/nnn
 .config/nvim/coc-settings.json

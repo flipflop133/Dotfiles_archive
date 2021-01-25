@@ -902,3 +902,18 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 707, in __exit__
     termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
 termios.error: (5, 'Input/output error')
+15/01/21 (15:49:40) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1266, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+19/01/21 (12:07:03) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1266, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+19/01/21 (12:09:32) | ERROR: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1266, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/francois/.config/bpytop/themes'
