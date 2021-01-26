@@ -40,6 +40,7 @@ alias nf='clear; neofetch'
 alias bt='bpytop'
 alias xrp='python -O $HOME/.config/crypto-script/crypto.py'
 alias q='python -O $HOME/.config/scripts/python/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
+alias server='ssh francois@192.168.1.59'
 
 #######
 # NNN #
