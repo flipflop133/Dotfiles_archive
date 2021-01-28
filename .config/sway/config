@@ -268,7 +268,10 @@ exec mako
 bindsym $mod+m exec mpd & exec $term -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
 
 # web browser
-bindsym $mod+b exec brave-nightly
+bindsym $mod+b exec firefox-nightly
 
 # night light
 exec gammastep
+
+# syncthing
+exec syncthing -no-browser
