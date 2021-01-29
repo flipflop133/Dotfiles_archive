@@ -272,6 +272,3 @@ bindsym $mod+b exec firefox-nightly
 
 # night light
 exec gammastep
-
-# syncthing
-exec syncthing -no-browser

@@ -1,4 +1,5 @@
 aic94xx-firmware
+alacritty
 android-studio
 android-tools
 aspell-en
@@ -30,6 +31,7 @@ grub
 handlr-bin
 intel-media-driver
 intel-ucode
+intellij-idea-community-edition
 iwd
 j4-dmenu-desktop
 joplin-appimage
@@ -75,6 +77,8 @@ sudo
 sway
 swayidle
 swaylock
+sxiv
+sxiv-rifle
 syncthing
 texinfo
 ttf-jetbrains-mono

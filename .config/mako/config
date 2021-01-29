@@ -1,0 +1,28 @@
+# general
+background-color=#ffffff
+text-color=#000000
+progress-color=#00BCD4
+default-timeout=10000
+font=RobotoMono 12
+anchor=bottom-right
+layer=overlay
+
+# audio
+[category=audio]
+default-timeout=2000
+group-by=category
+format=<b>%s</b>\n%b
+[category=audio grouped=1]
+default-timeout=2000
+group-by=category
+format=<b>%s</b>\n%b
+
+# brightness
+[category=brightness]
+default-timeout=2000
+group-by=category
+format=<b>%s</b>\n%b
+[category=brightness grouped=1]
+default-timeout=2000
+group-by=category
+format=<b>%s</b>\n%b
