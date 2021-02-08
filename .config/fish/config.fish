@@ -32,6 +32,8 @@ alias grep='grep --color=auto'
 alias cl='clear'
 alias cpu='cd /sys/devices/system/cpu'
 alias wifi='$HOME/.config/scripts/bash/Tools/wifi.sh'
+alias compress='tar -cvf archive.tar.xz --use-compress-program\=\'xz -T8\''
+alias hcompress='tar -cvf archive.tar.xz --use-compress-program\=\'xz -9T8\''
 
 # other
 alias n='nnn -e'
@@ -40,7 +42,7 @@ alias nf='clear; neofetch'
 alias bt='bpytop'
 alias xrp='python -O $HOME/.config/crypto-script/crypto.py'
 alias q='python -O $HOME/.config/scripts/python/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
-alias server='ssh francois@192.168.1.59'
+alias server='export TERM=linux;ssh francois@192.168.1.59'
 
 #######
 # NNN #

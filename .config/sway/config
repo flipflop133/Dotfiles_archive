@@ -232,8 +232,7 @@ bindsym $mod+p exec $HOME/.config/sway/bemenupower.sh
 bindsym $mod+Return exec $term
 
 # screenshot
-bindsym $mod+Print exec $HOME/.config/sway/grimshot.sh --notify copy area
-bindsym $mod+alt+Print exec $HOME/.config/sway/grimshot.sh --notify copy screen
+bindsym $mod+Print exec $HOME/.config/sway/bemenuscreenshot.sh
 
 # screenrecorder
 bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording..."
