@@ -31,8 +31,8 @@
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [Pulseaudio](https://www.archlinux.org/)                                  | Sound server                                                                      |
-| [Playerctl](https://github.com/acrisci/playerctl)                         | To control music on i3                                                            |
-| [Pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl)              | To adjust volume on i3                                                            |
+| [Playerctl](https://github.com/acrisci/playerctl)                         | Media control                                                                     |
+| [Pamixer](https://github.com/cdemoulins/pamixer)                          | To adjust volume                                                                  |
 | [Pavucontrol](https://freedesktop.org/software/pulseaudio/pavucontrol/)   | Graphical front-end to control pulseaudio                                         |
 
 #### System
@@ -62,7 +62,7 @@
 | [Picom](https://wiki.archlinux.org/index.php/Picom)                       | Xorg compositor                                                                   |
 | [efibootmgr]                                                              | required for uefi grub                                                            |
 | [sudo](https://wiki.archlinux.org/index.php/Sudo)                         | System administrator to manage root users accesses                                |
-| [dmenu](https://tools.suckless.org/dmenu/)                                | Suckless menu                                                                     |
+| [bemenu](https://github.com/Cloudef/bemenu)                               | Dmenu replacement for wayland                                                     |
 | [j4-menu-desktop](https://github.com/enkore/j4-dmenu-desktop)             | To use dmenu as app launcher                                                      |
 | [sxiv](https://github.com/muennich/sxiv)                                  | Image viewer                                                                      |
 | [sxiv-rifle](https://github.com/derf/feh)                                 | Script to browse through images for sxiv                                          |
@@ -70,13 +70,13 @@
 | [grimshot](https://github.com/swaywm/sway/blob/master/contrib/grimshot)   | Screenshot utility script using grim & slurp                                      |
 | [Powertop](https://wiki.archlinux.org/index.php/Powertop)                 | Powertop Intel's tool to control and monitor battery                              |
 | [xfce4-power-manager](https://docs.xfce.org/xfce/xfce4-power-manager/start) | Simple way to monitor battery status                                            |
-| [Dunst](https://github.com/dunst-project/dunst)                           | Light but powerful notification daemon                                            |
+| [Mako](https://github.com/emersion/mako)                                  | Wayland notification daemon                                            |
+| [Libnotify](https://wiki.archlinux.org/index.php/Desktop_notifications)   | Desktop notifications
 | [NetworkManager](https://github.com/NetworkManager/NetworkManager)        | easiest tool to setup your network                                                |
 | [waybar](https://github.com/Alexays/Waybar)                               | Status bar for wayland                                                            |
 | [Dunst](https://wiki.archlinux.org/index.php/Dunst)                       | Notifications                                                                     |
 | [ImageMagick](https://imagemagick.org/index.php)                          | Image modifications utility                                                       |
 | [wl-clipboard](https://github.com/bugaevc/wl-clipboard)                   | Command-line clipboard for wayland                                                |
-| [numlockx]                                                                | numlock key enabled on X11 start(used with lightdm)                               |
 | [handlr](https://github.com/chmln/handlr)                                 | Utility to set your default applications                                          |
 | [shellcheck](https://github.com/koalaman/shellcheck)                      | Shell scripts analysis                                                            |
 | [light](https://github.com/haikarainen/light)                             | Program to control backlights                                                     |
@@ -89,6 +89,9 @@
 | [pulseEffects presets](https://github.com/JackHack96/PulseEffects-Presets)| Nice presets for pulseEffects                                                     |
 | [iwd](https://wiki.archlinux.org/index.php/Iwd)                           | To manage network connections                                                     |
 | [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd)                     | DHCP client                                                                       |
+| [Poppler](https://github.com/freedesktop/poppler)                         | PDF engine for zathura, can also be used to concatenate PDFs                      |
+| [Wget](https://wiki.archlinux.org/index.php/Wget)                         | File retriever                                                                    |
+| [Gammastep](https://gitlab.com/chinstrap/gammastep)                       | Nightmode                                                                         |
 
 #### Window Manager
 | Package                                                                   | Description                                                                       |
