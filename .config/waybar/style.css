@@ -79,6 +79,10 @@ window#waybar {
   animation-direction: alternate;
 }
 
+#clock {
+  font-size: 14px;
+}
+
 /*BATTERY*/
 #battery {
   background-color: #ffffff;

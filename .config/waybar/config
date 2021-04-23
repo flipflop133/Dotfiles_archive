@@ -2,7 +2,7 @@
 	// General
 	"layer": "top",
 	"position": "bottom",
-	"height": 35,
+	"height": 40,
 
 	// Modules order
 	"modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
@@ -18,9 +18,10 @@
 			"3": "",
 			"4": "",
 			"5": "",
-			"6": "",
-			"7": "奈",
-			"8": "",
+			"6": "",
+			"7": "",
+			"8": "奈",
+			"9": "",
 			"default": ""
 		}
 	},
@@ -35,8 +36,8 @@
 		"spacing": 10
 	},
 	"clock": {
-		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": "{:%Y-%m-%d}"
+		"format": "{: %I:%M%p%n%d-%b-%y}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
 	},
 	"disk#root": {
 		"format": "{percentage_used}% ",
@@ -139,5 +140,9 @@
 		},
 		"tooltip-format": "{album}",
 		"max-length": 40
+	},
+	"custom/xrp": {
+		"interval": 3,
+		"exec": "python -O $HOME/.config/crypto-script/crypto.py"
 	}
 }

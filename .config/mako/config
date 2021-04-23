@@ -1,11 +1,12 @@
 # general
 background-color=#ffffff
 text-color=#000000
-progress-color=#00BCD4
+progress-color=source #03a9f4
 default-timeout=10000
 font=RobotoMono 12
 anchor=bottom-right
 layer=overlay
+border-color=#000000
 
 # audio
 [category=audio]

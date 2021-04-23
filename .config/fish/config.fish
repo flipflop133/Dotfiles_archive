@@ -34,6 +34,7 @@ alias cpu='cd /sys/devices/system/cpu'
 alias wifi='$HOME/.config/scripts/bash/Tools/wifi.sh'
 alias compress='tar -cvf archive.tar.xz --use-compress-program\=\'xz -T8\''
 alias hcompress='tar -cvf archive.tar.xz --use-compress-program\=\'xz -9T8\''
+alias xfce="exec startxfce4"
 
 # other
 alias n='nnn -e'

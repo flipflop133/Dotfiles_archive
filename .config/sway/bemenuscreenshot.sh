@@ -18,11 +18,11 @@ menu() { bemenu --fn "$font"\
 	$colors; }
 
 options() {
-	printf "ﴖ save\n copy\n"
+	printf " save\n copy"
 }
 
 subOptions(){
-	printf "active\nscreen\noutput\narea\nwindow\n"
+	printf " active\n screen\n output\n麗 area\n window\n"
 }
 
 select=$(options | menu)
@@ -43,19 +43,19 @@ esac
 secondChoice=""
 
 case $subSelect in
-	"active")
+	" active")
 		secondChoice="active"
 		;;
-	"screen")
+	" screen")
 		secondChoice="screen"
 		;;
-	"output")
+	" output")
 		secondChoice="output"
 		;;
-	"area")
+	"麗 area")
 		secondChoice="area"
 		;;
-	"window")
+	" window")
 		secondChoice="window"
 		;;
 esac
