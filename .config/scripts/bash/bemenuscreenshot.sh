@@ -15,7 +15,8 @@ menu() { bemenu --fn "$font"\
 	-i\
 	-l 10\
 	--prompt="ScreenshotMenu"\
-	$colors; }
+	$colors;
+}
 
 options() {
 	printf " save\n copy"
@@ -29,14 +30,18 @@ select=$(options | menu)
 choice=""
 
 case $select in
-	"ﴖ save")
+	" save")
 		choice="save"
+		echo "save selected"
 		subSelect=$(subOptions | menu)
 		;;
 	" copy")
 		choice="copy"
+		echo "copy selected"
 		subSelect=$(subOptions | menu)
 		;;
+	*)
+		exit 1
 esac
 
 
@@ -58,6 +63,8 @@ case $subSelect in
 	" window")
 		secondChoice="window"
 		;;
+	*)
+		exit 1
 esac
 
-$HOME/.config/sway/grimshot.sh --notify $choice $secondChoice
+$HOME/.config/scripts/bash/grimshot.sh --notify $choice $secondChoice

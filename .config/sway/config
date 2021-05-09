@@ -193,7 +193,7 @@ exec_always {
 # OTHER CONTROLS AND STARTUP STUFF #
 ####################################
 # notifications script path
-set $notifications $HOME/.config/sway/notifications.sh
+set $notifications $HOME/.config/scripts/bash/notifications.sh
 
 # volume control
 bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $notifications volume
@@ -226,13 +226,13 @@ exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Im
                  before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
 
 # powermenu
-bindsym $mod+p exec $HOME/.config/sway/bemenupower.sh
+bindsym $mod+p exec $HOME/.config/scripts/bash/bemenupower.sh
 
 # terminal
 bindsym $mod+Return exec $term
 
 # screenshot
-bindsym $mod+Print exec $HOME/.config/sway/bemenuscreenshot.sh
+bindsym $mod+Print exec $HOME/.config/scripts/bash/bemenuscreenshot.sh
 
 # screenrecorder
 bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording..."
