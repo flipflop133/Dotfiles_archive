@@ -22,11 +22,17 @@ input * {
 	xkb_numlock enabled
 }
 
-# touchpad
+# touchpad Lenovo
 input 1267:12608:MSFT0001:01_04F3:3140_Touchpad {
-	xkb_layout "be"
 	tap enabled
 	natural_scroll enabled
+}
+
+# touchpad Samsung
+input 2:14:ETPS/2_Elantech_Touchpad {
+         tap enabled
+	 natural_scroll enabled
+	 pointer_accel 0.5
 }
 
 ##########
