@@ -8,7 +8,7 @@ alias pu='yay -Syu'
 alias pr='yay -Rns'
 
 # system
-alias ls='ls --color=auto'
+alias ls='exa --icons'
 alias df='df -h'
 alias du='du -h'
 alias dush='du -hsx * | sort -rh | head -10'

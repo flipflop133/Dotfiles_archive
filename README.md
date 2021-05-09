@@ -46,13 +46,15 @@
 #### Terminal
 | Package                                                                   | Description                                                                       |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-| [Alacritty](https://github.com/alacritty/alacritty)                       | The best fatest terminal(powered by your graphic card)                            |
+| [foot](https://codeberg.org/dnkl/foot)                       		    | A fast, lightweight and minimalistic Wayland terminal emulator                    |
 | [neofetch](https://github.com/dylanaraps/neofetch)                        | A fast, highly customizable system info script                                    |
 | [Figlet](https://github.com/cmatsuoka/figlet)                             | ASCII banners in terminal                                                         |
 | [lolcat](https://github.com/busyloop/lolcat)                              | Just because Unicorns exist                                                       |
 | [htop](https://github.com/hishamhm/htop)                                  | Easier top                                                                        |
 | [bpytop](https://github.com/aristocratos/bpytop)                          | Ressource monitor, with style                                                     |
-| [cowfortune](https://github.com/anthraxx/cowfortune)                      | In case my quote python script break...                                           |
+| [cowfortune](https://github.com/anthraxx/cowfortune)                      | In case my Python quote script break...                                           |
+| [zsh](https://wiki.archlinux.org/title/zsh)                               | Powerful shell                                                                    |
+| [exa](https://github.com/ogham/exa)                                       | Ls replacement                                                                    |
 
 #### Utilities
 | Package                                                                   | Description                                                                       |

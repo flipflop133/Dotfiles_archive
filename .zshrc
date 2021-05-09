@@ -89,10 +89,7 @@ zinit wait lucid for \
 
 # colored-man-pages
 zinit wait"1" lucid for \
-	ael-code/zsh-colored-man-pages \
-	from'gh-r' as'program' mv'vivid* -> vivid' pick'vivid/vivid' \
-	atload'export LS_COLORS="$(vivid generate ayu)"' \
-	@sharkdp/vivid
+	ael-code/zsh-colored-man-pages
 
 #######
 # NNN #

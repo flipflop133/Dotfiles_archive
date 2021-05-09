@@ -28,6 +28,7 @@ dnslookup-bin
 dosfstools
 dunst
 efibootmgr
+exa
 exfat-utils
 fakeroot
 firefox
