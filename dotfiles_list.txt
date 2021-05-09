@@ -1,4 +1,5 @@
 .pam_environment
+.config/aliases
 .config/archive
 .config/bpytop
 .config/Code - OSS/User/settings.json
