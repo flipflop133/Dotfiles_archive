@@ -11,7 +11,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg exit'
 
 # terminal
-set $term kitty
+set $term foot
 
 #########
 # INPUT #
@@ -40,7 +40,7 @@ output * {
 # gaps #
 ########
 smart_borders on
-gaps inner 30
+#gaps inner 30
 
 ##################
 # WINDOWS DESIGN #
@@ -242,7 +242,7 @@ bindsym $mod+alt+r exec killall -s SIGINT wf-recorder & notify-send "Stopped rec
 bindsym XF86Calculator exec galculator
 
 # file manager
-bindsym $mod+Shift+f exec $term -e fish -c "nnn -e"
+bindsym $mod+Shift+f exec $term fish -c "nnn -e"
 
 # app launcher
 bindsym $mod+d exec j4-dmenu-desktop --dmenu="bemenu --fn 'RobotoMono 16' \
@@ -264,7 +264,7 @@ exec waybar
 exec mako
 
 # music player
-bindsym $mod+m exec mpd & exec $term -e fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
+bindsym $mod+m exec mpd & exec $term fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
 
 # web browser
 bindsym $mod+b exec firefox

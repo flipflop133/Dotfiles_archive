@@ -36,5 +36,8 @@ Plug 'mcchrish/nnn.vim'
 " FZF
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
+"
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 

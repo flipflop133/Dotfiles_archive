@@ -13,5 +13,3 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/nnn.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
-
-

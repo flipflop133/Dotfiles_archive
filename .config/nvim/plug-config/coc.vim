@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
 			\ 'coc-tabnine',
 			\ 'coc-css',
 			\ 'coc-prettier',
-			\ 'coc-clangd'
+			\ 'coc-clangd',
+			\ 'coc-java'
 			\]
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

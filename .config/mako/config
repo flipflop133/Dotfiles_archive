@@ -13,17 +13,9 @@ border-color=#000000
 default-timeout=2000
 group-by=category
 format=<b>%s</b>\n%b
-[category=audio grouped=1]
-default-timeout=2000
-group-by=category
-format=<b>%s</b>\n%b
 
 # brightness
 [category=brightness]
-default-timeout=2000
-group-by=category
-format=<b>%s</b>\n%b
-[category=brightness grouped=1]
 default-timeout=2000
 group-by=category
 format=<b>%s</b>\n%b
