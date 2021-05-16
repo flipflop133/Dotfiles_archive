@@ -23,20 +23,49 @@ class Dbus:
     intf_player = obj_player + ".Player"
 
 
-def blockAds(song, ad):
+def muteSpotify(mute):
+    # run the command
+    appList = subprocess.run(["pacmd", "list-sink-inputs"],
+                             stdout=subprocess.PIPE)
+
+    # parse the output
+    parsed = {}
+    lines = appList.stdout.decode('utf-8').replace("\t",
+                                                   "").replace(" ",
+                                                               "").split("\n")
+    current_index = 0
+    cross_properties = False
+
+    for line in lines:
+        if not cross_properties:
+            splited = line.split(":")
+            cross_properties = splited[0] == "properties"
+
+            if splited[0] == "index":
+                current_index = int(splited[1])
+
+        else:
+            splited = line.split("=")
+            if splited[0] == "application.name":
+                parsed[splited[1]] = current_index
+                current_index = 0
+                cross_properties = False
+
+    # mute
+    index = parsed["\"Spotify\""]
+    subprocess.run(["pacmd", "set-sink-input-mute", str(index), mute])
+
+
+def blockAds(song):
     """Mute sound during ads
     """
-    # get mute status
-    f = os.popen("pacmd list-sinks | awk '/muted/ { print $2 }'")
-    mute = f.read()
     # mute sound if spotify is playing and AD
-    if 'Advertisement' in song and 'yes' not in mute:
-        subprocess.call(['pactl', 'set-sink-mute', '0', "toggle"])
+    if 'Advertisement' in song:
+        muteSpotify("1")
         ad = True
         time.sleep(5)
-    if 'Advertisement' not in song and 'yes' in mute and ad:
-        subprocess.call(['pactl', 'set-sink-mute', '0', "toggle"])
     if 'Advertisement' not in song:
+        muteSpotify("0")
         ad = False
     return ad
 
@@ -56,8 +85,7 @@ def getSong(isSong):
     song = metadata['xesam:title'] if metadata['xesam:title'] else ''
 
     # check for ads
-    global ad
-    ad = blockAds(song, ad)
+    blockAds(song)
 
     # determine icon
     status = get_playBackStatus()

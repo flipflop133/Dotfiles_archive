@@ -241,8 +241,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+Print exec $HOME/.config/scripts/bash/bemenuscreenshot.sh
 
 # screenrecorder
-bindsym $mod+Shift+r exec wf-recorder -g "$$(slurp)" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording..."
-bindsym $mod+alt+r exec killall -s SIGINT wf-recorder & notify-send "Stopped recording" "Record is located in ~/Videos"
+bindsym $mod+Shift+r exec $HOME/.config/scripts/bash/bemenuscreenrecord.sh
+bindsym $mod+alt+r exec killall -s SIGINT wf-recorder & killall -s SIGINT ffmpeg & notify-send "Stopped recording" "Record is located in ~/Videos"
 
 # calculator
 bindsym XF86Calculator exec galculator

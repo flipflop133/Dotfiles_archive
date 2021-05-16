@@ -53,7 +53,6 @@ intellij-idea-community-edition
 iwd
 j4-dmenu-desktop
 jdk
-jdk-openjdk
 joplin-appimage
 junit
 kitty
@@ -61,6 +60,7 @@ libappimage
 libnotify
 libreoffice-fresh
 libva-intel-driver
+libva-utils
 light-git
 linux
 linux-firmware
@@ -85,6 +85,7 @@ nextcloud-client
 nmap
 nnn
 noto-fonts-emoji
+obs-studio
 openjml-bin
 openvas-scanner
 openvpn
@@ -130,6 +131,7 @@ vulkan-intel
 waybar
 wd719x-firmware
 wev
+wf-recorder
 wget
 whois
 wl-clipboard
@@ -180,4 +182,5 @@ xorg-xwud
 yay
 zathura
 zathura-pdf-mupdf
+zoom
 zsh

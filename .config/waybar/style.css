@@ -66,6 +66,7 @@ window#waybar {
 #backlight,
 #battery,
 #custom-calendar,
+#custom-notifications,
 #tray {
   padding-left: 15px;
   padding-right: 8px;
