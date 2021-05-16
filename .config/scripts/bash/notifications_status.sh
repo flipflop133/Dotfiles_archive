@@ -1,12 +1,12 @@
 #!/bin/sh
-# Script to control notifications from status bar
-# Dependency: mako
+# Script to display and control notifications in status bar
+# Dependencies: mako, nerd fonts
 
-# Define active notification icon
-icon="notifications"
+# Define icons
 iconActive=""
 iconInactive=""
 
+# Display notifications status
 if [ "$1" = "--status" ];then
 	if [ "$(pidof mako)" ];then
 		icon=$iconActive
@@ -14,6 +14,7 @@ if [ "$1" = "--status" ];then
 		icon=$iconInactive
 	fi
 	echo "$icon"
+# Toggle notifications status
 elif [ "$1" = "--toggle" ];then
 	if [ "$(pidof mako)" ];then
 		killall mako
@@ -21,4 +22,3 @@ elif [ "$1" = "--toggle" ];then
 		mako
 	fi
 fi
-
