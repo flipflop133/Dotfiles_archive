@@ -14,6 +14,7 @@ base
 bemenu-wayland
 binutils
 bison
+bitwarden-bin
 blueman
 bluez
 bluez-utils
@@ -36,7 +37,7 @@ fish
 flex
 foot
 fzf
-gambas3-devel
+gambas3-dev-tools
 gammastep
 gcc
 git
@@ -52,12 +53,14 @@ intel-ucode
 intellij-idea-community-edition
 iwd
 j4-dmenu-desktop
+java-cobertura
 jdk
 joplin-appimage
 junit
 kitty
 libappimage
 libnotify
+libreoffice-extension-grammalecte-fr
 libreoffice-fresh
 libva-intel-driver
 libva-utils
@@ -71,7 +74,6 @@ make
 mako
 man-db
 maven
-metasploit
 mpd
 mpdris2
 mpv
@@ -80,15 +82,14 @@ neofetch
 neovim
 nerd-fonts-roboto-mono
 nerd-fonts-source-code-pro
-nessus
 nextcloud-client
 nmap
 nnn
 noto-fonts-emoji
+nvm
 obs-studio
 openjml-bin
 openvas-scanner
-openvpn
 p7zip
 pacmixer
 pamixer
@@ -101,6 +102,7 @@ pkgconf
 playerctl
 pulseaudio
 pulseaudio-ctl
+pwgen
 python-pip
 python-pynvim
 qbittorrent
@@ -116,6 +118,7 @@ swayidle
 swaylock
 sxiv
 sxiv-rifle
+sysstat
 teams
 telegram-desktop
 texinfo
@@ -139,7 +142,6 @@ wlroots
 xdg-utils-handlr
 xf86-video-intel
 xf86-video-vesa
-xfce4-screenshooter
 xorg-bdftopcf
 xorg-docs
 xorg-font-util

@@ -79,6 +79,8 @@ bindkey '^g' fzf-cdr
 # syntax-highlighting
 # zsh-completions
 # zsh-autosuggestions
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 zinit wait lucid for \
 	atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
 	zdharma/fast-syntax-highlighting \

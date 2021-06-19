@@ -38,27 +38,28 @@ select=$(options | menu)
 # power menu
 case $select in
 	" Poweroff")
-		notify-send -i "$icon_path/$shutdown_icon" "Shutting down..."
+		notify-send -i "$icon_path/$shutdown_icon" "Shutting down..." &
 		sleep 1
 		poweroff
 		;;
 	"勒 Reboot")
-		notify-send -i "$icon_path/$reboot_icon" "Rebooting..."
+		notify-send -i "$icon_path/$reboot_icon" "Rebooting..." &
 		sleep 1
 		reboot
 		;;
 	"﫼 Logout")
-		notify-send -i "$icon_path/$log_out_icon" "Logging off..."
+		notify-send -i "$icon_path/$log_out_icon" "Logging off..." &
+		echo "not waiting"
 		sleep 1
 		logoff_cmd
 		;;
 	"鈴 Suspend")
-		notify-send -i "$icon_path/$suspend_icon" "Suspending..."
+		notify-send -i "$icon_path/$suspend_icon" "Suspending..." &
 		sleep 1
 		systemctl suspend
 		;;
 	" Hibernate")
-		notify-send -i "$icon_path/$suspend_hibernate_icon" "Hibernating..."
+		notify-send -i "$icon_path/$suspend_hibernate_icon" "Hibernating..." &
 		sleep 1
 		systemctl hibernate
 		;;

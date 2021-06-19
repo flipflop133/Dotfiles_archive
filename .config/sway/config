@@ -277,3 +277,6 @@ bindsym $mod+b exec firefox
 
 # night light
 exec gammastep -l 49:5
+
+# nextcloud
+exec nextcloud

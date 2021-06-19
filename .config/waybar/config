@@ -114,7 +114,7 @@
 		"interval": 3,
 		"exec": "python -O $HOME/.config/scripts/python/spotify.py",
 		"on-click": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause",
-		"on-click-right": "exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+		"on-click-right": "killall spotify"
 	},
 	"mpd": {
 		"format": "<span style=\"italic\">{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title}</span>",
@@ -147,7 +147,8 @@
 	},
 	"custom/weather": {
 		"interval": 600,
-		"exec": "python -O $HOME/.config/weather-script/weather.py"
+		"exec": "python -O $HOME/.config/weather-script/weather.py",
+		"on-click": "firefox www.meteo.be"
 	},
 	"custom/notifications": {
 		"format": "{} ",
