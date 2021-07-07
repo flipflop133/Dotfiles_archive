@@ -7,7 +7,6 @@ antlr4
 aspell-en
 aspell-fr
 atomicwallet
-audacity
 autoconf
 automake
 base
@@ -21,7 +20,6 @@ bluez-utils
 bpytop
 buku-git
 cmake
-code
 dhcpcd
 discord
 dmenu
@@ -53,7 +51,6 @@ intel-ucode
 intellij-idea-community-edition
 iwd
 j4-dmenu-desktop
-java-cobertura
 jdk
 joplin-appimage
 junit
@@ -89,7 +86,6 @@ noto-fonts-emoji
 nvm
 obs-studio
 openjml-bin
-openvas-scanner
 p7zip
 pacmixer
 pamixer
@@ -102,12 +98,14 @@ pkgconf
 playerctl
 pulseaudio
 pulseaudio-ctl
+pulseaudio-jack
 pwgen
 python-pip
 python-pynvim
 qbittorrent
 rpmextract
 rslsync
+seatd
 shellcheck
 slurp
 sof-firmware
@@ -126,9 +124,10 @@ thunderbird
 tree
 ttf-jetbrains-mono
 ttf-opensans
-tutanota-desktop-bin
+tutanota-desktop
 unzip
 upower
+vim
 vimix-gtk-themes-git
 vulkan-intel
 waybar

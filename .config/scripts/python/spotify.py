@@ -116,7 +116,7 @@ def get_playBackStatus():
 
 
 try:
-    data = None
+        data = None
     try:
         with open("/tmp/spotify.json", "r") as read_file:
             data = json.load(read_file)

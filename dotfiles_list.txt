@@ -13,11 +13,7 @@
 .config/mpv/mpv.conf
 .config/ncmpcpp/config
 .config/nnn
-.config/nvim/coc-settings.json
-.config/nvim/general
-.config/nvim/init.vim
-.config/nvim/plug-config
-.config/nvim/vim-plug
+.config/nvim
 .config/pulse/daemon.conf
 .config/scripts
 .config/sway
