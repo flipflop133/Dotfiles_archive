@@ -30,7 +30,7 @@ return require('packer').startup(function()
 	-- LSP
 	use {
 		"neovim/nvim-lspconfig",
-		event = "BufRead",
+		event = "BufReadPre",
 		config = function()
 			require "lsp"
 		end

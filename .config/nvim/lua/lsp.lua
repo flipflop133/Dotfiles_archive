@@ -1,74 +1,117 @@
-local sumneko_root_path = '/home/theprimeagen/personal/lua-language-server'
-local sumneko_binary = sumneko_root_path .. "/bin/Linux/lua-language-server"
+local efm = require "efm"
+local lspconfig = require "lspconfig"
 
-local function on_attach()
-    -- TODO: TJ told me to do this and I should do it because he is Telescopic
-    -- "Big Tech" "Cash Money" Johnson
+-- LSP snippets support
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+custom_attach = function(client, _)
+	-- Mappings
+	local opts = {noremap = true, silent = true}
+	set_keymap("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	set_keymap("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+	set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+	set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+	set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
+	-- Format on save
+	vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]])
+
+	-- Code Action
+	vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb{sign = {enabled = true, priority = 9}}]]
+
+	-- Disable lsp formatter
+	client.resolved_capabilities.document_formatting = false
 end
 
-require'lspconfig'.tsserver.setup{ on_attach=on_attach }
-require'lspconfig'.clangd.setup {
-    on_attach = on_attach,
-    root_dir = function() return vim.loop.cwd() end
+custom_attach_hs = function(client, _)
+	custom_attach(client)
+	client.resolved_capabilities.document_formatting = true
+end
+
+local servers = {
+	"rust_analyzer",
+	"bashls",
+	"tsserver",
+	"pyright"
 }
 
-require'lspconfig'.pyls.setup{ on_attach=on_attach }
+for _, lsp in ipairs(servers) do
+	lspconfig[lsp].setup {
+		on_attach = custom_attach,
+		capabilities = capabilities,
+	}
+end
 
-require'lspconfig'.svelte.setup{}
-
-require'lspconfig'.yamlls.setup{}
-
-require'lspconfig'.gopls.setup{
-    on_attach=on_attach,
-    cmd = {"gopls", "serve"},
-    settings = {
-        gopls = {
-            analyses = {
-                unusedparams = true,
-            },
-            staticcheck = true,
-        },
-    },
-}
--- who even uses this?
-require'lspconfig'.rust_analyzer.setup{ on_attach=on_attach }
-
-require'lspconfig'.sumneko_lua.setup {
-    on_attach = on_attach,
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
-    settings = {
-        Lua = {
-            runtime = {
-                -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                version = 'LuaJIT',
-                -- Setup your lua path
-                path = vim.split(package.path, ';'),
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-                },
-            },
-        },
-    },
+lspconfig.hls.setup{
+	on_attach = custom_attach_hs,
+	capabilities = capabilities,
 }
 
-local opts = {
-    -- whether to highlight the currently hovered symbol
-    -- disable if your cpu usage is higher than you want it
-    -- or you just hate the highlight
-    -- default: true
-    highlight_hovered_item = true,
-
-    -- whether to show outline guides
-    -- default: true
-    show_guides = true,
+local sumneko_binary = "/usr/bin/lua-language-server"
+lspconfig.sumneko_lua.setup{
+	cmd = {sumneko_binary, "-E"};
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = {"mp", "love", "vim", "use"},
+				disable = {"lowercase-global"}
+			},
+			telemetry = {enable = false}
+		},
+	},
+	on_attach = custom_atach,
+	capabilities = capabilities
 }
 
-require('symbols-outline').setup(opts)
+lspconfig.gopls.setup{
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+				fieldalignment = true,
+				nilness = true,
+				unusedwrite = true
+			},
+			linksInHover = false,
+			staticcheck = true
+		}
+	},
+	on_attach = custom_attach,
+	capabilities = capabilities,
+}
+
+lspconfig.efm.setup {
+	init_options = {documentFormatting = true},
+	filetypes = efm.filetypes,
+	settings = {
+		rootMarkers = {vim.loop.cwd()},
+		languages = efm.languages,
+	},
+}
+
+-- Documentation floating window
+vim.lsp.handlers["textDocument/hover"] =
+vim.lsp.with(
+	vim.lsp.handlers.hover,
+	{
+		border = "single"
+	}
+)
+
+-- On screen diagnostics symbol
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+vim.lsp.with(
+	vim.lsp.diagnostic.on_publish_diagnostics,
+	{
+		virtual_text = {prefix = "●"}
+	}
+)
+
+-- Define diagnostics symbols
+vim.fn.sign_define("LspDiagnosticsSignError", {text = ""})
+vim.fn.sign_define("LspDiagnosticsSignWarning", {text = ""})
+vim.fn.sign_define("LspDiagnosticsSignInformation", {text = ""})
+vim.fn.sign_define("LspDiagnosticsSignHint", {text = ""})
+vim.fn.sign_define("LightBulbSign", {text = ""})t

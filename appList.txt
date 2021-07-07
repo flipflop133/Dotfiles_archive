@@ -101,6 +101,7 @@ pulseaudio
 pulseaudio-ctl
 pulseaudio-jack
 pwgen
+pyright
 python-pip
 python-pynvim
 qbittorrent
@@ -181,6 +182,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yarn
 yay
 zathura
 zathura-pdf-mupdf

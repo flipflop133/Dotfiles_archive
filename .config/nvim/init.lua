@@ -9,3 +9,6 @@ require "plugins"
 
 -- compe
 require("completion")
+
+-- Load misc settings
+require "misc"
