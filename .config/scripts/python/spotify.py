@@ -125,7 +125,7 @@ try:
         with open("/tmp/spotify.json", "w+") as read_file:
             json.dump(dict, read_file)
     if data is not None:
-        ad = bool(data['ad'])
+                ad = bool(data['ad'])
         isSong = bool(data['isSong'])
         values = getSong(isSong)
         if values == "no_process":
@@ -138,7 +138,7 @@ try:
                 json.dump(dict, read_file)
 
 except Exception as e:
-    if isinstance(e, dbus.exceptions.DBusException):
+        if isinstance(e, dbus.exceptions.DBusException):
         print('')
     else:
         print(e)

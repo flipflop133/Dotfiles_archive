@@ -66,6 +66,7 @@ linux
 linux-firmware
 lolcat
 lsix
+lua-language-server-git
 m4
 make
 mako

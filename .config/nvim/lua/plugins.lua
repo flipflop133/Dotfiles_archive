@@ -2,12 +2,20 @@ return require('packer').startup(function()
 	-- Packer can manage itself
 	use "wbthomason/packer.nvim"
 	-- Material theme
-	use 'marko-cerovac/material.nvim'
+	use {
+		'marko-cerovac/material.nvim',
+		config = function() 
+			vim.g.material_style = "lighter"
+			require('material').set()
+		end
+	}
 
-	-- Statusline
+	-- Lualine
 	use {
 		'hoob3rt/lualine.nvim',
-		requires = {'kyazdani42/nvim-web-devicons', opt = true}
+		config = function()
+			require'lualine'.setup{options={theme = 'material-nvim'}}
+		end
 	}
 
 	-- Treesitter
@@ -24,7 +32,7 @@ return require('packer').startup(function()
 		"neovim/nvim-lspconfig",
 		event = "BufRead",
 		config = function()
-			require("lsp").config()
+			require "lsp"
 		end
 	}
 
@@ -35,6 +43,8 @@ return require('packer').startup(function()
 			require("lspkind").init()
 		end
 	}
+
+	use 'kabouzeid/nvim-lspinstall'
 
 	-- compe
 	use {
@@ -70,4 +80,5 @@ return require('packer').startup(function()
 			}
 		end
 	}
+	use "kyazdani42/nvim-web-devicons"
 end)

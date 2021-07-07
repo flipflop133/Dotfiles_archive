@@ -7,14 +7,5 @@ end
 -- Load plugins
 require "plugins"
 
--- Material Theme
-require('material').set()
-vim.g.material_style = "lighter"
-
--- Status Line
-require('lualine').setup{
-	options = {theme = 'papercolor_light'}
-}
-
 -- compe
 require("completion")
