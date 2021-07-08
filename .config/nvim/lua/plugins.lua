@@ -65,7 +65,6 @@ return require('packer').startup(function()
 	-- Autopairs
 	use {
 		"windwp/nvim-autopairs",
-		event = "InsertCharPre",
 		config = function()
 			require"nvim-autopairs".setup({
 				check_ts = true,
@@ -75,6 +74,12 @@ return require('packer').startup(function()
 				map_complete = true
 			})
 		end
+	}
+
+	-- Auto close tags
+	use {
+		"windwp/nvim-ts-autotag",
+		opt = true,
 	}
 
 	-- Icons
