@@ -79,7 +79,9 @@ return require('packer').startup(function()
 	-- Auto close tags
 	use {
 		"windwp/nvim-ts-autotag",
-		opt = true,
+		config = function()
+			require('nvim-ts-autotag').setup()
+		end
 	}
 
 	-- Icons

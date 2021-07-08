@@ -120,9 +120,8 @@ _G.packer_plugins = {
     path = "/home/francois/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-ts-autotag"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/francois/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag"
+    loaded = true,
+    path = "/home/francois/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
