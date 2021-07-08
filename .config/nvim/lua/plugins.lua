@@ -66,5 +66,8 @@ return require('packer').startup(function()
 	use "kyazdani42/nvim-web-devicons"
 
 	-- File manager
-	use "kyazdani42/nvim-tree.lua"
+	use {
+		"mcchrish/nnn.vim",
+		cmd = {"Np", "NnnPicker"}
+	}
 end)

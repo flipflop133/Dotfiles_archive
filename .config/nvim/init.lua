@@ -7,9 +7,6 @@ end
 -- Load plugins
 require "plugins"
 
--- Completion
-require("completion")
-
 -- Load misc settings
 require "misc"
 
