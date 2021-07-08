@@ -27,6 +27,7 @@ dnslookup-bin
 dosfstools
 dunst
 efibootmgr
+efm-langserver
 exa
 exfat-utils
 fakeroot
@@ -97,6 +98,7 @@ pcmanfm
 pdfmerger
 pkgconf
 playerctl
+prettier
 pulseaudio
 pulseaudio-ctl
 pulseaudio-jack
@@ -182,6 +184,7 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+yapf
 yarn
 yay
 zathura

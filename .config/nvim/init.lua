@@ -7,8 +7,11 @@ end
 -- Load plugins
 require "plugins"
 
--- compe
+-- Completion
 require("completion")
 
 -- Load misc settings
 require "misc"
+
+-- Key mappings
+require "mappings"
