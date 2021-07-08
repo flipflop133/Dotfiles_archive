@@ -62,6 +62,21 @@ return require('packer').startup(function()
 		end
 	}
 
+	-- Autopairs
+	use {
+		"windwp/nvim-autopairs",
+		event = "InsertCharPre",
+		config = function()
+			require"nvim-autopairs".setup({
+				check_ts = true,
+			})
+			require"nvim-autopairs.completion.compe".setup({
+				map_cr = true,
+				map_complete = true
+			})
+		end
+	}
+
 	-- Icons
 	use "kyazdani42/nvim-web-devicons"
 

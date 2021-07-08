@@ -203,8 +203,8 @@ exec_always {
 set $notifications $HOME/.config/scripts/bash/notifications.sh
 
 # volume control
-bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $notifications volume
-bindsym XF86AudioLowerVolume exec pamixer -d 2;exec $notifications volume
+bindsym XF86AudioRaiseVolume exec pamixer -i 1;exec $notifications volume
+bindsym XF86AudioLowerVolume exec pamixer -d 1;exec $notifications volume
 bindsym XF86AudioMute exec pamixer -t;exec $notifications volume
 
 # microphone control
