@@ -1,8 +1,10 @@
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noinsert,noselect"
 
+-- Avoid showing message extra message when using completion
+vim.o.shortmess = vim.o.shortmess .. "cI"
+
 require'compe'.setup {
-  autocomplete = true;
   debug = false;
   min_length = 1;
   preselect = 'enable';
