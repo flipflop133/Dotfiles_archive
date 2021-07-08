@@ -1,7 +1,7 @@
-vim.o.completeopt = "menuone,noselect"
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = "menuone,noinsert,noselect"
 
 require'compe'.setup {
-  enabled = true;
   autocomplete = true;
   debug = false;
   min_length = 1;
@@ -17,6 +17,10 @@ require'compe'.setup {
   source = {
     path = true;
     nvim_lsp = true;
+    nvim_lua = true,
+    buffer = { kind = "﬘", true },
+    luasnip = { kind = "﬌", true },
+		emoji = true
   };
 }
 

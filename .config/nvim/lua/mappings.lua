@@ -10,3 +10,7 @@ local o = {}
 
 -- Format
 map("n", "<A-f>", [[<Cmd> Neoformat<CR>]],opt)
+map("n" , "<C-n>",[[<Cmd> NvimTreeToggle<CR>]],opt)
+map("n", "<leader>r", [[<Cmd> NvimTreeRefresh<CR>]], opt)
+map("n", "<leader>n", [[<Cmd> NvimTreeFindFile<CR>]], opt)
+

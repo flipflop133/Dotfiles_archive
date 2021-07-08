@@ -23,7 +23,7 @@ return require('packer').startup(function()
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		config = function()
-			require("treesitter-nvim").config()
+			require("treesitter-nvim")
 		end
 	}
 
@@ -58,36 +58,13 @@ return require('packer').startup(function()
 		'hrsh7th/nvim-compe',
 		requires = {{'hrsh7th/vim-vsnip'}},
 		config = function()
-			require'compe'.setup {
-				enabled = true,
-				autocomplete = true,
-				debug = false,
-				min_length = 1,
-				preselect = 'enable',
-				throttle_time = 80,
-				source_timeout = 200,
-				incomplete_delay = 400,
-				max_abbr_width = 100,
-				max_kind_width = 100,
-				max_menu_width = 100,
-				documentation = true,
-				source = {
-					buffer = true,
-					calc = true,
-					nvim_lsp = true,
-					nvim_lua = true,
-					path = true,
-					snippets_nvim = true,
-					spell = true,
-					tags = true,
-					treesitter = true,
-					vsnip = true,
-					zsh = true
-				}
-			}
+			require('completion')
 		end
 	}
 
 	-- Icons
 	use "kyazdani42/nvim-web-devicons"
+
+	-- File manager
+	use "kyazdani42/nvim-tree.lua"
 end)
