@@ -6,6 +6,7 @@ android-tools
 antlr4
 aspell-en
 aspell-fr
+atom
 atomicwallet
 autoconf
 automake
@@ -20,6 +21,7 @@ bluez-utils
 bpytop
 buku-git
 cmake
+code
 dhcpcd
 discord
 dmenu
@@ -47,6 +49,7 @@ groff
 grub
 handlr-bin
 hexedit
+htmlhint
 intel-media-driver
 intel-ucode
 intellij-idea-community-edition
@@ -55,7 +58,6 @@ j4-dmenu-desktop
 jdk
 joplin-appimage
 junit
-kitty
 libappimage
 libnotify
 libreoffice-extension-grammalecte-fr
@@ -92,6 +94,7 @@ p7zip
 pacmixer
 pamixer
 papirus-icon-theme
+paru
 patch
 pavucontrol
 pcmanfm
@@ -128,7 +131,8 @@ thunderbird
 tree
 ttf-jetbrains-mono
 ttf-opensans
-tutanota-desktop
+tutanota-desktop-bin
+unrar
 unzip
 upower
 vim
@@ -186,7 +190,6 @@ xorg-xwininfo
 xorg-xwud
 yapf
 yarn
-yay
 zathura
 zathura-pdf-mupdf
 zoom

@@ -11,3 +11,9 @@ opt.updatetime = 300
 
 -- Combine diagnostics with line number
 opt.signcolumn = "number"
+
+-- True color support
+opt.termguicolors = true
+
+-- Mouse
+opt.mouse = "a"

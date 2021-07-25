@@ -1,27 +1,19 @@
 {
-    "workbench.colorTheme": "Visual Studio Light",
-    "terminal.integrated.shell.linux": "/bin/bash",
+    // Font
+    "editor.fontFamily":"JetBrains Mono",
+    "editor.fontSize": 18,
+    "editor.fontLigatures": true,
+
+    // Theme
+    "workbench.colorTheme": "GitHub Light",
+
+    // Misc
+    "sonarlint.ls.javaHome": "/home/francois/.vscode-oss/extensions/sonarsource.sonarlint_managed-jre/jre/jdk-11.0.11+9-jre",
+    "kite.showWelcomeNotificationOnStartup": false,
     "launch": {
 
         "configurations": [],
         "compounds": []
     },
-
-    // Font
-    "editor.fontFamily":"JetBrains Mono",
-    "editor.fontSize": 16,
-    "editor.fontLigatures": true,
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
     "tabnine.experimentalAutoImports": true,
-    "files.autoSave": "afterDelay",
-    "[java]": {
-        "editor.defaultFormatter": "redhat.java"
-    },
-    "sonarlint.ls.javaHome": "/home/francois/.vscode-oss/extensions/sonarsource.sonarlint_managed-jre/jre/jdk-11.0.11+9-jre",
-    "kite.showWelcomeNotificationOnStartup": false,
 }

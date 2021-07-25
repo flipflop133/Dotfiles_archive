@@ -100,3 +100,9 @@ if command -v nnn > /dev/null; then
 	source $HOME/.config/nnn/config.nnn
 	bindkey -s '^N' 'n\n'
 fi
+
+#######
+# NVM #
+#######
+# Set up Node Version Manager
+source /usr/share/nvm/init-nvm.sh

@@ -3,9 +3,9 @@
 #
 # packages
 alias pacman='pacman --color=auto'
-alias yay='yay --color=auto'
-alias pu='yay -Syu'
-alias pr='yay -Rns'
+alias paru='paru --color=auto'
+alias pu='paru -Syu'
+alias pr='sudo pacman -Rns'
 
 # system
 alias ls='exa --icons'
@@ -25,6 +25,7 @@ alias xfce="exec startxfce4"
 
 # other
 alias vi='nvim'
+alias vip="nvim -p *"
 alias nf='clear; neofetch'
 alias bt='bpytop'
 alias xrp='python -O $HOME/.config/crypto-script/crypto.py'
