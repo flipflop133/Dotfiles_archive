@@ -8,12 +8,18 @@
 
 power_save_mode(){
 	#####################
+	# Disable bluetooth #
+	#####################
+	rmmod btusb
+	rfkill block bluetooth
+
+	#####################
 	# cpupower commands #
 	#####################
 	cpupower idle-set -E
 	cpupower set --perf-bias 15
 	cpupower frequency-set -u 1GHz
-	sudo cpupower frequency-set -g powersave
+	cpupower frequency-set -g powersave
 
 	#################
 	# INTEL P-STATE #
@@ -31,10 +37,10 @@ power_save_mode(){
 	# other #
 	#########
 	# set HWP(intel HardWare P-state) to power
-	echo power > /sys/devices/system/cpu/cpufreq/policy?/energy_performance_preference
-
-	# set ASMP(Active State Power Management) to powersupersave
-	echo powersupersave > /sys/module/pcie_aspm/parameters/policy
+	echo power > /sys/devices/system/cpu/cpufreq/policy0/energy_performance_preference
+	echo power > /sys/devices/system/cpu/cpufreq/policy1/energy_performance_preference
+	echo power > /sys/devices/system/cpu/cpufreq/policy2/energy_performance_preference
+	echo power > /sys/devices/system/cpu/cpufreq/policy3/energy_performance_preference
 
 	#####################
 	# powertop commands #

@@ -64,7 +64,7 @@ case $select in
 		systemctl hibernate
 		;;
 	" PowerMode")
-		kitty -e sudo "$HOME"/.config/scripts/bash/Tools/powersave.sh
+		foot sudo "$HOME"/.config/scripts/bash/Tools/powersave.sh
 		;;
 	"祥 Screen timeout")
 		timeout=$(printf "鈴 Enable screen timeout\n零 Disable screen timeout" | menu)
