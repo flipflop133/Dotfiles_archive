@@ -1,0 +1,17 @@
+# colors
+# define colors
+set $black       #000000
+set $lightBlack  #0c0c0c
+set $bg          #cccccc
+set $fg          #ffffff
+set $cyan        #007DB7
+set $red         #B00020
+
+# set colors
+# class                 border  backgr. text    indicator child_border
+client.focused          $fg     $fg     $black  $red      $cyan
+client.focused_inactive $fg     $fg     $black  $fg       $bg
+client.unfocused        $fg     $bg     $black  $fg       $bg
+client.urgent           $fg     $bg     $red    $fg       $fg
+client.placeholder      $black  $lightBlack $fg     $black   $lightBlack 
+client.background       $fg

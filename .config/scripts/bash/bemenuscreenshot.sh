@@ -1,15 +1,7 @@
 #!/bin/bash
+source lightBemenu
 
 font="RobotoMono 16"
-colors="--fb=#ffffff
-	--ff=#000000
-	--tb=#ffffff
-	--tf=#000000
-	--nb=#ffffff
-	--nf=#000000
-	--hb=#000000
-	--hf=#ffffff
-	"
 
 menu() { bemenu --fn "$font"\
 	-i\

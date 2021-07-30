@@ -1,2 +1,3 @@
 /etc/X11/xorg.conf.d/
 /etc/default/grub
+/etc/modprobe.d/iwlwifi.conf

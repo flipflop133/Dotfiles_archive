@@ -1,4 +1,5 @@
 #!/bin/bash
+source lightBemenu
 
 logoff_cmd() { sway exit; }
 
@@ -13,15 +14,7 @@ screen_icon="cs-screen.svg"
 
 # menu
 font="RobotoMono 16"
-colors="--fb=#ffffff
-	--ff=#000000
-	--tb=#ffffff
-	--tf=#000000
-	--nb=#ffffff
-	--nf=#000000
-	--hb=#000000
-	--hf=#ffffff
-	"
+
 menu() { bemenu --fn "$font"\
 	-i\
 	-l 10\

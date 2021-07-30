@@ -126,9 +126,10 @@ sxiv
 sxiv-rifle
 sysstat
 teams
-telegram-desktop
+telegram-desktop-bin
 texinfo
 thunderbird
+tlp
 tree
 ttf-jetbrains-mono
 ttf-opensans
