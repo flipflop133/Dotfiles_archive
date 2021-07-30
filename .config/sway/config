@@ -40,7 +40,7 @@ input 2:14:ETPS/2_Elantech_Touchpad {
 # OUTPUT #
 ##########
 output * {
-	bg ~/Images/wallpaper/* fill
+	bg ~/Images/wallpaper/dark/* fill
 }
 
 ########
@@ -211,13 +211,13 @@ bindsym $mod+KP_Add exec light -A 1;exec $notifications brightness
 bindsym $mod+KP_Subtract exec light -U 1;exec $notifications brightness
 
 # lockscreen
-bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/*
+bindsym $mod+x exec swaylock --no-unlock-indicator --image $HOME/Images/wallpaper/dark/*
 
 # power management
-exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'\
+exec swayidle -w timeout 330 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/dark/*'\
                  timeout 300 'swaymsg "output * dpms off"'\
                  resume 'swaymsg "output * dpms on"'\
-                 before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/*'
+                 before-sleep 'swaylock -f --no-unlock-indicator --image $HOME/Images/wallpaper/dark/*'
 
 # powermenu
 bindsym $mod+p exec $HOME/.config/scripts/bash/bemenupower.sh
@@ -258,3 +258,6 @@ exec gammastep -l 49:5
 
 # nextcloud
 exec nextcloud
+
+# theme manager
+exec $HOME/.config/Themes/themeChanger.sh
