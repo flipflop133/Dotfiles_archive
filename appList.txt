@@ -85,7 +85,7 @@ nerd-fonts-roboto-mono
 nerd-fonts-source-code-pro
 nextcloud-client
 nmap
-nnn
+nnn-nerd
 noto-fonts-emoji
 nvm
 obs-studio

@@ -1,0 +1,6 @@
+{
+  "url": "http://api.weatherapi.com/v1/forecast.json",
+  "key": "c86787891ef24dfb94f71630202511",
+  "parameters": "Saint-Leger,Belgium",
+  "unit": "Celsius"
+}

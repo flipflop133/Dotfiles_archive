@@ -17,6 +17,7 @@
 .config/pulse/daemon.conf
 .config/scripts
 .config/sway
+.config/Themes
 .config/waybar
 .config/zathura
 .zprofile

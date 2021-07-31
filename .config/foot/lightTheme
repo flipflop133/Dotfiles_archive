@@ -3,7 +3,7 @@
 # Github theme
 foreground=000000
 background=f6f8fa
-regular0=cccccc  # black
+regular0=000000  # black
 regular1=d03d3d  # red
 regular2=14ce14  # green
 regular3=949800  # yellow

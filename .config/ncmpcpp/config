@@ -7,7 +7,7 @@ visualizer_color = "cyan"
 ##### song format #####
 now_playing_prefix = $b$(cyan)
 now_playing_suffix = $(end)$/b
-current_item_prefix = $(white)$r
+current_item_prefix = $(black)$r
 
 ##### various settings #####
 progressbar_look = "━━ "
@@ -19,35 +19,35 @@ song_columns_list_format = (20)[]{a} (6f)[]{NE} (50)[]{t|f:Title} (20)[]{b} (7f)
 #
 colors_enabled = yes
 #
-empty_tag_color = white
+empty_tag_color = black
 #
-header_window_color = white
+header_window_color = black
 #
-volume_color = white
+volume_color = black
 #
-state_line_color = white
+state_line_color = black
 #
-state_flags_color = white:b
+state_flags_color = black:b
 #
-main_window_color = white
+main_window_color = black
 #
-color1 = white
+color1 = black
 #
-color2 = white
+color2 = black
 #
-progressbar_color = white:b
+progressbar_color = black:b
 #
 progressbar_elapsed_color = cyan:b
 #
-statusbar_color = white
+statusbar_color = black
 #
-statusbar_time_color = white:b
+statusbar_time_color = black:b
 #
 player_state_color = cyan:b
 #
-alternative_ui_separator_color = white:b
+alternative_ui_separator_color = black:b
 #
-window_border_color = white
+window_border_color = black
 #
-active_window_border = white
+active_window_border = black
 #
