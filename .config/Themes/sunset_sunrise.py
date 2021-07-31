@@ -1,6 +1,7 @@
 import json
 import requests
 import time
+from datetime import *
 from pathlib import Path
 home = str(Path.home())
 
@@ -29,9 +30,13 @@ def get_sunset_sunrise():
         request = "{}?key={}&q={}".format(url, key, parameters)
         response = requests.get(request)
         data = json.loads(response.content)
-        sunrise = data['forecast']['forecastday'][0]['astro']['sunrise']
-        sunset = data['forecast']['forecastday'][0]['astro']['sunset']
-        return sunrise[:5].replace(":", ""), sunset[:5].replace(":", "")
+        sunrise = datetime.strptime(
+            data['forecast']['forecastday'][0]['astro']['sunrise'], '%I:%M %p')
+        sunrise = (str(sunrise.time())[:-3]).replace(':', '')
+        sunset = datetime.strptime(
+            data['forecast']['forecastday'][0]['astro']['sunset'], '%I:%M %p')
+        sunset = (str(sunset.time())[:-3]).replace(':', '')
+        return sunrise, sunset
     except requests.ConnectionError:
         error_handling()
     except json.JSONDecodeError:
