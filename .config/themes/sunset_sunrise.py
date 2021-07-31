@@ -21,9 +21,10 @@ def get_sunset_sunrise():
     data = ""
     try:
         # retrieve data from json file
-        with open(home + "/.config/Themes/settings.json", 'r') as read_file:
+        with open(home + "/.config/weather-script/weather_settings.json",
+                  'r') as read_file:
             data = json.load(read_file)
-        url = data['url']
+        url = "http://api.weatherapi.com/v1/forecast.json"
         key = data['key']
         parameters = data['parameters']
         # retrieve weather from weatherapi.com
