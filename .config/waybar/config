@@ -41,17 +41,17 @@
 	},
 	"disk#root": {
 		"format": "{percentage_used}% ",
-		"on-click":"kitty -e fish -c nnn -e"
+		"on-click":"foot fish -c nnn -e"
 	},
 	"disk#home": {
 		"format": "{percentage_used}% ",
-		"on-click":"kitty -e fish -c nnn -e",
+		"on-click":"foot fish -c nnn -e",
 		"path":"/home"
 	},
 	"cpu": {
 		"format": "{usage}% ",
 		"interval": 1,
-		"on-click": "kitty -e bpytop"
+		"on-click": "foot bpytop"
 	},
 	"memory": {
 		"format": "{}% ",

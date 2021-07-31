@@ -102,7 +102,7 @@ main(){
 	# Check AM or PM
 	if [[ $(date +%p) == "AM" ]];then
 		# If AM, check sunrise
-		if [[ ($(date +%I%M) -lt sunrise) ]];then
+		if [[ ($(date +%I%M) -lt $sunrise) ]];then
 			if [[ $currentTheme == *"light"* ]];then
 				dark_mode
 			fi
@@ -113,12 +113,13 @@ main(){
 		fi
 	else
 		# If PM, check sunset
-		if [[ ($(date +%I%M) -gt sunset) ]];then
+		if [[ ($(date +%I%M) -gt $sunset) ]];then
 			if [[ $currentTheme == *"light"* ]];then
 				dark_mode
 			fi
 		else
 			if [[ $currentTheme == *"dark"* ]];then
+				echo works
 				light_mode
 			fi
 		fi

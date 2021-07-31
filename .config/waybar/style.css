@@ -24,7 +24,7 @@ window#waybar {
 }
 
 #workspaces button.urgent {
-  color: #b00020;
+  color: #b30000;
 }
 
 #workspaces button:hover {
@@ -73,11 +73,11 @@ window#waybar {
 }
 
 #temperature.critical {
+  color: #b30000;
   animation-name: blink;
-  animation-duration: 0.8s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 #clock {
@@ -86,26 +86,26 @@ window#waybar {
 
 /*BATTERY*/
 #battery.warning:not(.charging) {
+  color: #b30000;
   animation-name: blink;
-  animation-duration: 0.8s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 #battery.critical:not(.charging) {
+  color: #b30000;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 /**************/
 /* ANIMATIONS */
 /**************/
 @keyframes blink {
-  to {
-    color: #b00020;
+  50% {
+    opacity: 0;
   }
 }

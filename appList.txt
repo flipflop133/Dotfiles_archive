@@ -116,6 +116,7 @@ rslsync
 seatd
 shellcheck
 slurp
+snapd
 sof-firmware
 spotify
 sudo
