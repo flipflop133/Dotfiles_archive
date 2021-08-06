@@ -1,5 +1,5 @@
 #!/bin/bash
-source lightBemenu
+source $HOME/.config/scripts/bash/lightBemenu
 
 font="RobotoMono 16"
 

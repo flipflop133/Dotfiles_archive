@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source lightBemenu
+source $HOME/.config/scripts/bash/lightBemenu
 
 font="RobotoMono 16"
 
@@ -68,8 +68,7 @@ esac
 
 
 if [[ $secondChoice == "slurp" ]];then
-	size="$(slurp)"
-	exec wf-recorder "$choice" -g $size -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording $choiceName"
+	exec wf-recorder "$choice" -g "$(slurp)" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording $choiceName"
 else
 	exec wf-recorder "$choice" -f ~/Videos/recording_$(date +"%Y-%m-%d_%H:%M:%S.mp4") & notify-send "Recording $choiceName"
 fi

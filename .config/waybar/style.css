@@ -4,31 +4,23 @@
 * {
   font-family: RobotoMono Nerd Font;
   font-size: 18px;
+  border-radius: 0;
 }
 window#waybar {
-  background: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.38);
+  background: @theme_bg_color;
+  color: @theme_fg_color;
 }
 
 /****************/
 /* MODULES LEFT */
 /****************/
-#workspaces button {
-  padding-left: 8px;
-  padding-right: 8px;
-  color: rgba(0, 0, 0, 0.38);
-}
-
 #workspaces button.focused {
-  color: #111111;
+  color: @theme_selected_fg_color;
+  background: @theme_selected_bg_color;
 }
 
 #workspaces button.urgent {
-  color: #b30000;
-}
-
-#workspaces button:hover {
-  background: rgba(0, 0, 0, 0.15);
+  color: @error_color;
 }
 
 #mode,
@@ -73,9 +65,8 @@ window#waybar {
 }
 
 #temperature.critical {
-  color: #b30000;
   animation-name: blink;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -86,17 +77,15 @@ window#waybar {
 
 /*BATTERY*/
 #battery.warning:not(.charging) {
-  color: #b30000;
   animation-name: blink;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 #battery.critical:not(.charging) {
-  color: #b30000;
   animation-name: blink;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -106,6 +95,6 @@ window#waybar {
 /**************/
 @keyframes blink {
   50% {
-    opacity: 0;
+    color: @error_color;
   }
 }

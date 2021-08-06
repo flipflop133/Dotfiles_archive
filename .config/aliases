@@ -7,6 +7,9 @@ alias paru='paru --color=auto'
 alias pu='paru -Syu'
 alias pr='sudo pacman -Rns'
 
+plist (){
+	LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
+}
 # system
 alias ls='exa --icons'
 alias df='df -h'
@@ -17,11 +20,9 @@ alias lsblk='lsblk -afm'
 alias fdisk='fdisk -L'
 alias grep='grep --color=auto'
 alias cl='clear'
-alias cpu='cd /sys/devices/system/cpu'
 alias wifi='$HOME/.config/scripts/bash/Tools/wifi.sh'
 alias compress='tar -cvf archive.tar.xz --use-compress-program\='xz -T8\'
 alias hcompress='tar -cvf archive.tar.xz --use-compress-program\='xz -9T8\'
-alias xfce="exec startxfce4"
 
 # other
 alias vi='nvim'
@@ -30,5 +31,4 @@ alias nf='clear; neofetch'
 alias bt='bpytop'
 alias xrp='python -O $HOME/.config/crypto-script/crypto.py'
 alias q='python -O $HOME/.config/scripts/python/daily_quote/daily_quote.py | lolcat -p 1.5 -a -d 3'
-alias server='export TERM=linux;ssh francois@192.168.1.59'
 alias n='nnn'

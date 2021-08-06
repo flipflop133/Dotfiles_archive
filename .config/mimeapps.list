@@ -10,14 +10,14 @@ x-scheme-handler/chrome=userapp-Waterfox-0HXZW0.desktop;userapp-Waterfox-K0BTW0.
 x-scheme-handler/ftp=userapp-Waterfox-0HXZW0.desktop;userapp-Waterfox-K0BTW0.desktop;userapp-Nightly-VF7PW0.desktop;
 x-scheme-handler/http=xfce4-web-browser.desktop;
 x-scheme-handler/https=xfce4-web-browser.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-6MM1V0.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-6MM1V0.desktop;userapp-Kotatogram Desktop-2X8D70.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-VC7Y10.desktop;
 message/rfc822=userapp-Thunderbird-VC7Y10.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
 x-scheme-handler/msteams=teams.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-6MM1V0.desktop;
+x-scheme-handler/tg=userapp-Kotatogram Desktop-2X8D70.desktop
 x-scheme-handler/http=xfce4-web-browser.desktop
 x-scheme-handler/https=xfce4-web-browser.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-VC7Y10.desktop

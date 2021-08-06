@@ -16,25 +16,19 @@ set $term foot
 #########
 # INPUT #
 #########
-# keyboard
 input * {
 	xkb_layout "be"
 	xkb_numlock enabled
-}
-
-# touchpad Lenovo
-input 1267:12608:MSFT0001:01_04F3:3140_Touchpad {
 	tap enabled
 	natural_scroll enabled
 	pointer_accel 0.2
 }
 
-# touchpad Samsung
-input 2:14:ETPS/2_Elantech_Touchpad {
-         tap enabled
-	 natural_scroll enabled
-	 pointer_accel 0.5
-}
+# hide cursor after some time
+seat * hide_cursor 5000
+
+# hide cursor on keypress
+seat * hide_cursor when-typing enable
 
 ##########
 # OUTPUT #
@@ -43,19 +37,13 @@ output * {
 	bg ~/Images/wallpaper/light/* fill
 }
 
-########
-# gaps #
-########
-smart_borders on
-#gaps inner 30
-
 ##################
 # WINDOWS DESIGN #
 ##################
 # borders
-hide_edge_borders smart
 default_border pixel 3
 default_floating_border pixel 3
+smart_borders on
 
 # window titles font
 font pango:RobotoMono Nerd Font 14
@@ -190,8 +178,8 @@ exec_always {
 set $notifications $HOME/.config/scripts/bash/notifications.sh
 
 # volume control
-bindsym XF86AudioRaiseVolume exec pamixer -i 1;exec $notifications volume
-bindsym XF86AudioLowerVolume exec pamixer -d 1;exec $notifications volume
+bindsym XF86AudioRaiseVolume exec pamixer -i 2;exec $notifications volume
+bindsym XF86AudioLowerVolume exec pamixer -d 2;exec $notifications volume
 bindsym XF86AudioMute exec pamixer -t;exec $notifications volume
 
 # microphone control
@@ -226,20 +214,20 @@ bindsym $mod+p exec $HOME/.config/scripts/bash/bemenupower.sh
 bindsym $mod+Return exec $term
 
 # screenshot
-bindsym $mod+Print exec $HOME/.config/scripts/bash/bemenuscreenshot.sh
+bindsym Print exec $HOME/.config/scripts/bash/bemenuscreenshot.sh
 
 # screenrecorder
 bindsym $mod+Shift+r exec $HOME/.config/scripts/bash/bemenuscreenrecord.sh
 bindsym $mod+alt+r exec killall -s SIGINT wf-recorder & killall -s SIGINT ffmpeg & notify-send "Stopped recording" "Record is located in ~/Videos"
 
 # calculator
-bindsym XF86Calculator exec galculator
+bindsym XF86Calculator exec foot python -i $HOME/.config/sway/calculator.py
 
 # file manager
-bindsym $mod+Shift+f exec $term fish -c "nnn -e"
+bindsym $mod+Shift+f exec $term nnn
 
 # app launcher
-include lightBemenu
+include lightFuzzel
 
 # bar
 exec waybar
@@ -248,7 +236,7 @@ exec waybar
 exec mako
 
 # music player
-bindsym $mod+m exec mpd & exec $term fish -c "mpDris2 > /dev/null 2>&1 & ncmpcpp"
+bindsym $mod+m exec mpd & exec mpDris2 & exec $term ncmpcpp
 
 # web browser
 bindsym $mod+b exec firefox
@@ -260,4 +248,4 @@ exec gammastep -l 49:5
 exec nextcloud
 
 # theme manager
-exec $HOME/.config/Themes/themeChanger.sh
+exec $HOME/.config/themes/themeChanger.sh

@@ -6,8 +6,6 @@ android-tools
 antlr4
 aspell-en
 aspell-fr
-atom
-atomicwallet
 autoconf
 automake
 base
@@ -34,10 +32,11 @@ efm-langserver
 exa
 exfat-utils
 fakeroot
+feh
 firefox
-fish
 flex
 foot
+fuzzel
 fzf
 gambas3-dev-tools
 gammastep
@@ -51,6 +50,7 @@ grub
 handlr-bin
 hexedit
 htmlhint
+intel-gpu-tools
 intel-media-driver
 intel-ucode
 intellij-idea-community-edition
@@ -68,7 +68,6 @@ light-git
 linux
 linux-firmware
 lolcat
-lsix
 lua-language-server-git
 m4
 make
@@ -97,7 +96,6 @@ papirus-icon-theme
 paru
 patch
 pavucontrol
-pcmanfm
 pdfmerger
 pkgconf
 playerctl
@@ -127,7 +125,7 @@ sxiv
 sxiv-rifle
 sysstat
 teams
-telegram-desktop-bin
+telegram-desktop-bin-dev
 texinfo
 thunderbird
 tlp
@@ -146,9 +144,9 @@ wd719x-firmware
 wev
 wf-recorder
 wget
-whois
 wl-clipboard
 wlroots
+wol
 xdg-utils-handlr
 xf86-video-intel
 xf86-video-vesa
@@ -195,5 +193,4 @@ yapf
 yarn
 zathura
 zathura-pdf-mupdf
-zoom
 zsh

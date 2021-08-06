@@ -3,7 +3,7 @@ import os
 import subprocess
 import time
 import json
-try   :
+try:
     import dbus
 except ModuleNotFoundError:
     n = os.fork()
@@ -106,7 +106,7 @@ def getSong(isSong):
     return isSong, ad
 
 
-def     get_playBackStatus():
+def get_playBackStatus():
     """Use Dbus to find the current playback status
     """
     player = Dbus.obj_player + "." + "spotify"
@@ -115,8 +115,8 @@ def     get_playBackStatus():
     return properties.Get(Dbus.intf_player, "PlaybackStatus")
 
 
-try :
-        data = None
+try:
+    data = None
     try:
         with open("/tmp/spotify.json", "r") as read_file:
             data = json.load(read_file)
@@ -125,7 +125,7 @@ try :
         with open("/tmp/spotify.json", "w+") as read_file:
             json.dump(dict, read_file)
     if data is not None:
-                ad = bool(data['ad'])
+        ad = bool(data['ad'])
         isSong = bool(data['isSong'])
         values = getSong(isSong)
         if values == "no_process":
@@ -138,7 +138,7 @@ try :
                 json.dump(dict, read_file)
 
 except Exception as e:
-        if isinstance(e, dbus.exceptions.DBusException):
-        print ( '')
+    if isinstance(e, dbus.exceptions.DBusException):
+        print('')
     else:
-        print(e)
+        print('')

@@ -7,7 +7,7 @@ visualizer_color = "cyan"
 ##### song format #####
 now_playing_prefix = $b$(cyan)
 now_playing_suffix = $(end)$/b
-current_item_prefix = $(black)$r
+current_item_prefix = $(blue)$r
 
 ##### various settings #####
 progressbar_look = "━━ "

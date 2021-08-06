@@ -1,9 +1,10 @@
-colors="--fb=#000000\
-	--ff=#ffffff\
+colors="
 	--tb=#000000\
 	--tf=#ffffff\
+	--fb=#000000\
+	--ff=#ffffff\
 	--nb=#000000\
+	--nf=#ffffff\
 	--hb=#ffffff\
 	--hf=#000000\
-	--nf=#ffffff
-	"
+"

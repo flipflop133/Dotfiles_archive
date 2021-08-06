@@ -40,7 +40,7 @@ SAVEHIST=1000000
 
 # Enable colors and change prompt
 autoload -U colors && colors
-PS1=$'%(4~|%-1~/…/%3~|%~)\n%F{green}❯%f '
+PS1=$'%(4~|%-1~/…/%3~|%~)\n%F{blue}❯%f '
 setopt interactive_comments
 setopt noflowcontrol
 

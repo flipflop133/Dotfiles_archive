@@ -1,7 +1,7 @@
 import json
 import requests
-import time
-from datetime import *
+from time import sleep
+from datetime import datetime
 from pathlib import Path
 home = str(Path.home())
 
@@ -10,8 +10,9 @@ error_time = 0
 
 def error_handling():
     global error_time
-    time.sleep(error_time)
-    error_time += 10
+    sleep(error_time)
+    if error_time < 600:
+        error_time += 10
     get_sunset_sunrise()
 
 
