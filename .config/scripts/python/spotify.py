@@ -83,6 +83,7 @@ def getSong(isSong):
                                       'Metadata')
     artist = metadata['xesam:artist'][0] if metadata['xesam:artist'] else ''
     song = metadata['xesam:title'] if metadata['xesam:title'] else ''
+    album = metadata['xesam:album'] if metadata['xesam:album'] else ''
 
     # check for ads
     blockAds(song)
@@ -95,14 +96,18 @@ def getSong(isSong):
         icon = ''
 
     # display song name
-    if song != '' and 'Advertisement' not in song and artist != '' and isSong is False:
+    if song != '' and 'Advertisement' not in song and isSong is False:
         isSong = True
         print("{} {}".format(icon, song))
 
     # display artist name
-    elif song != '' and 'Advertisement' not in song and artist != '' and isSong is True:
+    elif song != '' and 'Advertisement' not in song and (
+            artist != '' or album != '') and isSong is True:
         isSong = False
-        print("{} {}".format(icon, artist))
+        if (artist == ''):
+            print("{} {}".format(icon, album))
+        else:
+            print("{} {}".format(icon, artist))
     return isSong, ad
 
 
