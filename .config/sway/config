@@ -166,7 +166,7 @@ mode "resize" {
 #######
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-	gsettings set $gnome-schema gtk-theme 'vimix-dark-laptop-doder'
+	gsettings set $gnome-schema gtk-theme 'Orchis-dark'
 	gsettings set $gnome-schema icon-theme 'Papirus-Light'
 	gsettings set $gnome-schema font-name 'Open Sans 12'
 }
@@ -191,7 +191,7 @@ bindsym XF86AudioMicMute exec pamixer --source 5 -t;exec $notifications micropho
 bindsym XF86AudioPlay exec playerctl play-pause || mpc toggle
 bindsym XF86AudioPause exec playerctl pause || mpc pause
 bindsym XF86AudioNext exec playerctl next || mpc next
-bindsym XF86AudioPrev exec playerctl previous || mpc previous
+bindsym XF86AudioPrev exec playerctl previous || mpc prev
 bindsym XF86AudioStop exec playerctl stop || mpc stop
 
 # backlight control
@@ -236,16 +236,16 @@ exec waybar
 exec mako
 
 # music player
-bindsym $mod+m exec mpd & exec mpDris2 & exec $term ncmpcpp
+bindsym $mod+m exec mpd & exec $term ncmpcpp
 
 # web browser
 bindsym $mod+b exec firefox
 
 # night light
-exec gammastep -l 49:5
+exec wlsunset -l 49 -L 5
 
 # nextcloud
 exec nextcloud
 
 # theme manager
-exec $HOME/.config/themes/themeChanger.sh
+exec $HOME/.config/themes/themer.sh

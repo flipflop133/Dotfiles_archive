@@ -3,7 +3,7 @@
 #
 # packages
 alias pacman='pacman --color=auto'
-alias paru='paru --color=auto'
+alias paru='paru --color=auto --removemake'
 alias pu='paru -Syu'
 alias pr='sudo pacman -Rns'
 

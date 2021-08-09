@@ -39,7 +39,6 @@ foot
 fuzzel
 fzf
 gambas3-dev-tools
-gammastep
 gcc
 git
 gnome-screenshot
@@ -74,8 +73,8 @@ make
 mako
 man-db
 maven
+mpc
 mpd
-mpdris2
 mpv
 ncmpcpp
 neofetch
@@ -89,6 +88,7 @@ noto-fonts-emoji
 nvm
 obs-studio
 openjml-bin
+orchis-theme-git
 p7zip
 pacmixer
 pamixer
@@ -109,6 +109,7 @@ pyright
 python-pip
 python-pynvim
 qbittorrent
+qt5-wayland
 rpmextract
 rslsync
 seatd
@@ -137,7 +138,6 @@ unrar
 unzip
 upower
 vim
-vimix-gtk-themes-git
 vulkan-intel
 waybar
 wd719x-firmware
@@ -146,6 +146,7 @@ wf-recorder
 wget
 wl-clipboard
 wlroots
+wlsunset
 wol
 xdg-utils-handlr
 xf86-video-intel

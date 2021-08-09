@@ -1,1 +1,1 @@
-bindsym $mod+d exec fuzzel -f 'RobotoMono 16' -b '1f2428ff' -t 'ffffffff' -s '666666ff' -i 'Papirus-Light'
+bindsym $mod+d exec fuzzel -f 'RobotoMono 16' -b '212121ff' -t 'ffffffff' -s '3281eaff' -i 'Papirus-Light'
