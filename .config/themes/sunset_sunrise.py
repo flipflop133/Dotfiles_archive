@@ -39,12 +39,7 @@ def get_sunset_sunrise():
             data['forecast']['forecastday'][0]['astro']['sunset'], '%I:%M %p')
         sunset = (str(sunset.time())[:-3]).replace(':', '')
         return sunrise, sunset
-    except requests.ConnectionError:
-        error_handling()
-    except json.JSONDecodeError:
-        print("error in weather_settings.json file")
-    except Exception as e:
-        print(e)
+    except:  # we don't get about the error here, we just need to retry
         error_handling()
 
 

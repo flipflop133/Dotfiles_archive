@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $HOME/.config/scripts/bash/darkBemenu
+source $HOME/.config/scripts/bash/lightBemenu
 
 font="RobotoMono 16"
 

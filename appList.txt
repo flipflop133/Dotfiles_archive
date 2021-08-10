@@ -133,7 +133,7 @@ tlp
 tree
 ttf-jetbrains-mono
 ttf-opensans
-tutanota-desktop-bin
+tutanota-desktop
 unrar
 unzip
 upower

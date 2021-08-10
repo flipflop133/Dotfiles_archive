@@ -1,6 +1,6 @@
 # imports
 import os
-import subprocess
+from subprocess import check_output, run, PIPE
 import time
 import json
 try:
@@ -8,7 +8,7 @@ try:
 except ModuleNotFoundError:
     n = os.fork()
     if n == 0:
-        subprocess.run(["pip", "install", "dbus-python"])
+        run(["pip", "install", "dbus-python"])
         import dbus
     else:
         os.wait()
@@ -25,8 +25,7 @@ class Dbus:
 
 def muteSpotify(mute):
     # run the command
-    appList = subprocess.run(["pacmd", "list-sink-inputs"],
-                             stdout=subprocess.PIPE)
+    appList = run(["pacmd", "list-sink-inputs"], stdout=PIPE)
 
     # parse the output
     parsed = {}
@@ -53,7 +52,7 @@ def muteSpotify(mute):
 
     # mute
     index = parsed["\"Spotify\""]
-    subprocess.run(["pacmd", "set-sink-input-mute", str(index), mute])
+    run(["pacmd", "set-sink-input-mute", str(index), mute])
 
 
 def blockAds(song):
@@ -120,30 +119,38 @@ def get_playBackStatus():
     return properties.Get(Dbus.intf_player, "PlaybackStatus")
 
 
-try:
-    data = None
+def main():
     try:
-        with open("/tmp/spotify.json", "r") as read_file:
-            data = json.load(read_file)
-    except IOError:
-        dict = {"ad": False, "isSong": False}
-        with open("/tmp/spotify.json", "w+") as read_file:
-            json.dump(dict, read_file)
-    if data is not None:
-        ad = bool(data['ad'])
-        isSong = bool(data['isSong'])
-        values = getSong(isSong)
-        if values == "no_process":
-            print("")
-        else:
-            isSong = values[0]
-            ad = values[1]
-            dict = {"ad": ad, "isSong": isSong}
-            with open("/tmp/spotify.json", "w") as read_file:
+        data = None
+        try:
+            with open("/tmp/spotify.json", "r") as read_file:
+                data = json.load(read_file)
+        except IOError:
+            dict = {"ad": False, "isSong": False}
+            with open("/tmp/spotify.json", "w+") as read_file:
                 json.dump(dict, read_file)
+        if data is not None:
+            ad = bool(data['ad'])
+            isSong = bool(data['isSong'])
+            values = getSong(isSong)
+            if values == "no_process":
+                print("")
+            else:
+                isSong = values[0]
+                ad = values[1]
+                dict = {"ad": ad, "isSong": isSong}
+                with open("/tmp/spotify.json", "w") as read_file:
+                    json.dump(dict, read_file)
 
-except Exception as e:
-    if isinstance(e, dbus.exceptions.DBusException):
-        print('')
-    else:
-        print('')
+    except Exception as e:
+        if isinstance(e, dbus.exceptions.DBusException):
+            print('')
+        else:
+            print('')
+
+
+try:
+    check_output(["pidof", "spotify"])
+    main()
+except:
+    print('')

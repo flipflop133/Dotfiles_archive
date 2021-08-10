@@ -141,9 +141,4 @@
 		"exec": "$HOME/.config/scripts/bash/notifications_status.sh --status",
 		"on-click": "$HOME/.config/scripts/bash/notifications_status.sh --toggle"
 	},
-	"custom/theme": {
-		"format": "{} ",
-		"interval": 600,
-		"exec": "$HOME/.config/scripts/bash/darkTheme/nightMode.sh",
-	}
 }

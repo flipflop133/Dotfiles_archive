@@ -1,6 +1,6 @@
 # general
-background-color=#212121
-text-color=#ffffff
+background-color=#f2f2f2
+text-color=#000000
 progress-color=source #3281ea
 default-timeout=10000
 font=RobotoMono 12
