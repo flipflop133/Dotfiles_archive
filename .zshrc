@@ -30,9 +30,6 @@ export SUDO_EDITOR=/usr/bin/nvim
 # Default editor
 export EDITOR=nvim
 
-# Default browser
-export BROWSER=firefox
-
 # History
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1200000

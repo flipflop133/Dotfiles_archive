@@ -1,10 +1,10 @@
 colors="
-	--tb=#212121\
-	--tf=#ffffff\
-	--fb=#212121\
-	--ff=#ffffff\
-	--nb=#212121\
-	--nf=#ffffff\
-	--hb=#3281ea\
+	--tb=#333333\
+	--tf=#dedede\
+	--fb=#333333\
+	--ff=#dedede\
+	--nb=#333333\
+	--nf=#dedede\
+	--hb=#0860f2\
 	--hf=#ffffff\
 "

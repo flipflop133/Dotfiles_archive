@@ -289,22 +289,26 @@ main(){
 	# check for root rights
 	if [ $(id -u) -eq 0 ]
 	then
-		echo -e "\e[96mPower MANAGER SCRIPT\e[0m"
-		echo ''
-		echo -e "\e[96m1)Power Save Mode\e[0m"
-		echo -e "\e[96m2)Balanced Mode\e[0m"
-		echo -e "\e[96m2)Boost Mode\e[0m"
-		read -r -p "Enter a selection:" response
-		if [ "$response" == "1" ]; then
-			power_save_mode
-		elif [ "$response" == "2" ]; then
-			balanced_mode
-		elif [ "$response" == "3" ]; then
-			boost_mode
+		if [ -z "$1" ];then
+			echo -e "\e[96mPower MANAGER SCRIPT\e[0m"
+			echo ''
+			echo -e "\e[96m1)Power Save Mode\e[0m"
+			echo -e "\e[96m2)Balanced Mode\e[0m"
+			echo -e "\e[96m2)Boost Mode\e[0m"
+			read -r -p "Enter a selection:" response
+			if [ "$response" == "1" ]; then
+				power_save_mode
+			elif [ "$response" == "2" ]; then
+				balanced_mode
+			elif [ "$response" == "3" ]; then
+				boost_mode
+			else
+				clear
+				echo -e "\e[31mPlease enter a valid value\e[0m"
+				main
+			fi
 		else
-			clear
-			echo -e "\e[31mPlease enter a valid value\e[0m"
-			main
+			$1
 		fi
 	else
 		echo -e "\e[31mPlease run script as root.\e[0m"
@@ -312,4 +316,4 @@ main(){
 	fi
 }
 clear
-main
+main "$1"

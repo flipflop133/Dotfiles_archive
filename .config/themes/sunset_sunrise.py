@@ -34,13 +34,10 @@ def get_sunset_sunrise():
         data = json.loads(response.content)
         sunrise = datetime.strptime(
             data['forecast']['forecastday'][0]['astro']['sunrise'], '%I:%M %p')
-        sunrise = (str(sunrise.time())[:-3]).replace(':', '')
+        sunrise = (str(sunrise.time())[:-3]).replace(":", "")
         sunset = datetime.strptime(
             data['forecast']['forecastday'][0]['astro']['sunset'], '%I:%M %p')
-        sunset = (str(sunset.time())[:-3]).replace(':', '')
+        sunset = (str(sunset.time())[:-3]).replace(":", "")
         return sunrise, sunset
     except:  # we don't get about the error here, we just need to retry
         error_handling()
-
-
-print(get_sunset_sunrise())

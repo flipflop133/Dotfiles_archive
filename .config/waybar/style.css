@@ -4,6 +4,7 @@
 * {
   font-family: RobotoMono Nerd Font;
   font-size: 18px;
+  border: none;
   border-radius: 0;
 }
 window#waybar {
@@ -64,36 +65,13 @@ window#waybar {
 }
 
 #temperature.critical {
-  animation-name: blink;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  color: @error_color;
 }
 
-#clock {
-  font-size: 14px;
-}
-
-/*BATTERY*/
 #battery.warning:not(.charging) {
-  animation-name: blink;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  color: @error_color;
 }
 
 #battery.critical:not(.charging) {
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-/**************/
-/* ANIMATIONS */
-/**************/
-@keyframes blink {
-  50% {
-    color: @error_color;
-  }
+  color: @error_color;
 }

@@ -69,7 +69,7 @@ def blockAds(song):
     return ad
 
 
-def getSong(isSong):
+def getSong():
     """Retrieve Spotify current playing song using dbus
     """
     session_bus = dbus.SessionBus()
@@ -90,24 +90,22 @@ def getSong(isSong):
     # determine icon
     status = get_playBackStatus()
     if status == "Paused":
-        icon = ''
+        icon = '\uf28b'
     else:
-        icon = ''
+        icon = '\uf144'
 
     # display song name
-    if song != '' and 'Advertisement' not in song and isSong is False:
-        isSong = True
-        print("{} {}".format(icon, song))
-
-    # display artist name
-    elif song != '' and 'Advertisement' not in song and (
-            artist != '' or album != '') and isSong is True:
-        isSong = False
-        if (artist == ''):
-            print("{} {}".format(icon, album))
+    if (song != '' or artist != ''
+            or album != '') and 'Advertisement' not in song:
+        if (artist != '' and song != ''):
+            print("{} {} - {}".format(icon, song[:15], artist[:15]))
+        elif (artist != ''):
+            print("{} {}".format(icon, artist[:20]))
+        elif (song != ''):
+            print("{} {}".format(icon, song[:20]))
         else:
-            print("{} {}".format(icon, artist))
-    return isSong, ad
+            print("{} {}".format(icon, album[:20]))
+    return ad
 
 
 def get_playBackStatus():
@@ -132,7 +130,7 @@ def main():
         if data is not None:
             ad = bool(data['ad'])
             isSong = bool(data['isSong'])
-            values = getSong(isSong)
+            values = getSong()
             if values == "no_process":
                 print("")
             else:

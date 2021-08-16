@@ -24,4 +24,4 @@ set index-active-fg "#1f2428"
 set recolor   
 set recolor-lightcolor "#1f2428"
 set recolor-darkcolor "#d1d5da"
-set recolor-keephue
+#set recolor-keephue

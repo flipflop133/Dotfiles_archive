@@ -13,6 +13,9 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg e
 # terminal
 set $term foot
 
+# xwayland support
+xwayland enable
+
 #########
 # INPUT #
 #########
@@ -45,8 +48,8 @@ default_border pixel 3
 default_floating_border pixel 3
 smart_borders on
 
-# window titles font
-font pango:RobotoMono Nerd Font 14
+# windows titles font
+font pango:RobotoMono Nerd Font 18px
 
 # colors
 include lightTheme
@@ -166,8 +169,9 @@ mode "resize" {
 #######
 set $gnome-schema org.gnome.desktop.interface
 exec_always {
-	gsettings set $gnome-schema gtk-theme 'Orchis-light'
+	gsettings set $gnome-schema gtk-theme 'WhiteSur-light'
 	gsettings set $gnome-schema icon-theme 'Papirus-Light'
+	gsettings set $gnome-schema cursor-theme 'macOSBigSur'
 	gsettings set $gnome-schema font-name 'Open Sans 12'
 }
 
@@ -236,10 +240,11 @@ exec waybar
 exec mako
 
 # music player
-bindsym $mod+m exec mpd & exec $term ncmpcpp
+exec mpd
+bindsym $mod+m exec $term ncmpcpp
 
 # web browser
-bindsym $mod+b exec firefox
+bindsym $mod+b exec $BROWSER
 
 # night light
 exec wlsunset -l 49 -L 5
@@ -248,4 +253,7 @@ exec wlsunset -l 49 -L 5
 exec nextcloud
 
 # theme manager
-exec $HOME/.config/themes/themer.sh
+exec python $HOME/.config/themes/main.py
+
+# notes
+bindsym $mod+n exec foot nnn $HOME/Nextcloud/Notes
